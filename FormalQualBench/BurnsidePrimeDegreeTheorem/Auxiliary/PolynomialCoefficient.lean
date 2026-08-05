@@ -67,4 +67,71 @@ lemma coeff_sum_taylor_sub
   have hpredsucc : (r - 1).succ = r := by omega
   rw [hpredsucc]
 
+/--
+The analogous binomial expansion for the translated powers appearing on the right-hand side of
+the Schur--Müller polynomial identity.
+-/
+lemma sum_power_taylor_sub
+    {F : Type*} [Field F] (f : F[X]) (U : Finset F) (w : ℕ) :
+    (∑ u ∈ U, ((f + C u) ^ w - f ^ w)) =
+      ∑ k ∈ Finset.range w,
+        C ((w.choose (k + 1) : F) * ∑ u ∈ U, u ^ (k + 1)) *
+          f ^ (w - (k + 1)) := by
+  classical
+  have hexpand (u : F) :
+      (f + C u) ^ w - f ^ w =
+        ∑ k ∈ Finset.range w,
+          C ((w.choose (k + 1) : F) * u ^ (k + 1)) * f ^ (w - (k + 1)) := by
+    rw [add_comm, add_pow, Finset.sum_range_succ']
+    simp only [pow_zero, one_mul, Nat.choose_zero_right, Nat.cast_one, mul_one, Nat.sub_zero]
+    ring_nf
+    apply Finset.sum_congr rfl
+    intro k hk
+    simp only [← C_pow, ← C_eq_natCast, ← C_mul]
+    simp [mul_comm, mul_left_comm]
+  rw [Finset.sum_congr rfl (fun u _ ↦ hexpand u)]
+  rw [Finset.sum_comm]
+  apply Finset.sum_congr rfl
+  intro k hk
+  rw [← Finset.sum_mul]
+  rw [← map_sum]
+  congr 2
+  rw [← Finset.mul_sum]
+
+/--
+If the first `m` positive power sums of a nonempty finite set of nonzero field elements vanish,
+then the set has more than `m` elements. This is the Vandermonde step in the Schur--Müller proof.
+-/
+lemma card_gt_of_power_sums_eq_zero
+    {F : Type*} [Field F] (U : Finset F) (m : ℕ)
+    (hU0 : 0 ∉ U) (hU : U.Nonempty)
+    (hpow : ∀ k, 1 ≤ k → k ≤ m → (∑ u ∈ U, u ^ k) = 0) :
+    m < U.card := by
+  by_contra hm
+  have hcard : U.card ≤ m := Nat.le_of_not_gt hm
+  let e : Fin U.card ≃ U := U.equivFin.symm
+  let f : Fin U.card → F := fun i ↦ (e i : U).1
+  have hf : Function.Injective f := by
+    intro i j hij
+    apply e.injective
+    exact Subtype.ext hij
+  have hfv : ∀ i : Fin U.card, (∑ j : Fin U.card, f j * f j ^ (i : ℕ)) = 0 := by
+    intro i
+    simp_rw [← pow_succ']
+    change (∑ j : Fin U.card, ((e j : U).1 : F) ^ ((i : ℕ) + 1)) = 0
+    rw [Fintype.sum_equiv e (fun j ↦ ((e j : U).1 : F) ^ ((i : ℕ) + 1))
+      (fun u : U ↦ (u.1 : F) ^ ((i : ℕ) + 1)) (fun j ↦ rfl)]
+    change (∑ u ∈ U.attach, (u.1 : F) ^ ((i : ℕ) + 1)) = 0
+    exact (Finset.sum_attach U (fun u ↦ u ^ ((i : ℕ) + 1))).trans
+      (hpow ((i : ℕ) + 1) (by omega) (by omega))
+  have hz := Matrix.eq_zero_of_forall_pow_sum_mul_pow_eq_zero hf hfv
+  have i : Fin U.card := ⟨0, hU.card_pos⟩
+  have hi := congr_fun hz i
+  have hfi : f i ≠ 0 := by
+    intro h
+    apply hU0
+    have hei : (e i : F) ∈ U := (e i).2
+    simpa [f, h] using hei
+  exact hfi (by simpa using hi)
+
 end BurnsidePrimeDegreeTheorem
