@@ -1,1 +1,8 @@
+import Solution.BanachStoneTheorem
+import Solution.ColorfulCaratheodoryTheorem
+import Solution.DLOQuantifierElimination
+import Solution.DeBruijnErdos
+import Solution.GleasonKahaneZelazkoTheorem
+import Solution.JordanDerangementTheorem
+import Solution.ParisHarringtonPrinciple
 import Solution.VonNeumannDoubleCommutantTheorem

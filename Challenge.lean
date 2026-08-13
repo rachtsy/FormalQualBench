@@ -1,1 +1,8 @@
+import Challenge.BanachStoneTheorem
+import Challenge.ColorfulCaratheodoryTheorem
+import Challenge.DLOQuantifierElimination
+import Challenge.DeBruijnErdos
+import Challenge.GleasonKahaneZelazkoTheorem
+import Challenge.JordanDerangementTheorem
+import Challenge.ParisHarringtonPrinciple
 import Challenge.VonNeumannDoubleCommutantTheorem
