@@ -1,0 +1,133 @@
+\section{Banach--Stone theorem}
+
+\begin{definition}[Faces of the unit sphere]
+\label{def:banach-stone-face}
+\lean{BanachStoneTheorem.face}
+\leanok
+For a compact space $X$, a point $x\in X$, and $\varepsilon\in\mathbb R$, define
+\[
+  F(x,\varepsilon)=\{f\in C(X,\mathbb R):\|f\|=1\text{ and }f(x)=\varepsilon\}.
+\]
+\end{definition}
+
+\begin{lemma}[The norm is attained]
+\label{lem:banach-stone-norm-attained}
+\lean{BanachStoneTheorem.exists_abs_apply_eq_norm}
+\leanok
+If $X$ is compact and nonempty and $f\in C(X,\mathbb R)$, then there is $x\in X$ such that
+$|f(x)|=\|f\|$.
+\end{lemma}
+
+\begin{lemma}[Faces are convex]
+\label{lem:banach-stone-face-convex}
+\lean{BanachStoneTheorem.face_convex}
+\leanok
+\uses{def:banach-stone-face}
+If $|\varepsilon|=1$, then $F(x,\varepsilon)$ is convex.
+\end{lemma}
+
+\begin{lemma}[Finite common-sign property]
+\label{lem:banach-stone-finite-common-sign}
+\lean{BanachStoneTheorem.finite_common_sign}
+\leanok
+\uses{lem:banach-stone-norm-attained}
+Let $A$ be a convex subset of the unit sphere of $C(X,\mathbb R)$.  Every finite
+subset of $A$ has a point $x\in X$ and a common sign $\varepsilon\in\{-1,1\}$ at
+which all its functions take the value $\varepsilon$.
+\end{lemma}
+
+\begin{lemma}[Convex subsets lie in a face]
+\label{lem:banach-stone-convex-subset-face}
+\lean{BanachStoneTheorem.convex_subset_face}
+\leanok
+\uses{def:banach-stone-face,lem:banach-stone-finite-common-sign}
+Every convex subset of the unit sphere of $C(X,\mathbb R)$ is contained in a
+face $F(x,\varepsilon)$ with $\varepsilon\in\{-1,1\}$.
+\end{lemma}
+
+\begin{lemma}[Separation by a function in a face]
+\label{lem:banach-stone-separator}
+\lean{BanachStoneTheorem.separator_mem_face}
+\leanok
+\uses{def:banach-stone-face}
+If $x\ne y$, then for either sign there is a continuous function in the face at
+$x$ taking the opposite sign at $y$.
+\end{lemma}
+
+\begin{lemma}[A face determines its point and sign]
+\label{lem:banach-stone-face-rigidity}
+\lean{BanachStoneTheorem.face_subset_face}
+\leanok
+\uses{lem:banach-stone-separator}
+If one signed face is contained in another, then the underlying points and signs
+are equal.
+\end{lemma}
+
+\begin{lemma}[Faces are maximal convex subsets]
+\label{lem:banach-stone-face-maximal}
+\lean{BanachStoneTheorem.face_maximal}
+\leanok
+\uses{lem:banach-stone-convex-subset-face,lem:banach-stone-face-rigidity}
+Each signed face is a maximal convex subset of the unit sphere.
+\end{lemma}
+
+\begin{lemma}[Linear isometries send faces to faces]
+\label{lem:banach-stone-isometry-faces}
+\lean{BanachStoneTheorem.exists_image_face_eq_face}
+\leanok
+\uses{lem:banach-stone-face-convex,lem:banach-stone-convex-subset-face,lem:banach-stone-face-maximal}
+A linear isometry between spaces of real-valued continuous functions maps each
+signed face onto a signed face.
+\end{lemma}
+
+\begin{definition}[The induced point map]
+\label{def:banach-stone-point-map}
+\lean{BanachStoneTheorem.pointMap}
+\leanok
+\uses{lem:banach-stone-isometry-faces}
+The image-of-faces correspondence defines a map between the underlying compact
+Hausdorff spaces.
+\end{definition}
+
+\begin{lemma}[Pointwise form of the isometry]
+\label{lem:banach-stone-map-apply}
+\lean{BanachStoneTheorem.map_apply_eq}
+\leanok
+\uses{def:banach-stone-point-map,lem:banach-stone-isometry-faces}
+For every $f$ and $y$, evaluation of the isometry at $y$ is, up to a sign,
+evaluation of $f$ at the induced point.
+\end{lemma}
+
+\begin{lemma}[Continuity of the induced point map]
+\label{lem:banach-stone-point-map-continuous}
+\lean{BanachStoneTheorem.continuous_pointMap}
+\leanok
+\uses{lem:banach-stone-map-apply}
+The induced point map is continuous.
+\end{lemma}
+
+\begin{lemma}[The point maps are inverse]
+\label{lem:banach-stone-point-map-inverse}
+\lean{BanachStoneTheorem.pointMap_symm_apply}
+\leanok
+\uses{lem:banach-stone-map-apply}
+The point map associated with an isometry and the point map associated with its
+inverse are mutually inverse.
+\end{lemma}
+
+\begin{definition}[The induced equivalence]
+\label{def:banach-stone-point-equiv}
+\lean{BanachStoneTheorem.pointEquiv}
+\leanok
+\uses{def:banach-stone-point-map,lem:banach-stone-point-map-inverse}
+The two inverse point maps define an equivalence between the underlying spaces.
+\end{definition}
+
+\begin{theorem}[Banach--Stone]
+\label{thm:banach-stone}
+\lean{BanachStoneTheorem.MainTheorem}
+\leanok
+\uses{def:banach-stone-point-equiv,lem:banach-stone-point-map-continuous}
+Let $X$ and $Y$ be compact Hausdorff spaces.  If $C(X,\mathbb R)$ and
+$C(Y,\mathbb R)$ are linearly isometric, then $X$ and $Y$ are homeomorphic.
+\end{theorem}

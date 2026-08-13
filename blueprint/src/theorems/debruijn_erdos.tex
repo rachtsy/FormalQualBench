@@ -1,0 +1,15 @@
+\section{De Bruijn--Erd\H{o}s theorem}
+
+\begin{theorem}[De Bruijn--Erd\H{o}s]
+\label{thm:debruijn-erdos}
+\lean{DeBruijnErdos.MainTheorem}
+\leanok
+Let $G$ be a graph and let $k\in\mathbb N$.  If every finite induced subgraph of
+$G$ is $k$-colorable, then $G$ is $k$-colorable.
+\end{theorem}
+
+\begin{proof}
+\leanok
+The formal proof applies the compactness principle for graph homomorphisms to
+the complete graph on $k$ vertices.
+\end{proof}

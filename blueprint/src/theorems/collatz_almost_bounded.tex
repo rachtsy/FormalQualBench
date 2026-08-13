@@ -1,0 +1,27 @@
+\section{Almost bounded values of the Collatz map}
+
+\begin{definition}[Collatz map]
+\label{def:collatz-map}
+\lean{CollatzMapAlmostBoundedValues.collatz}
+\leanok
+The Collatz map sends an even integer $n$ to $n/2$ and an odd integer $n$ to
+$3n+1$.
+\end{definition}
+
+\begin{definition}[Attaining a bounded value]
+\label{def:collatz-attains-below}
+\lean{CollatzMapAlmostBoundedValues.AttainsBelow}
+\leanok
+\uses{def:collatz-map}
+For a function $f:\mathbb N\to\mathbb N$, a starting value $n$ attains below
+$f(n)$ if some iterate of the Collatz map is strictly smaller than $f(n)$.
+\end{definition}
+
+\begin{theorem}[Almost all Collatz orbits attain almost bounded values]
+\label{thm:collatz-almost-bounded}
+\lean{CollatzMapAlmostBoundedValues.MainTheorem}
+\notready
+\uses{def:collatz-attains-below}
+For every function $f(n)\to\infty$, the exceptional set of starting values whose
+Collatz orbit never goes below $f(n)$ has logarithmic density zero.
+\end{theorem}

@@ -1,0 +1,30 @@
+\section{Colorful Carath\'eodory theorem}
+
+\begin{lemma}[Supporting inequality at a minimizing point]
+\label{lem:colorful-caratheodory-support}
+\lean{ColorfulCaratheodoryTheorem.inner_ge_of_min_on_convex}
+\leanok
+If $p$ minimizes the squared norm over a convex set $S$, then
+$\|p\|^2\leq \langle p,q\rangle$ for every $q\in S$.
+\end{lemma}
+
+\begin{theorem}[Finite colorful zero lemma]
+\label{thm:colorful-caratheodory-finite-zero}
+\lean{ColorfulCaratheodoryTheorem.finite_colorful_zero}
+\leanok
+\uses{lem:colorful-caratheodory-support}
+For $d+1$ finite color classes in a $d$-dimensional real inner-product space,
+if the origin lies in the convex hull of every color class, one can choose one
+point of each color so that the origin lies in the convex hull of the chosen
+points.
+\end{theorem}
+
+\begin{theorem}[Colorful Carath\'eodory]
+\label{thm:colorful-caratheodory}
+\lean{ColorfulCaratheodoryTheorem.MainTheorem}
+\leanok
+\uses{thm:colorful-caratheodory-finite-zero}
+If each of $d+1$ subsets of $\mathbb R^d$ contains the origin in its convex hull,
+then one can choose one point from each set such that the origin lies in the
+convex hull of the selected points.
+\end{theorem}
