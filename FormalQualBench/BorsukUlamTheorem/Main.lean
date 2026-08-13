@@ -12,14 +12,14 @@ abbrev UnitSphere (n : ℕ) : Type :=
 def antipode {n : ℕ} : UnitSphere n → UnitSphere n :=
   fun x => ⟨-x.1, by simpa [norm_neg] using x.2⟩
 
-private lemma continuous_antipode {n : ℕ} : Continuous (@antipode n) :=
+lemma continuous_antipode {n : ℕ} : Continuous (@antipode n) :=
   Continuous.subtype_mk continuous_subtype_val.neg _
 
-private lemma antipode_antipode {n : ℕ} (x : UnitSphere n) : antipode (antipode x) = x := by
+lemma antipode_antipode {n : ℕ} (x : UnitSphere n) : antipode (antipode x) = x := by
   ext i
   simp [antipode]
 
-private instance unitSphereConnected (n : ℕ) : ConnectedSpace (UnitSphere (n + 1)) := by
+instance unitSphereConnected (n : ℕ) : ConnectedSpace (UnitSphere (n + 1)) := by
   have hrank : 1 < Module.rank ℝ (EuclideanSpace ℝ (Fin (n + 2))) := by
     calc
       (1 : Cardinal) < ↑(n + 2 : ℕ) := by exact_mod_cast Nat.one_lt_succ_succ n

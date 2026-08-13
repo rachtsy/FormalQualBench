@@ -6,12 +6,12 @@ namespace VonNeumannDoubleCommutantTheorem
 open scoped Topology InnerProductSpace
 variable {H : Type*} [NormedAddCommGroup H] [InnerProductSpace ℂ H] [CompleteSpace H]
 noncomputable section
-private theorem closure_invt {f : H →L[ℂ] H} {s : Submodule ℂ H}
+theorem closure_invt {f : H →L[ℂ] H} {s : Submodule ℂ H}
     (hs : s ∈ Module.End.invtSubmodule f.toLinearMap) :
     s.topologicalClosure ∈ Module.End.invtSubmodule f.toLinearMap := by
   rw [Module.End.mem_invtSubmodule_iff_map_le] at hs ⊢
   exact (s.topologicalClosure_map f).trans (Submodule.topologicalClosure_mono hs)
-private theorem orthogonal_invt (K : Submodule ℂ H) {a : H →L[ℂ] H}
+theorem orthogonal_invt (K : Submodule ℂ H) {a : H →L[ℂ] H}
     (hK : K ∈ Module.End.invtSubmodule (star a).toLinearMap) :
     Kᗮ ∈ Module.End.invtSubmodule a.toLinearMap := by
   rw [Module.End.mem_invtSubmodule_iff_forall_mem_of_mem] at hK ⊢
@@ -23,46 +23,46 @@ private theorem orthogonal_invt (K : Submodule ℂ H) {a : H →L[ℂ] H}
       (ContinuousLinearMap.adjoint_inner_left a v u).symm
     _ = 0 := by
       simpa [ContinuousLinearMap.star_eq_adjoint] using hv (star a u) (hK u hu)
-private abbrev HSum (H ι : Type*) := PiLp 2 (fun _ : ι ↦ H)
-private def diag {ι : Type*} [Fintype ι] (a : H →L[ℂ] H) : HSum H ι →L[ℂ] HSum H ι :=
+abbrev HSum (H ι : Type*) := PiLp 2 (fun _ : ι ↦ H)
+def diag {ι : Type*} [Fintype ι] (a : H →L[ℂ] H) : HSum H ι →L[ℂ] HSum H ι :=
   let e := PiLp.continuousLinearEquiv 2 ℂ (fun _ : ι ↦ H)
   e.symm.toContinuousLinearMap ∘L
     ContinuousLinearMap.pi (fun i ↦ a ∘L ContinuousLinearMap.proj i) ∘L e.toContinuousLinearMap
-@[simp] private lemma diag_apply {ι : Type*} [Fintype ι] (a : H →L[ℂ] H)
+@[simp] lemma diag_apply {ι : Type*} [Fintype ι] (a : H →L[ℂ] H)
     (v : HSum H ι) (i : ι) : diag a v i = a (v i) := by simp [diag]
-@[simp] private lemma diag_star {ι : Type*} [Fintype ι] (a : H →L[ℂ] H) :
+@[simp] lemma diag_star {ι : Type*} [Fintype ι] (a : H →L[ℂ] H) :
     diag (ι := ι) (star a) = star (diag a) := by
   rw [ContinuousLinearMap.star_eq_adjoint, ContinuousLinearMap.star_eq_adjoint,
     ContinuousLinearMap.eq_adjoint_iff]
   intro v w
   simp only [diag_apply, PiLp.inner_apply]
   exact Finset.sum_congr rfl fun i _ ↦ ContinuousLinearMap.adjoint_inner_left a (w i) (v i)
-private def single {ι : Type*} [Fintype ι] [DecidableEq ι] (i : ι) : H →L[ℂ] HSum H ι :=
+def single {ι : Type*} [Fintype ι] [DecidableEq ι] (i : ι) : H →L[ℂ] HSum H ι :=
   (PiLp.continuousLinearEquiv 2 ℂ (fun _ : ι ↦ H)).symm.toContinuousLinearMap ∘L
     ContinuousLinearMap.single ℂ (fun _ : ι ↦ H) i
-@[simp] private lemma single_apply {ι : Type*} [Fintype ι] [DecidableEq ι]
+@[simp] lemma single_apply {ι : Type*} [Fintype ι] [DecidableEq ι]
     (i j : ι) (v : H) : single i v j = if j = i then v else 0 := by
   by_cases h : j = i
   · subst j
     simp [single, Pi.single_eq_same]
   · simp [single, h, Pi.single_eq_of_ne]
 
-@[simp] private lemma diag_single {ι : Type*} [Fintype ι] [DecidableEq ι]
+@[simp] lemma diag_single {ι : Type*} [Fintype ι] [DecidableEq ι]
     (a : H →L[ℂ] H) (j : ι) (v : H) : diag a (single j v) = single j (a v) := by
   ext i
   by_cases h : i = j <;> simp [h]
 
-private def entry {ι : Type*} [Fintype ι] [DecidableEq ι] (z : HSum H ι →L[ℂ] HSum H ι)
+def entry {ι : Type*} [Fintype ι] [DecidableEq ι] (z : HSum H ι →L[ℂ] HSum H ι)
     (i j : ι) : H →L[ℂ] H := PiLp.proj 2 (fun _ : ι ↦ H) i ∘L z ∘L single j
 
-private lemma coord_sum {ι : Type*} [Fintype ι] [DecidableEq ι]
+lemma coord_sum {ι : Type*} [Fintype ι] [DecidableEq ι]
     (z : HSum H ι →L[ℂ] HSum H ι) (i : ι) (v : HSum H ι) :
     z v i = ∑ j, entry z i j (v j) := by
   have hv : ∑ j, single j (v j) = v := by ext j; simp
   rw [← hv, map_sum]
   simp [entry]
 
-private theorem finite_approx {ι : Type*} [Fintype ι] [DecidableEq ι]
+theorem finite_approx {ι : Type*} [Fintype ι] [DecidableEq ι]
     (S : StarSubalgebra ℂ (H →L[ℂ] H)) {x : H →L[ℂ] H}
     (hx : x ∈ Set.centralizer (Set.centralizer (S : Set (H →L[ℂ] H)))) (ξ : HSum H ι) :
     diag x ξ ∈ closure ((fun a : H →L[ℂ] H ↦ diag a ξ) '' (S : Set (H →L[ℂ] H))) := by
@@ -118,7 +118,7 @@ private theorem finite_approx {ι : Type*} [Fintype ι] [DecidableEq ι]
   change diag x ξ ∈ closure (K0 : Set (HSum H ι)) at hxξ
   rwa [hK0] at hxξ
 
-private theorem wot_approx (S : StarSubalgebra ℂ (H →L[ℂ] H)) {x : H →L[ℂ] H}
+theorem wot_approx (S : StarSubalgebra ℂ (H →L[ℂ] H)) {x : H →L[ℂ] H}
     (hx : x ∈ Set.centralizer (Set.centralizer (S : Set (H →L[ℂ] H)))) :
     ContinuousLinearMap.toWOT (RingHom.id ℂ) H H x ∈
       closure (ContinuousLinearMap.toWOT (RingHom.id ℂ) H H '' (S : Set (H →L[ℂ] H))) := by
@@ -164,7 +164,7 @@ private theorem wot_approx (S : StarSubalgebra ℂ (H →L[ℂ] H)) {x : H →L[
     simpa [toWOT, ContinuousLinearMapWOT.sub_apply, ContinuousLinearMap.sub_apply] using hlt
   exact ⟨toWOT a, hs hball, a, ha, rfl⟩
 
-private theorem wot_centralizer_closed (T : Set (H →L[ℂ] H)) :
+theorem wot_centralizer_closed (T : Set (H →L[ℂ] H)) :
     IsClosed (ContinuousLinearMap.toWOT (RingHom.id ℂ) H H '' Set.centralizer T) := by
   let e := ContinuousLinearMap.toWOT (RingHom.id ℂ) H H
   have hs : e '' Set.centralizer T = ⋂ z ∈ T,

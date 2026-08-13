@@ -12,25 +12,25 @@ namespace BanachStoneTheorem
 open scoped BigOperators
 open Metric Set
 
-private def face {X : Type*} [TopologicalSpace X] [CompactSpace X]
+def face {X : Type*} [TopologicalSpace X] [CompactSpace X]
     (x : X) (ε : ℝ) : Set C(X, ℝ) :=
   {f | ‖f‖ = 1 ∧ f x = ε}
 
-private def boolSign (b : Bool) : ℝ := if b then 1 else -1
+def boolSign (b : Bool) : ℝ := if b then 1 else -1
 
 @[simp]
-private lemma boolSign_true : boolSign true = 1 := rfl
+lemma boolSign_true : boolSign true = 1 := rfl
 
 @[simp]
-private lemma boolSign_false : boolSign false = -1 := rfl
+lemma boolSign_false : boolSign false = -1 := rfl
 
-private lemma abs_boolSign (b : Bool) : |boolSign b| = 1 := by
+lemma abs_boolSign (b : Bool) : |boolSign b| = 1 := by
   cases b <;> simp [boolSign]
 
-private lemma boolSign_ne_zero (b : Bool) : boolSign b ≠ 0 := by
+lemma boolSign_ne_zero (b : Bool) : boolSign b ≠ 0 := by
   cases b <;> simp [boolSign]
 
-private lemma boolSign_injective : Function.Injective boolSign := by
+lemma boolSign_injective : Function.Injective boolSign := by
   intro b c h
   cases b <;> cases c
   · rfl
@@ -38,7 +38,7 @@ private lemma boolSign_injective : Function.Injective boolSign := by
   · norm_num [boolSign] at h
   · rfl
 
-private lemma exists_abs_apply_eq_norm {X : Type*} [TopologicalSpace X] [CompactSpace X]
+lemma exists_abs_apply_eq_norm {X : Type*} [TopologicalSpace X] [CompactSpace X]
     [Nonempty X] (f : C(X, ℝ)) : ∃ x, |f x| = ‖f‖ := by
   obtain ⟨x, -, hx⟩ := CompactSpace.isCompact_univ.exists_isMaxOn Set.univ_nonempty
     (map_continuous f).norm.continuousOn
@@ -48,7 +48,7 @@ private lemma exists_abs_apply_eq_norm {X : Type*} [TopologicalSpace X] [Compact
     intro y
     simpa [Real.norm_eq_abs] using hx (Set.mem_univ y)
 
-private lemma face_convex {X : Type*} [TopologicalSpace X] [CompactSpace X]
+lemma face_convex {X : Type*} [TopologicalSpace X] [CompactSpace X]
     (x : X) {ε : ℝ} (hε : |ε| = 1) : Convex ℝ (face x ε) := by
   intro f hf g hg a b ha hb hab
   have heval : (a • f + b • g) x = ε := by
@@ -68,12 +68,12 @@ private lemma face_convex {X : Type*} [TopologicalSpace X] [CompactSpace X]
         simpa [Real.norm_eq_abs] using
           ContinuousMap.norm_coe_le_norm (a • f + b • g) x
 
-private lemma face_subset_sphere {X : Type*} [TopologicalSpace X] [CompactSpace X]
+lemma face_subset_sphere {X : Type*} [TopologicalSpace X] [CompactSpace X]
     (x : X) (ε : ℝ) : face x ε ⊆ sphere (0 : C(X, ℝ)) 1 := by
   intro f hf
   simpa [mem_sphere, dist_zero_right] using hf.1
 
-private lemma weighted_eq_one {ι : Type*} (t : Finset ι) (w : ℝ) (hw : 0 < w)
+lemma weighted_eq_one {ι : Type*} (t : Finset ι) (w : ℝ) (hw : 0 < w)
     (a : ι → ℝ) (hle : ∀ i ∈ t, a i ≤ 1)
     (hweight : ∑ _i ∈ t, w = 1) (hsum : ∑ i ∈ t, w * a i = 1) :
     ∀ i ∈ t, a i = 1 := by
@@ -89,7 +89,7 @@ private lemma weighted_eq_one {ι : Type*} (t : Finset ι) (w : ℝ) (hw : 0 < w
   rw [hsum, hweight] at hslt
   exact (lt_irrefl 1 hslt).elim
 
-private lemma finite_common_sign {X : Type*} [TopologicalSpace X] [CompactSpace X]
+lemma finite_common_sign {X : Type*} [TopologicalSpace X] [CompactSpace X]
     [Nonempty X] {A : Set C(X, ℝ)} (hconv : Convex ℝ A)
     (hsphere : A ⊆ sphere (0 : C(X, ℝ)) 1) (t : Finset C(X, ℝ))
     (ht : ∀ f ∈ t, f ∈ A) : ∃ x b, ∀ f ∈ t, f x = boolSign b := by
@@ -125,17 +125,17 @@ private lemma finite_common_sign {X : Type*} [TopologicalSpace X] [CompactSpace 
     simp only [boolSign_false]
     linarith
 
-private def commonSignSet {X : Type*} [TopologicalSpace X]
+def commonSignSet {X : Type*} [TopologicalSpace X]
     (f : C(X, ℝ)) : Set (X × Bool) :=
   {p | f p.1 = boolSign p.2}
 
-private lemma isClosed_commonSignSet {X : Type*} [TopologicalSpace X] (f : C(X, ℝ)) :
+lemma isClosed_commonSignSet {X : Type*} [TopologicalSpace X] (f : C(X, ℝ)) :
     IsClosed (commonSignSet f) := by
   apply isClosed_eq
   · exact f.continuous.comp continuous_fst
   · exact (show Continuous boolSign from continuous_of_discreteTopology).comp continuous_snd
 
-private lemma convex_subset_face {X : Type*} [TopologicalSpace X] [CompactSpace X]
+lemma convex_subset_face {X : Type*} [TopologicalSpace X] [CompactSpace X]
     [T2Space X] [Nonempty X] {A : Set C(X, ℝ)} (hconv : Convex ℝ A)
     (hsphere : A ⊆ sphere (0 : C(X, ℝ)) 1) :
     ∃ x b, A ⊆ face x (boolSign b) := by
@@ -160,7 +160,7 @@ private lemma convex_subset_face {X : Type*} [TopologicalSpace X] [CompactSpace 
   have heval := Set.mem_iInter.mp hp ⟨f, hf⟩
   exact ⟨hnorm, heval⟩
 
-private lemma separator_mem_face {X : Type*} [TopologicalSpace X] [CompactSpace X]
+lemma separator_mem_face {X : Type*} [TopologicalSpace X] [CompactSpace X]
     [T2Space X] {x y : X} (hxy : x ≠ y) (b : Bool) :
     ∃ f ∈ face x (boolSign b), f y = -boolSign b := by
   obtain ⟨h, hx, hy, hrange⟩ := exists_continuous_zero_one_of_isClosed
@@ -193,7 +193,7 @@ private lemma separator_mem_face {X : Type*} [TopologicalSpace X] [CompactSpace 
         simpa [Real.norm_eq_abs] using ContinuousMap.norm_coe_le_norm f x
   exact ⟨f, ⟨le_antisymm hnorm_le hnorm_ge, hfx⟩, hfy⟩
 
-private lemma face_subset_face {X : Type*} [TopologicalSpace X] [CompactSpace X]
+lemma face_subset_face {X : Type*} [TopologicalSpace X] [CompactSpace X]
     [T2Space X] [Nonempty X] {x y : X} {b c : Bool}
     (h : face x (boolSign b) ⊆ face y (boolSign c)) : x = y ∧ b = c := by
   have hconst : boolSign b • (1 : C(X, ℝ)) ∈ face x (boolSign b) := by
@@ -211,7 +211,7 @@ private lemma face_subset_face {X : Type*} [TopologicalSpace X] [CompactSpace X]
   have : boolSign c = 0 := by linarith
   exact boolSign_ne_zero c this
 
-private lemma face_maximal {X : Type*} [TopologicalSpace X] [CompactSpace X]
+lemma face_maximal {X : Type*} [TopologicalSpace X] [CompactSpace X]
     [T2Space X] [Nonempty X] (x : X) (b : Bool) {B : Set C(X, ℝ)}
     (hconv : Convex ℝ B) (hsphere : B ⊆ sphere (0 : C(X, ℝ)) 1)
     (hsub : face x (boolSign b) ⊆ B) : B ⊆ face x (boolSign b) := by
@@ -219,7 +219,7 @@ private lemma face_maximal {X : Type*} [TopologicalSpace X] [CompactSpace X]
   obtain ⟨hxy, hbc⟩ := face_subset_face (hsub.trans hB)
   simpa [hxy, hbc] using hB
 
-private lemma exists_image_face_eq_face
+lemma exists_image_face_eq_face
     {X Y : Type*} [TopologicalSpace X] [CompactSpace X] [T2Space X] [Nonempty X]
     [TopologicalSpace Y] [CompactSpace Y] [T2Space Y] [Nonempty Y]
     (e : C(X, ℝ) ≃ₗᵢ[ℝ] C(Y, ℝ)) (x : X) (b : Bool) :
@@ -243,26 +243,26 @@ private lemma exists_image_face_eq_face
   have hpre := face_maximal x b hpreconv hpresphere hsource
   exact ⟨e.symm g, hpre ⟨g, hg, rfl⟩, e.apply_symm_apply g⟩
 
-private noncomputable def pointMap
+noncomputable def pointMap
     {X Y : Type*} [TopologicalSpace X] [CompactSpace X] [T2Space X] [Nonempty X]
     [TopologicalSpace Y] [CompactSpace Y] [T2Space Y] [Nonempty Y]
     (e : C(X, ℝ) ≃ₗᵢ[ℝ] C(Y, ℝ)) (y : Y) : X :=
   Classical.choose (exists_image_face_eq_face e.symm y true)
 
-private noncomputable def pointSign
+noncomputable def pointSign
     {X Y : Type*} [TopologicalSpace X] [CompactSpace X] [T2Space X] [Nonempty X]
     [TopologicalSpace Y] [CompactSpace Y] [T2Space Y] [Nonempty Y]
     (e : C(X, ℝ) ≃ₗᵢ[ℝ] C(Y, ℝ)) (y : Y) : Bool :=
   Classical.choose (Classical.choose_spec (exists_image_face_eq_face e.symm y true))
 
-private lemma pointMap_spec
+lemma pointMap_spec
     {X Y : Type*} [TopologicalSpace X] [CompactSpace X] [T2Space X] [Nonempty X]
     [TopologicalSpace Y] [CompactSpace Y] [T2Space Y] [Nonempty Y]
     (e : C(X, ℝ) ≃ₗᵢ[ℝ] C(Y, ℝ)) (y : Y) :
     e.symm '' face y 1 = face (pointMap e y) (boolSign (pointSign e y)) :=
   Classical.choose_spec (Classical.choose_spec (exists_image_face_eq_face e.symm y true))
 
-private lemma map_face_apply
+lemma map_face_apply
     {X Y : Type*} [TopologicalSpace X] [CompactSpace X] [T2Space X] [Nonempty X]
     [TopologicalSpace Y] [CompactSpace Y] [T2Space Y] [Nonempty Y]
     (e : C(X, ℝ) ≃ₗᵢ[ℝ] C(Y, ℝ)) (y : Y) {f : C(X, ℝ)}
@@ -276,7 +276,7 @@ private lemma map_face_apply
   rw [heq]
   exact hg.2
 
-private lemma map_one_apply
+lemma map_one_apply
     {X Y : Type*} [TopologicalSpace X] [CompactSpace X] [T2Space X] [Nonempty X]
     [TopologicalSpace Y] [CompactSpace Y] [T2Space Y] [Nonempty Y]
     (e : C(X, ℝ) ≃ₗᵢ[ℝ] C(Y, ℝ)) (y : Y) :
@@ -291,7 +291,7 @@ private lemma map_one_apply
     linarith
   · simpa [b, hb] using h
 
-private lemma abs_perturb_le (b : Bool) {δ a : ℝ} (hδ : 0 ≤ δ)
+lemma abs_perturb_le (b : Bool) {δ a : ℝ} (hδ : 0 ≤ δ)
     (hδa : δ * |a| ≤ 1) :
     |boolSign b * (1 - δ * |a|) + δ * a| ≤ 1 ∧
       |boolSign b * (1 - δ * |a|) - δ * a| ≤ 1 := by
@@ -300,7 +300,7 @@ private lemma abs_perturb_le (b : Bool) {δ a : ℝ} (hδ : 0 ≤ δ)
   all_goals constructor
   all_goals constructor <;> nlinarith [le_abs_self a, neg_le_abs a]
 
-private lemma map_apply_eq_zero_of_apply_eq_zero
+lemma map_apply_eq_zero_of_apply_eq_zero
     {X Y : Type*} [TopologicalSpace X] [CompactSpace X] [T2Space X] [Nonempty X]
     [TopologicalSpace Y] [CompactSpace Y] [T2Space Y] [Nonempty Y]
     (e : C(X, ℝ) ≃ₗᵢ[ℝ] C(Y, ℝ)) (f : C(X, ℝ)) (y : Y)
@@ -351,7 +351,7 @@ private lemma map_apply_eq_zero_of_apply_eq_zero
   change e base y - δ * e f y = 1 at heminus
   nlinarith
 
-private lemma map_apply_eq
+lemma map_apply_eq
     {X Y : Type*} [TopologicalSpace X] [CompactSpace X] [T2Space X] [Nonempty X]
     [TopologicalSpace Y] [CompactSpace Y] [T2Space Y] [Nonempty Y]
     (e : C(X, ℝ) ≃ₗᵢ[ℝ] C(Y, ℝ)) (f : C(X, ℝ)) (y : Y) :
@@ -364,7 +364,7 @@ private lemma map_apply_eq
   rw [map_one_apply] at hzero
   linarith
 
-private lemma continuous_pointMap
+lemma continuous_pointMap
     {X Y : Type*} [TopologicalSpace X] [CompactSpace X] [T2Space X] [Nonempty X]
     [TopologicalSpace Y] [CompactSpace Y] [T2Space Y] [Nonempty Y]
     (e : C(X, ℝ) ≃ₗᵢ[ℝ] C(Y, ℝ)) : Continuous (pointMap e) := by
@@ -394,7 +394,7 @@ private lemma continuous_pointMap
   have : (1 : ℝ) / 2 < 0 := by simpa [V, hmap] using hz
   norm_num at this
 
-private lemma pointMap_symm_apply
+lemma pointMap_symm_apply
     {X Y : Type*} [TopologicalSpace X] [CompactSpace X] [T2Space X] [Nonempty X]
     [TopologicalSpace Y] [CompactSpace Y] [T2Space Y] [Nonempty Y]
     (e : C(X, ℝ) ≃ₗᵢ[ℝ] C(Y, ℝ)) (y : Y) :
@@ -432,14 +432,14 @@ private lemma pointMap_symm_apply
   rw [hy (Set.mem_singleton y), hy' (Set.mem_singleton y')] at this
   norm_num at this
 
-private lemma pointMap_apply_symm
+lemma pointMap_apply_symm
     {X Y : Type*} [TopologicalSpace X] [CompactSpace X] [T2Space X] [Nonempty X]
     [TopologicalSpace Y] [CompactSpace Y] [T2Space Y] [Nonempty Y]
     (e : C(X, ℝ) ≃ₗᵢ[ℝ] C(Y, ℝ)) (x : X) :
     pointMap e (pointMap e.symm x) = x := by
   simpa using pointMap_symm_apply e.symm x
 
-private noncomputable def pointEquiv
+noncomputable def pointEquiv
     {X Y : Type*} [TopologicalSpace X] [CompactSpace X] [T2Space X] [Nonempty X]
     [TopologicalSpace Y] [CompactSpace Y] [T2Space Y] [Nonempty Y]
     (e : C(X, ℝ) ≃ₗᵢ[ℝ] C(Y, ℝ)) : Y ≃ X where

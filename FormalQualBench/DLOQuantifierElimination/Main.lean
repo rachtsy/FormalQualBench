@@ -16,7 +16,7 @@ def EliminatesQuantifiers {L : Language} (T : L.Theory) : Prop :=
         ∀ (v : α → M) (xs : Fin n → M),
           φ.Realize v xs ↔ ψ.Realize v xs
 
-private theorem realize_iff_of_fgequiv
+theorem realize_iff_of_fgequiv
     {M N : Type*} [Language.order.Structure M] [Language.order.Structure N]
     (hMN : Language.order.IsExtensionPair M N)
     (hNM : Language.order.IsExtensionPair N M)
@@ -116,7 +116,7 @@ private theorem realize_iff_of_fgequiv
         rw [Fin.comp_snoc] at hleft
         simpa [v', xs', a', Function.comp_def] using hleft
 
-private theorem isQF_foldr_inf {α : Type*} {n : ℕ}
+theorem isQF_foldr_inf {α : Type*} {n : ℕ}
     (l : List (Language.order.BoundedFormula α n))
     (hl : ∀ φ ∈ l, φ.IsQF) : (l.foldr (· ⊓ ·) ⊤).IsQF := by
   induction l with
@@ -124,7 +124,7 @@ private theorem isQF_foldr_inf {α : Type*} {n : ℕ}
   | cons φ l ih =>
       exact (hl φ (by simp)).inf (ih fun ψ hψ ↦ hl ψ (by simp [hψ]))
 
-private theorem isQF_foldr_sup {α : Type*} {n : ℕ}
+theorem isQF_foldr_sup {α : Type*} {n : ℕ}
     (l : List (Language.order.BoundedFormula α n))
     (hl : ∀ φ ∈ l, φ.IsQF) : (l.foldr (· ⊔ ·) ⊥).IsQF := by
   induction l with
@@ -132,7 +132,7 @@ private theorem isQF_foldr_sup {α : Type*} {n : ℕ}
   | cons φ l ih =>
       exact (hl φ (by simp)).sup (ih fun ψ hψ ↦ hl ψ (by simp [hψ]))
 
-private def orderAtom {α : Type*} {n : ℕ}
+def orderAtom {α : Type*} {n : ℕ}
     (r : (α ⊕ Fin n) → (α ⊕ Fin n) → Bool)
     (p : (α ⊕ Fin n) × (α ⊕ Fin n)) : Language.order.BoundedFormula α n :=
   if r p.1 p.2 then
@@ -142,14 +142,14 @@ private def orderAtom {α : Type*} {n : ℕ}
     ∼((Language.leSymb : Language.order.Relations 2).boundedFormula₂
       (Language.Term.var p.1) (Language.Term.var p.2))
 
-private noncomputable def orderDiagram {α : Type*} [Finite α] {n : ℕ}
+noncomputable def orderDiagram {α : Type*} [Finite α] {n : ℕ}
     (r : (α ⊕ Fin n) → (α ⊕ Fin n) → Bool) : Language.order.BoundedFormula α n := by
   classical
   let _ := Fintype.ofFinite α
   exact ((Finset.univ : Finset ((α ⊕ Fin n) × (α ⊕ Fin n))).toList.map
     (orderAtom r)).foldr (· ⊓ ·) ⊤
 
-private theorem orderAtom_isQF {α : Type*}
+theorem orderAtom_isQF {α : Type*}
     (r : (α ⊕ Fin n) → (α ⊕ Fin n) → Bool)
     (p : (α ⊕ Fin n) × (α ⊕ Fin n)) : (orderAtom r p).IsQF := by
   classical
@@ -158,7 +158,7 @@ private theorem orderAtom_isQF {α : Type*}
   · exact Language.Relations.isQF _ _
   · exact (Language.Relations.isQF _ _).not
 
-private theorem orderDiagram_isQF {α : Type*} [Finite α]
+theorem orderDiagram_isQF {α : Type*} [Finite α]
     (r : (α ⊕ Fin n) → (α ⊕ Fin n) → Bool) : (orderDiagram r).IsQF := by
   classical
   let _ := Fintype.ofFinite α
@@ -168,7 +168,7 @@ private theorem orderDiagram_isQF {α : Type*} [Finite α]
   obtain ⟨p, _, rfl⟩ := hψ
   exact orderAtom_isQF r p
 
-private theorem realize_orderAtom {α : Type*}
+theorem realize_orderAtom {α : Type*}
     (r : (α ⊕ Fin n) → (α ⊕ Fin n) → Bool)
     (p : (α ⊕ Fin n) × (α ⊕ Fin n))
     {M : Type*} [Language.order.Structure M] [LE M]
@@ -182,7 +182,7 @@ private theorem realize_orderAtom {α : Type*}
   · have hr' : r p.1 p.2 = false := Bool.eq_false_of_not_eq_true hr
     simp [orderAtom, hr']
 
-private theorem realize_orderDiagram {α : Type*} [Finite α]
+theorem realize_orderDiagram {α : Type*} [Finite α]
     (r : (α ⊕ Fin n) → (α ⊕ Fin n) → Bool)
     {M : Type*} [Language.order.Structure M] [LE M]
     [Language.order.OrderedStructure M]
@@ -200,7 +200,7 @@ private theorem realize_orderDiagram {α : Type*} [Finite α]
     obtain ⟨p, _, rfl⟩ := hψ
     exact (realize_orderAtom r p v xs).mpr (h p.1 p.2)
 
-private noncomputable def qfForFinite {α : Type*} [Finite α] {n : ℕ}
+noncomputable def qfForFinite {α : Type*} [Finite α] {n : ℕ}
     (φ : Language.order.BoundedFormula α n) : Language.order.BoundedFormula α n := by
   classical
   let _ := Fintype.ofFinite α
@@ -212,7 +212,7 @@ private noncomputable def qfForFinite {α : Type*} [Finite α] {n : ℕ}
   exact ((Finset.univ : Finset Profiles).toList.filter Good).map
     (fun r ↦ orderDiagram r) |>.foldr (· ⊔ ·) ⊥
 
-private theorem qfForFinite_isQF {α : Type*} [Finite α] {n : ℕ}
+theorem qfForFinite_isQF {α : Type*} [Finite α] {n : ℕ}
     (φ : Language.order.BoundedFormula α n) : (qfForFinite φ).IsQF := by
   classical
   let _ := Fintype.ofFinite α
@@ -223,7 +223,7 @@ private theorem qfForFinite_isQF {α : Type*} [Finite α] {n : ℕ}
   obtain ⟨r, _, rfl⟩ := hψ
   exact orderDiagram_isQF r
 
-private theorem eq_iff_eq_of_same_orderProfile
+theorem eq_iff_eq_of_same_orderProfile
     {β M N : Type*} [PartialOrder M] [PartialOrder N]
     (x : β → M) (y : β → N)
     (h : ∀ i j, (x i ≤ x j ↔ y i ≤ y j)) (i j : β) :
@@ -238,7 +238,7 @@ private theorem eq_iff_eq_of_same_orderProfile
     · exact (h i j).mpr hij.le
     · exact (h j i).mpr hij.ge
 
-private noncomputable def rangeOrderIso
+noncomputable def rangeOrderIso
     {β M N : Type*} [PartialOrder M] [PartialOrder N]
     (x : β → M) (y : β → N)
     (h : ∀ i j, (x i ≤ x j ↔ y i ≤ y j)) : Set.range x ≃o Set.range y := by
@@ -268,7 +268,7 @@ private noncomputable def rangeOrderIso
   intro a b
   exact hg_le a b
 
-private theorem rangeOrderIso_apply
+theorem rangeOrderIso_apply
     {β M N : Type*} [PartialOrder M] [PartialOrder N]
     (x : β → M) (y : β → N)
     (h : ∀ i j, (x i ≤ x j ↔ y i ≤ y j)) (i : β) :
@@ -279,7 +279,7 @@ private theorem rangeOrderIso_apply
   exact (eq_iff_eq_of_same_orderProfile x y h _ _).mp
     (Classical.choose_spec (show x i ∈ Set.range x from ⟨i, rfl⟩))
 
-private noncomputable def fgequivOfSameOrderProfile
+noncomputable def fgequivOfSameOrderProfile
     {β M N : Type*} [Finite β]
     [Language.order.Structure M] [Language.order.Structure N]
     [LinearOrder M] [LinearOrder N]
@@ -298,7 +298,7 @@ private noncomputable def fgequivOfSameOrderProfile
           (by simp [T, Substructure.closure_eq_of_isRelational]))
   exact ⟨⟨S, T, StrongHomClass.toEquiv eST⟩, Substructure.fg_closure (Set.finite_range x)⟩
 
-private theorem fgequivOfSameOrderProfile_apply
+theorem fgequivOfSameOrderProfile_apply
     {β M N : Type*} [Finite β]
     [Language.order.Structure M] [Language.order.Structure N]
     [LinearOrder M] [LinearOrder N]
@@ -313,7 +313,7 @@ private theorem fgequivOfSameOrderProfile_apply
   change ((rangeOrderIso x y h ⟨x i, ⟨i, rfl⟩⟩ : Set.range y) : N) = y i
   exact rangeOrderIso_apply x y h i
 
-private theorem realize_qfForFinite {α : Type*} [Finite α] {n : ℕ}
+theorem realize_qfForFinite {α : Type*} [Finite α] {n : ℕ}
     (φ : Language.order.BoundedFormula α n)
     (M : Type*) [Language.order.Structure M]
     [M ⊨ Language.order.dlo ∪ Language.order.nonemptyTheory]
@@ -447,7 +447,7 @@ private theorem realize_qfForFinite {α : Type*} [Finite α] {n : ℕ}
     · funext i
       exact (hmapxs i).symm
 
-private theorem isQF_subst {L : Language} {α β : Type*} {n : ℕ}
+theorem isQF_subst {L : Language} {α β : Type*} {n : ℕ}
     {φ : L.BoundedFormula α n} (hφ : φ.IsQF) (f : α → L.Term β) :
     (φ.subst f).IsQF := by
   induction hφ with

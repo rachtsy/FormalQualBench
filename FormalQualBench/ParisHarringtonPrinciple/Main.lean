@@ -30,12 +30,12 @@ The following infinite Ramsey proof is adapted from Yann Pequignot's
 Copyright (c) 2026 Yann Pequignot. Released under the Apache License 2.0.
 -/
 
-private theorem exists_infinite_fiber_nat {κ : Type*} [Finite κ] (f : ℕ → κ) :
+theorem exists_infinite_fiber_nat {κ : Type*} [Finite κ] (f : ℕ → κ) :
     ∃ k : κ, {n : ℕ | f n = k}.Infinite := by
   obtain ⟨k, hk⟩ := Finite.exists_infinite_fiber f
   exact ⟨k, Set.infinite_coe_iff.mp hk⟩
 
-private structure RamseyState {κ : Type*} (c : Finset ℕ → κ) (r : ℕ) where
+structure RamseyState {κ : Type*} (c : Finset ℕ → κ) (r : ℕ) where
   vert : ℕ
   col : κ
   succ : Set ℕ
@@ -43,7 +43,7 @@ private structure RamseyState {κ : Type*} (c : Finset ℕ → κ) (r : ℕ) whe
   hgt : ∀ x ∈ succ, vert < x
   hprop : ∀ t : Finset ℕ, ↑t ⊆ succ → t.card = r → c (insert vert t) = col
 
-private theorem infinite_ramsey {κ : Type*} [Finite κ] (r : ℕ) (c : Finset ℕ → κ)
+theorem infinite_ramsey {κ : Type*} [Finite κ] (r : ℕ) (c : Finset ℕ → κ)
     {M : Set ℕ} (hM : M.Infinite) :
     ∃ N ⊆ M, N.Infinite ∧ ∃ col : κ,
       ∀ t : Finset ℕ, ↑t ⊆ N → t.card = r → c t = col := by
@@ -132,25 +132,25 @@ private theorem infinite_ramsey {κ : Type*} [Finite κ] (r : ℕ) (c : Finset �
       rw [hVm, Finset.insert_erase ha_mem, hmJ] at key
       exact key
 
-private def positiveEmbedding (N : ℕ) : Fin N ↪ ℕ where
+def positiveEmbedding (N : ℕ) : Fin N ↪ ℕ where
   toFun x := x + 1
   inj' := by
     intro x y hxy
     exact Fin.ext (Nat.add_right_cancel hxy)
 
-private def IsGoodColoringSet (k m N r : ℕ) (c : Finset (Fin N) → Fin r)
+def IsGoodColoringSet (k m N r : ℕ) (c : Finset (Fin N) → Fin r)
     (H : Finset (Fin N)) : Prop :=
   m ≤ H.card ∧
   (∃ x ∈ H, x.val + 1 ≤ H.card) ∧
   IsHomogeneous k H c
 
-private def IsBadColoring (k m N r : ℕ) (c : Finset (Fin N) → Fin r) : Prop :=
+def IsBadColoring (k m N r : ℕ) (c : Finset (Fin N) → Fin r) : Prop :=
   ∀ H, ¬IsGoodColoringSet k m N r c H
 
-private abbrev BadColoring (k m N r : ℕ) :=
+abbrev BadColoring (k m N r : ℕ) :=
   {c : Finset (Fin N) → Fin r // IsBadColoring k m N r c}
 
-private theorem isHomogeneous_map_iff {α β κ : Type*} [DecidableEq α] [DecidableEq β]
+theorem isHomogeneous_map_iff {α β κ : Type*} [DecidableEq α] [DecidableEq β]
     (e : α ↪ β) (k : ℕ) (H : Finset α) (c : Finset β → κ) :
     IsHomogeneous k (H.map e) c ↔ IsHomogeneous k H (fun s ↦ c (s.map e)) := by
   rw [IsHomogeneous, IsHomogeneous, Finset.powersetCard_map]
@@ -162,7 +162,7 @@ private theorem isHomogeneous_map_iff {α β κ : Type*} [DecidableEq α] [Decid
     obtain ⟨t', ht', rfl⟩ := Finset.mem_map.mp ht
     exact h s' hs' t' ht'
 
-private def BadColoring.restrict {k m r i j : ℕ} (hij : i ≤ j)
+def BadColoring.restrict {k m r i j : ℕ} (hij : i ≤ j)
     (c : BadColoring k m j r) : BadColoring k m i r := by
   refine ⟨fun s ↦ c.1 (s.map (Fin.castLEEmb hij)), ?_⟩
   intro H hgood
@@ -172,14 +172,14 @@ private def BadColoring.restrict {k m r i j : ℕ} (hij : i ≤ j)
     exact ⟨Fin.castLE hij x, Finset.mem_map_of_mem _ hxH, by simpa using hx⟩
   · exact (isHomogeneous_map_iff (Fin.castLEEmb hij) k H c.1).2 hgood.2.2
 
-private theorem BadColoring.restrict_refl {k m r N : ℕ} (c : BadColoring k m N r) :
+theorem BadColoring.restrict_refl {k m r N : ℕ} (c : BadColoring k m N r) :
     c.restrict (le_refl N) = c := by
   apply Subtype.ext
   funext s
   change c.1 (s.map (Fin.castLEEmb (le_refl N))) = c.1 s
   rw [show s.map (Fin.castLEEmb (le_refl N)) = s by ext x; simp]
 
-private theorem BadColoring.restrict_trans {k m r i j l : ℕ} (hij : i ≤ j) (hjl : j ≤ l)
+theorem BadColoring.restrict_trans {k m r i j l : ℕ} (hij : i ≤ j) (hjl : j ≤ l)
     (c : BadColoring k m l r) :
     (c.restrict hjl).restrict hij = c.restrict (hij.trans hjl) := by
   apply Subtype.ext
@@ -189,7 +189,7 @@ private theorem BadColoring.restrict_trans {k m r i j l : ℕ} (hij : i ≤ j) (
   rw [show (s.map (Fin.castLEEmb hij)).map (Fin.castLEEmb hjl) =
       s.map (Fin.castLEEmb (hij.trans hjl)) by ext x; simp]
 
-private theorem exists_uniform_good_bound (k r m : ℕ) (_hr : 0 < r) (_hm : k ≤ m) :
+theorem exists_uniform_good_bound (k r m : ℕ) (_hr : 0 < r) (_hm : k ≤ m) :
     ∃ N : ℕ, ∀ c : Finset (Fin N) → Fin r, ∃ H, IsGoodColoringSet k m N r c H := by
   by_contra hno
   push_neg at hno
