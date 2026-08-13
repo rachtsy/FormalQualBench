@@ -1,1 +1,1 @@
-import Challenge.DeBruijnErdos
+import Challenge.VonNeumannDoubleCommutantTheorem
