@@ -1,0 +1,1413 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Dependency graph</title>
+  <meta name="generator" content="plasTeX" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="styles/theme-white.css" />
+  <link rel="stylesheet" href="styles/dep_graph.css" />
+  
+  <script type="text/x-mathjax-config">
+  
+    MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+  
+  </script>
+
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">  </script>
+
+
+<link rel="stylesheet" href="styles/extra_styles.css" />
+
+</head>
+
+<body>
+<header>
+  <a class="toc" href="index.html">Home</a>
+  <h1 id="doc_title">Dependencies</h1>
+</header>
+<div class="wrapper">
+<div class="content">
+  <div id="Legend">
+    <span id="legend_title" class="title">Legend
+    <div class="btn">
+       <div class="bar"></div>
+       <div class="bar"></div>
+       <div class="bar"></div>
+    </div></span> 
+    <dl class="legend">
+      
+      <dt>Boxes</dt><dd>definitions</dd>
+      
+      <dt>Ellipses</dt><dd>theorems and lemmas</dd>
+      
+      <dt>Blue border</dt><dd>the <em>statement</em> of this result is ready to be formalized; all prerequisites are done</dd>
+      
+      <dt>Orange border</dt><dd>the <em>statement</em> of this result is not ready to be formalized; the blueprint needs more work</dd>
+      
+      <dt>Blue background</dt><dd>the <em>proof</em> of this result is ready to be formalized; all prerequisites are done</dd>
+      
+      <dt>Green border</dt><dd>the <em>statement</em> of this result is formalized</dd>
+      
+      <dt>Green background</dt><dd>the <em>proof</em> of this result is formalized</dd>
+      
+      <dt>Dark green background</dt><dd>the <em>proof</em> of this result and all its ancestors are formalized</dd>
+      
+      <dt>Dark green border</dt><dd>this is in Mathlib</dd>
+      
+    </dl>
+  </div>
+    <div id="graph"></div>
+<div id="statements">
+
+    
+    <div class="dep-modal-container" id="def:banach-stone-face_modal">
+      <div class="dep-modal-content">
+          <button class="dep-closebtn">
+<svg  class="icon icon-cross "><use xlink:href="symbol-defs.svg#icon-cross"></use></svg>
+</button>
+        
+  <div class="thm" id="def:banach-stone-face" style="display: none">
+    <div class="thm_thmheading">
+      <span class="definition_thmcaption">
+      Definition
+      </span>
+      <span class="definition_thmlabel">1</span><span class="definition_thmtitle">Faces of the unit sphere</span></div>
+    <div class="thm_thmcontent"><p>   For a compact space \(X\), a point \(x\in X\), and \(\varepsilon \in \mathbb R\), define </p>
+<div class="displaymath" id="a0000000026">
+  \[  F(x,\varepsilon )=\{ f\in C(X,\mathbb R):\| f\| =1\text{ and }f(x)=\varepsilon \} .  \]
+</div>
+</div>
+
+    <a class="latex_link" href="sect0002.html#def:banach-stone-face">LaTeX</a>
+    
+    
+  <a class="lean_link lean_decl" href=":/find/#doc/BanachStoneTheorem.face">Lean</a>
+    
+    
+  
+    
+  </div>
+    
+      </div>
+    </div>
+
+
+    
+    <div class="dep-modal-container" id="def:banach-stone-point-equiv_modal">
+      <div class="dep-modal-content">
+          <button class="dep-closebtn">
+<svg  class="icon icon-cross "><use xlink:href="symbol-defs.svg#icon-cross"></use></svg>
+</button>
+        
+  <div class="thm" id="def:banach-stone-point-equiv" style="display: none">
+    <div class="thm_thmheading">
+      <span class="definition_thmcaption">
+      Definition
+      </span>
+      <span class="definition_thmlabel">14</span><span class="definition_thmtitle">The induced equivalence</span></div>
+    <div class="thm_thmcontent"><p>    The two inverse point maps define an equivalence between the underlying spaces. </p>
+</div>
+
+    <a class="latex_link" href="sect0002.html#def:banach-stone-point-equiv">LaTeX</a>
+    
+    
+  <a class="lean_link lean_decl" href=":/find/#doc/BanachStoneTheorem.pointEquiv">Lean</a>
+    
+    
+  
+    
+  </div>
+    
+      </div>
+    </div>
+
+
+    
+    <div class="dep-modal-container" id="def:banach-stone-point-map_modal">
+      <div class="dep-modal-content">
+          <button class="dep-closebtn">
+<svg  class="icon icon-cross "><use xlink:href="symbol-defs.svg#icon-cross"></use></svg>
+</button>
+        
+  <div class="thm" id="def:banach-stone-point-map" style="display: none">
+    <div class="thm_thmheading">
+      <span class="definition_thmcaption">
+      Definition
+      </span>
+      <span class="definition_thmlabel">10</span><span class="definition_thmtitle">The induced point map</span></div>
+    <div class="thm_thmcontent"><p>    The image-of-faces correspondence defines a map between the underlying compact Hausdorff spaces. </p>
+</div>
+
+    <a class="latex_link" href="sect0002.html#def:banach-stone-point-map">LaTeX</a>
+    
+    
+  <a class="lean_link lean_decl" href=":/find/#doc/BanachStoneTheorem.pointMap">Lean</a>
+    
+    
+  
+    
+  </div>
+    
+      </div>
+    </div>
+
+
+    
+    <div class="dep-modal-container" id="def:borsuk-ulam-antipode_modal">
+      <div class="dep-modal-content">
+          <button class="dep-closebtn">
+<svg  class="icon icon-cross "><use xlink:href="symbol-defs.svg#icon-cross"></use></svg>
+</button>
+        
+  <div class="thm" id="def:borsuk-ulam-antipode" style="display: none">
+    <div class="thm_thmheading">
+      <span class="definition_thmcaption">
+      Definition
+      </span>
+      <span class="definition_thmlabel">17</span><span class="definition_thmtitle">Antipodal map</span></div>
+    <div class="thm_thmcontent"><p>    The antipodal map sends \(x\) to \(-x\) on the unit sphere. </p>
+</div>
+
+    <a class="latex_link" href="sect0003.html#def:borsuk-ulam-antipode">LaTeX</a>
+    
+    
+  <a class="lean_link lean_decl" href=":/find/#doc/BorsukUlamTheorem.antipode">Lean</a>
+    
+    
+  
+    
+  </div>
+    
+      </div>
+    </div>
+
+
+    
+    <div class="dep-modal-container" id="def:borsuk-ulam-sphere_modal">
+      <div class="dep-modal-content">
+          <button class="dep-closebtn">
+<svg  class="icon icon-cross "><use xlink:href="symbol-defs.svg#icon-cross"></use></svg>
+</button>
+        
+  <div class="thm" id="def:borsuk-ulam-sphere" style="display: none">
+    <div class="thm_thmheading">
+      <span class="definition_thmcaption">
+      Definition
+      </span>
+      <span class="definition_thmlabel">16</span><span class="definition_thmtitle">Unit sphere</span></div>
+    <div class="thm_thmcontent"><p>   The type \(S^n\) is represented as the unit sphere in \(\mathbb R^{n+1}\). </p>
+</div>
+
+    <a class="latex_link" href="sect0003.html#def:borsuk-ulam-sphere">LaTeX</a>
+    
+    
+  <a class="lean_link lean_decl" href=":/find/#doc/BorsukUlamTheorem.UnitSphere">Lean</a>
+    
+    
+  
+    
+  </div>
+    
+      </div>
+    </div>
+
+
+    
+    <div class="dep-modal-container" id="def:collatz-attains-below_modal">
+      <div class="dep-modal-content">
+          <button class="dep-closebtn">
+<svg  class="icon icon-cross "><use xlink:href="symbol-defs.svg#icon-cross"></use></svg>
+</button>
+        
+  <div class="thm" id="def:collatz-attains-below" style="display: none">
+    <div class="thm_thmheading">
+      <span class="definition_thmcaption">
+      Definition
+      </span>
+      <span class="definition_thmlabel">21</span><span class="definition_thmtitle">Attaining a bounded value</span></div>
+    <div class="thm_thmcontent"><p>    For a function \(f:\mathbb N\to \mathbb N\), a starting value \(n\) attains below \(f(n)\) if some iterate of the Collatz map is strictly smaller than \(f(n)\). </p>
+</div>
+
+    <a class="latex_link" href="sect0005.html#def:collatz-attains-below">LaTeX</a>
+    
+    
+  <a class="lean_link lean_decl" href=":/find/#doc/CollatzMapAlmostBoundedValues.AttainsBelow">Lean</a>
+    
+    
+  
+    
+  </div>
+    
+      </div>
+    </div>
+
+
+    
+    <div class="dep-modal-container" id="def:collatz-map_modal">
+      <div class="dep-modal-content">
+          <button class="dep-closebtn">
+<svg  class="icon icon-cross "><use xlink:href="symbol-defs.svg#icon-cross"></use></svg>
+</button>
+        
+  <div class="thm" id="def:collatz-map" style="display: none">
+    <div class="thm_thmheading">
+      <span class="definition_thmcaption">
+      Definition
+      </span>
+      <span class="definition_thmlabel">20</span><span class="definition_thmtitle">Collatz map</span></div>
+    <div class="thm_thmcontent"><p>   The Collatz map sends an even integer \(n\) to \(n/2\) and an odd integer \(n\) to \(3n+1\). </p>
+</div>
+
+    <a class="latex_link" href="sect0005.html#def:collatz-map">LaTeX</a>
+    
+    
+  <a class="lean_link lean_decl" href=":/find/#doc/CollatzMapAlmostBoundedValues.collatz">Lean</a>
+    
+    
+  
+    
+  </div>
+    
+      </div>
+    </div>
+
+
+    
+    <div class="dep-modal-container" id="lem:banach-stone-convex-subset-face_modal">
+      <div class="dep-modal-content">
+          <button class="dep-closebtn">
+<svg  class="icon icon-cross "><use xlink:href="symbol-defs.svg#icon-cross"></use></svg>
+</button>
+        
+  <div class="thm" id="lem:banach-stone-convex-subset-face" style="display: none">
+    <div class="thm_thmheading">
+      <span class="lemma_thmcaption">
+      Lemma
+      </span>
+      <span class="lemma_thmlabel">5</span><span class="lemma_thmtitle">Convex subsets lie in a face</span></div>
+    <div class="thm_thmcontent"><p>    Every convex subset of the unit sphere of \(C(X,\mathbb R)\) is contained in a face \(F(x,\varepsilon )\) with \(\varepsilon \in \{ -1,1\} \). </p>
+</div>
+
+    <a class="latex_link" href="sect0002.html#lem:banach-stone-convex-subset-face">LaTeX</a>
+    
+    
+  <a class="lean_link lean_decl" href=":/find/#doc/BanachStoneTheorem.convex_subset_face">Lean</a>
+    
+    
+  
+    
+  </div>
+    
+      </div>
+    </div>
+
+
+    
+    <div class="dep-modal-container" id="lem:banach-stone-face-convex_modal">
+      <div class="dep-modal-content">
+          <button class="dep-closebtn">
+<svg  class="icon icon-cross "><use xlink:href="symbol-defs.svg#icon-cross"></use></svg>
+</button>
+        
+  <div class="thm" id="lem:banach-stone-face-convex" style="display: none">
+    <div class="thm_thmheading">
+      <span class="lemma_thmcaption">
+      Lemma
+      </span>
+      <span class="lemma_thmlabel">3</span><span class="lemma_thmtitle">Faces are convex</span></div>
+    <div class="thm_thmcontent"><p>    If \(|\varepsilon |=1\), then \(F(x,\varepsilon )\) is convex. </p>
+</div>
+
+    <a class="latex_link" href="sect0002.html#lem:banach-stone-face-convex">LaTeX</a>
+    
+    
+  <a class="lean_link lean_decl" href=":/find/#doc/BanachStoneTheorem.face_convex">Lean</a>
+    
+    
+  
+    
+  </div>
+    
+      </div>
+    </div>
+
+
+    
+    <div class="dep-modal-container" id="lem:banach-stone-face-maximal_modal">
+      <div class="dep-modal-content">
+          <button class="dep-closebtn">
+<svg  class="icon icon-cross "><use xlink:href="symbol-defs.svg#icon-cross"></use></svg>
+</button>
+        
+  <div class="thm" id="lem:banach-stone-face-maximal" style="display: none">
+    <div class="thm_thmheading">
+      <span class="lemma_thmcaption">
+      Lemma
+      </span>
+      <span class="lemma_thmlabel">8</span><span class="lemma_thmtitle">Faces are maximal convex subsets</span></div>
+    <div class="thm_thmcontent"><p>    Each signed face is a maximal convex subset of the unit sphere. </p>
+</div>
+
+    <a class="latex_link" href="sect0002.html#lem:banach-stone-face-maximal">LaTeX</a>
+    
+    
+  <a class="lean_link lean_decl" href=":/find/#doc/BanachStoneTheorem.face_maximal">Lean</a>
+    
+    
+  
+    
+  </div>
+    
+      </div>
+    </div>
+
+
+    
+    <div class="dep-modal-container" id="lem:banach-stone-face-rigidity_modal">
+      <div class="dep-modal-content">
+          <button class="dep-closebtn">
+<svg  class="icon icon-cross "><use xlink:href="symbol-defs.svg#icon-cross"></use></svg>
+</button>
+        
+  <div class="thm" id="lem:banach-stone-face-rigidity" style="display: none">
+    <div class="thm_thmheading">
+      <span class="lemma_thmcaption">
+      Lemma
+      </span>
+      <span class="lemma_thmlabel">7</span><span class="lemma_thmtitle">A face determines its point and sign</span></div>
+    <div class="thm_thmcontent"><p>    If one signed face is contained in another, then the underlying points and signs are equal. </p>
+</div>
+
+    <a class="latex_link" href="sect0002.html#lem:banach-stone-face-rigidity">LaTeX</a>
+    
+    
+  <a class="lean_link lean_decl" href=":/find/#doc/BanachStoneTheorem.face_subset_face">Lean</a>
+    
+    
+  
+    
+  </div>
+    
+      </div>
+    </div>
+
+
+    
+    <div class="dep-modal-container" id="lem:banach-stone-finite-common-sign_modal">
+      <div class="dep-modal-content">
+          <button class="dep-closebtn">
+<svg  class="icon icon-cross "><use xlink:href="symbol-defs.svg#icon-cross"></use></svg>
+</button>
+        
+  <div class="thm" id="lem:banach-stone-finite-common-sign" style="display: none">
+    <div class="thm_thmheading">
+      <span class="lemma_thmcaption">
+      Lemma
+      </span>
+      <span class="lemma_thmlabel">4</span><span class="lemma_thmtitle">Finite common-sign property</span></div>
+    <div class="thm_thmcontent"><p>    Let \(A\) be a convex subset of the unit sphere of \(C(X,\mathbb R)\). Every finite subset of \(A\) has a point \(x\in X\) and a common sign \(\varepsilon \in \{ -1,1\} \) at which all its functions take the value \(\varepsilon \). </p>
+</div>
+
+    <a class="latex_link" href="sect0002.html#lem:banach-stone-finite-common-sign">LaTeX</a>
+    
+    
+  <a class="lean_link lean_decl" href=":/find/#doc/BanachStoneTheorem.finite_common_sign">Lean</a>
+    
+    
+  
+    
+  </div>
+    
+      </div>
+    </div>
+
+
+    
+    <div class="dep-modal-container" id="lem:banach-stone-isometry-faces_modal">
+      <div class="dep-modal-content">
+          <button class="dep-closebtn">
+<svg  class="icon icon-cross "><use xlink:href="symbol-defs.svg#icon-cross"></use></svg>
+</button>
+        
+  <div class="thm" id="lem:banach-stone-isometry-faces" style="display: none">
+    <div class="thm_thmheading">
+      <span class="lemma_thmcaption">
+      Lemma
+      </span>
+      <span class="lemma_thmlabel">9</span><span class="lemma_thmtitle">Linear isometries send faces to faces</span></div>
+    <div class="thm_thmcontent"><p>    A linear isometry between spaces of real-valued continuous functions maps each signed face onto a signed face. </p>
+</div>
+
+    <a class="latex_link" href="sect0002.html#lem:banach-stone-isometry-faces">LaTeX</a>
+    
+    
+  <a class="lean_link lean_decl" href=":/find/#doc/BanachStoneTheorem.exists_image_face_eq_face">Lean</a>
+    
+    
+  
+    
+  </div>
+    
+      </div>
+    </div>
+
+
+    
+    <div class="dep-modal-container" id="lem:banach-stone-map-apply_modal">
+      <div class="dep-modal-content">
+          <button class="dep-closebtn">
+<svg  class="icon icon-cross "><use xlink:href="symbol-defs.svg#icon-cross"></use></svg>
+</button>
+        
+  <div class="thm" id="lem:banach-stone-map-apply" style="display: none">
+    <div class="thm_thmheading">
+      <span class="lemma_thmcaption">
+      Lemma
+      </span>
+      <span class="lemma_thmlabel">11</span><span class="lemma_thmtitle">Pointwise form of the isometry</span></div>
+    <div class="thm_thmcontent"><p>    For every \(f\) and \(y\), evaluation of the isometry at \(y\) is, up to a sign, evaluation of \(f\) at the induced point. </p>
+</div>
+
+    <a class="latex_link" href="sect0002.html#lem:banach-stone-map-apply">LaTeX</a>
+    
+    
+  <a class="lean_link lean_decl" href=":/find/#doc/BanachStoneTheorem.map_apply_eq">Lean</a>
+    
+    
+  
+    
+  </div>
+    
+      </div>
+    </div>
+
+
+    
+    <div class="dep-modal-container" id="lem:banach-stone-norm-attained_modal">
+      <div class="dep-modal-content">
+          <button class="dep-closebtn">
+<svg  class="icon icon-cross "><use xlink:href="symbol-defs.svg#icon-cross"></use></svg>
+</button>
+        
+  <div class="thm" id="lem:banach-stone-norm-attained" style="display: none">
+    <div class="thm_thmheading">
+      <span class="lemma_thmcaption">
+      Lemma
+      </span>
+      <span class="lemma_thmlabel">2</span><span class="lemma_thmtitle">The norm is attained</span></div>
+    <div class="thm_thmcontent"><p>   If \(X\) is compact and nonempty and \(f\in C(X,\mathbb R)\), then there is \(x\in X\) such that \(|f(x)|=\| f\| \). </p>
+</div>
+
+    <a class="latex_link" href="sect0002.html#lem:banach-stone-norm-attained">LaTeX</a>
+    
+    
+  <a class="lean_link lean_decl" href=":/find/#doc/BanachStoneTheorem.exists_abs_apply_eq_norm">Lean</a>
+    
+    
+  
+    
+  </div>
+    
+      </div>
+    </div>
+
+
+    
+    <div class="dep-modal-container" id="lem:banach-stone-point-map-continuous_modal">
+      <div class="dep-modal-content">
+          <button class="dep-closebtn">
+<svg  class="icon icon-cross "><use xlink:href="symbol-defs.svg#icon-cross"></use></svg>
+</button>
+        
+  <div class="thm" id="lem:banach-stone-point-map-continuous" style="display: none">
+    <div class="thm_thmheading">
+      <span class="lemma_thmcaption">
+      Lemma
+      </span>
+      <span class="lemma_thmlabel">12</span><span class="lemma_thmtitle">Continuity of the induced point map</span></div>
+    <div class="thm_thmcontent"><p>    The induced point map is continuous. </p>
+</div>
+
+    <a class="latex_link" href="sect0002.html#lem:banach-stone-point-map-continuous">LaTeX</a>
+    
+    
+  <a class="lean_link lean_decl" href=":/find/#doc/BanachStoneTheorem.continuous_pointMap">Lean</a>
+    
+    
+  
+    
+  </div>
+    
+      </div>
+    </div>
+
+
+    
+    <div class="dep-modal-container" id="lem:banach-stone-point-map-inverse_modal">
+      <div class="dep-modal-content">
+          <button class="dep-closebtn">
+<svg  class="icon icon-cross "><use xlink:href="symbol-defs.svg#icon-cross"></use></svg>
+</button>
+        
+  <div class="thm" id="lem:banach-stone-point-map-inverse" style="display: none">
+    <div class="thm_thmheading">
+      <span class="lemma_thmcaption">
+      Lemma
+      </span>
+      <span class="lemma_thmlabel">13</span><span class="lemma_thmtitle">The point maps are inverse</span></div>
+    <div class="thm_thmcontent"><p>    The point map associated with an isometry and the point map associated with its inverse are mutually inverse. </p>
+</div>
+
+    <a class="latex_link" href="sect0002.html#lem:banach-stone-point-map-inverse">LaTeX</a>
+    
+    
+  <a class="lean_link lean_decl" href=":/find/#doc/BanachStoneTheorem.pointMap_symm_apply">Lean</a>
+    
+    
+  
+    
+  </div>
+    
+      </div>
+    </div>
+
+
+    
+    <div class="dep-modal-container" id="lem:banach-stone-separator_modal">
+      <div class="dep-modal-content">
+          <button class="dep-closebtn">
+<svg  class="icon icon-cross "><use xlink:href="symbol-defs.svg#icon-cross"></use></svg>
+</button>
+        
+  <div class="thm" id="lem:banach-stone-separator" style="display: none">
+    <div class="thm_thmheading">
+      <span class="lemma_thmcaption">
+      Lemma
+      </span>
+      <span class="lemma_thmlabel">6</span><span class="lemma_thmtitle">Separation by a function in a face</span></div>
+    <div class="thm_thmcontent"><p>    If \(x\ne y\), then for either sign there is a continuous function in the face at \(x\) taking the opposite sign at \(y\). </p>
+</div>
+
+    <a class="latex_link" href="sect0002.html#lem:banach-stone-separator">LaTeX</a>
+    
+    
+  <a class="lean_link lean_decl" href=":/find/#doc/BanachStoneTheorem.separator_mem_face">Lean</a>
+    
+    
+  
+    
+  </div>
+    
+      </div>
+    </div>
+
+
+    
+    <div class="dep-modal-container" id="lem:colorful-caratheodory-support_modal">
+      <div class="dep-modal-content">
+          <button class="dep-closebtn">
+<svg  class="icon icon-cross "><use xlink:href="symbol-defs.svg#icon-cross"></use></svg>
+</button>
+        
+  <div class="thm" id="lem:colorful-caratheodory-support" style="display: none">
+    <div class="thm_thmheading">
+      <span class="lemma_thmcaption">
+      Lemma
+      </span>
+      <span class="lemma_thmlabel">23</span><span class="lemma_thmtitle">Supporting inequality at a minimizing point</span></div>
+    <div class="thm_thmcontent"><p>   If \(p\) minimizes the squared norm over a convex set \(S\), then \(\| p\| ^2\leq \langle p,q\rangle \) for every \(q\in S\). </p>
+</div>
+
+    <a class="latex_link" href="sect0006.html#lem:colorful-caratheodory-support">LaTeX</a>
+    
+    
+  <a class="lean_link lean_decl" href=":/find/#doc/ColorfulCaratheodoryTheorem.inner_ge_of_min_on_convex">Lean</a>
+    
+    
+  
+    
+  </div>
+    
+      </div>
+    </div>
+
+
+    
+    <div class="dep-modal-container" id="thm:banach-stone_modal">
+      <div class="dep-modal-content">
+          <button class="dep-closebtn">
+<svg  class="icon icon-cross "><use xlink:href="symbol-defs.svg#icon-cross"></use></svg>
+</button>
+        
+  <div class="thm" id="thm:banach-stone" style="display: none">
+    <div class="thm_thmheading">
+      <span class="theorem_thmcaption">
+      Theorem
+      </span>
+      <span class="theorem_thmlabel">15</span><span class="theorem_thmtitle">Banach–Stone</span></div>
+    <div class="thm_thmcontent"><p>    Let \(X\) and \(Y\) be compact Hausdorff spaces. If \(C(X,\mathbb R)\) and \(C(Y,\mathbb R)\) are linearly isometric, then \(X\) and \(Y\) are homeomorphic. </p>
+</div>
+
+    <a class="latex_link" href="sect0002.html#thm:banach-stone">LaTeX</a>
+    
+    
+  <a class="lean_link lean_decl" href=":/find/#doc/BanachStoneTheorem.MainTheorem">Lean</a>
+    
+    
+  
+    
+  </div>
+    
+      </div>
+    </div>
+
+
+    
+    <div class="dep-modal-container" id="thm:borsuk-ulam_modal">
+      <div class="dep-modal-content">
+          <button class="dep-closebtn">
+<svg  class="icon icon-cross "><use xlink:href="symbol-defs.svg#icon-cross"></use></svg>
+</button>
+        
+  <div class="thm" id="thm:borsuk-ulam" style="display: none">
+    <div class="thm_thmheading">
+      <span class="theorem_thmcaption">
+      Theorem
+      </span>
+      <span class="theorem_thmlabel">18</span><span class="theorem_thmtitle">Borsuk–Ulam</span></div>
+    <div class="thm_thmcontent"><p>    Every continuous map \(f:S^n\to \mathbb R^n\) takes the same value at some antipodal pair \(x\) and \(-x\). </p>
+</div>
+
+    <a class="latex_link" href="sect0003.html#thm:borsuk-ulam">LaTeX</a>
+    
+    
+  <a class="lean_link lean_decl" href=":/find/#doc/BorsukUlamTheorem.MainTheorem">Lean</a>
+    
+    
+  
+    
+  </div>
+    
+      </div>
+    </div>
+
+
+    
+    <div class="dep-modal-container" id="thm:burnside-prime-degree_modal">
+      <div class="dep-modal-content">
+          <button class="dep-closebtn">
+<svg  class="icon icon-cross "><use xlink:href="symbol-defs.svg#icon-cross"></use></svg>
+</button>
+        
+  <div class="thm" id="thm:burnside-prime-degree" style="display: none">
+    <div class="thm_thmheading">
+      <span class="theorem_thmcaption">
+      Theorem
+      </span>
+      <span class="theorem_thmlabel">19</span><span class="theorem_thmtitle">Burnside</span></div>
+    <div class="thm_thmcontent"><p>   A transitive permutation group of prime degree is either \(2\)-transitive or has a normal regular subgroup. </p>
+</div>
+
+    <a class="latex_link" href="sect0004.html#thm:burnside-prime-degree">LaTeX</a>
+    
+    
+  <a class="lean_link lean_decl" href=":/find/#doc/BurnsidePrimeDegreeTheorem.MainTheorem">Lean</a>
+    
+    
+  
+    
+  </div>
+    
+      </div>
+    </div>
+
+
+    
+    <div class="dep-modal-container" id="thm:collatz-almost-bounded_modal">
+      <div class="dep-modal-content">
+          <button class="dep-closebtn">
+<svg  class="icon icon-cross "><use xlink:href="symbol-defs.svg#icon-cross"></use></svg>
+</button>
+        
+  <div class="thm" id="thm:collatz-almost-bounded" style="display: none">
+    <div class="thm_thmheading">
+      <span class="theorem_thmcaption">
+      Theorem
+      </span>
+      <span class="theorem_thmlabel">22</span><span class="theorem_thmtitle">Almost all Collatz orbits attain almost bounded values</span></div>
+    <div class="thm_thmcontent"><p>    For every function \(f(n)\to \infty \), the exceptional set of starting values whose Collatz orbit never goes below \(f(n)\) has logarithmic density zero. </p>
+</div>
+
+    <a class="latex_link" href="sect0005.html#thm:collatz-almost-bounded">LaTeX</a>
+    
+    
+  <a class="lean_link lean_decl" href=":/find/#doc/CollatzMapAlmostBoundedValues.MainTheorem">Lean</a>
+    
+    
+  
+    
+  </div>
+    
+      </div>
+    </div>
+
+
+    
+    <div class="dep-modal-container" id="thm:colorful-caratheodory_modal">
+      <div class="dep-modal-content">
+          <button class="dep-closebtn">
+<svg  class="icon icon-cross "><use xlink:href="symbol-defs.svg#icon-cross"></use></svg>
+</button>
+        
+  <div class="thm" id="thm:colorful-caratheodory" style="display: none">
+    <div class="thm_thmheading">
+      <span class="theorem_thmcaption">
+      Theorem
+      </span>
+      <span class="theorem_thmlabel">25</span><span class="theorem_thmtitle">Colorful Carathéodory</span></div>
+    <div class="thm_thmcontent"><p>    If each of \(d+1\) subsets of \(\mathbb R^d\) contains the origin in its convex hull, then one can choose one point from each set such that the origin lies in the convex hull of the selected points. </p>
+</div>
+
+    <a class="latex_link" href="sect0006.html#thm:colorful-caratheodory">LaTeX</a>
+    
+    
+  <a class="lean_link lean_decl" href=":/find/#doc/ColorfulCaratheodoryTheorem.MainTheorem">Lean</a>
+    
+    
+  
+    
+  </div>
+    
+      </div>
+    </div>
+
+
+    
+    <div class="dep-modal-container" id="thm:colorful-caratheodory-finite-zero_modal">
+      <div class="dep-modal-content">
+          <button class="dep-closebtn">
+<svg  class="icon icon-cross "><use xlink:href="symbol-defs.svg#icon-cross"></use></svg>
+</button>
+        
+  <div class="thm" id="thm:colorful-caratheodory-finite-zero" style="display: none">
+    <div class="thm_thmheading">
+      <span class="theorem_thmcaption">
+      Theorem
+      </span>
+      <span class="theorem_thmlabel">24</span><span class="theorem_thmtitle">Finite colorful zero lemma</span></div>
+    <div class="thm_thmcontent"><p>    For \(d+1\) finite color classes in a \(d\)-dimensional real inner-product space, if the origin lies in the convex hull of every color class, one can choose one point of each color so that the origin lies in the convex hull of the chosen points. </p>
+</div>
+
+    <a class="latex_link" href="sect0006.html#thm:colorful-caratheodory-finite-zero">LaTeX</a>
+    
+    
+  <a class="lean_link lean_decl" href=":/find/#doc/ColorfulCaratheodoryTheorem.finite_colorful_zero">Lean</a>
+    
+    
+  
+    
+  </div>
+    
+      </div>
+    </div>
+
+
+    
+    <div class="dep-modal-container" id="thm:debruijn-erdos_modal">
+      <div class="dep-modal-content">
+          <button class="dep-closebtn">
+<svg  class="icon icon-cross "><use xlink:href="symbol-defs.svg#icon-cross"></use></svg>
+</button>
+        
+  <div class="thm" id="thm:debruijn-erdos" style="display: none">
+    <div class="thm_thmheading">
+      <span class="theorem_thmcaption">
+      Theorem
+      </span>
+      <span class="theorem_thmlabel">27</span><span class="theorem_thmtitle">De Bruijn–Erdős</span></div>
+    <div class="thm_thmcontent"><p>   Let \(G\) be a graph and let \(k\in \mathbb N\). If every finite induced subgraph of \(G\) is \(k\)-colorable, then \(G\) is \(k\)-colorable. </p>
+</div>
+
+    <a class="latex_link" href="sect0008.html#thm:debruijn-erdos">LaTeX</a>
+    
+    
+  <a class="lean_link lean_decl" href=":/find/#doc/DeBruijnErdos.MainTheorem">Lean</a>
+    
+    
+  
+    
+  </div>
+    
+      </div>
+    </div>
+
+
+    
+    <div class="dep-modal-container" id="thm:dlo-quantifier-elimination_modal">
+      <div class="dep-modal-content">
+          <button class="dep-closebtn">
+<svg  class="icon icon-cross "><use xlink:href="symbol-defs.svg#icon-cross"></use></svg>
+</button>
+        
+  <div class="thm" id="thm:dlo-quantifier-elimination" style="display: none">
+    <div class="thm_thmheading">
+      <span class="theorem_thmcaption">
+      Theorem
+      </span>
+      <span class="theorem_thmlabel">26</span><span class="theorem_thmtitle">Quantifier elimination</span></div>
+    <div class="thm_thmcontent"><p>   The FormalQualBench statement that the theory of dense linear orders admits quantifier elimination. </p>
+</div>
+
+    <a class="latex_link" href="sect0007.html#thm:dlo-quantifier-elimination">LaTeX</a>
+    
+    
+  <a class="lean_link lean_decl" href=":/find/#doc/DLOQuantifierElimination.MainTheorem">Lean</a>
+    
+    
+  
+    
+  </div>
+    
+      </div>
+    </div>
+
+
+    
+    <div class="dep-modal-container" id="thm:erdos-discrepancy_modal">
+      <div class="dep-modal-content">
+          <button class="dep-closebtn">
+<svg  class="icon icon-cross "><use xlink:href="symbol-defs.svg#icon-cross"></use></svg>
+</button>
+        
+  <div class="thm" id="thm:erdos-discrepancy" style="display: none">
+    <div class="thm_thmheading">
+      <span class="theorem_thmcaption">
+      Theorem
+      </span>
+      <span class="theorem_thmlabel">28</span><span class="theorem_thmtitle">Erdős discrepancy</span></div>
+    <div class="thm_thmcontent"><p>   The FormalQualBench statement of the Erdős discrepancy problem. </p>
+</div>
+
+    <a class="latex_link" href="sect0009.html#thm:erdos-discrepancy">LaTeX</a>
+    
+    
+  <a class="lean_link lean_decl" href=":/find/#doc/ErdosDiscrepancyProblem.MainTheorem">Lean</a>
+    
+    
+  
+    
+  </div>
+    
+      </div>
+    </div>
+
+
+    
+    <div class="dep-modal-container" id="thm:gleason-kahane-zelazko_modal">
+      <div class="dep-modal-content">
+          <button class="dep-closebtn">
+<svg  class="icon icon-cross "><use xlink:href="symbol-defs.svg#icon-cross"></use></svg>
+</button>
+        
+  <div class="thm" id="thm:gleason-kahane-zelazko" style="display: none">
+    <div class="thm_thmheading">
+      <span class="theorem_thmcaption">
+      Theorem
+      </span>
+      <span class="theorem_thmlabel">29</span><span class="theorem_thmtitle">Gleason–Kahane–Želazko</span></div>
+    <div class="thm_thmcontent"><p>   The FormalQualBench statement of the Gleason–Kahane–Želazko theorem. </p>
+</div>
+
+    <a class="latex_link" href="sect0010.html#thm:gleason-kahane-zelazko">LaTeX</a>
+    
+    
+  <a class="lean_link lean_decl" href=":/find/#doc/GleasonKahaneZelazkoTheorem.MainTheorem">Lean</a>
+    
+    
+  
+    
+  </div>
+    
+      </div>
+    </div>
+
+
+    
+    <div class="dep-modal-container" id="thm:green-tao_modal">
+      <div class="dep-modal-content">
+          <button class="dep-closebtn">
+<svg  class="icon icon-cross "><use xlink:href="symbol-defs.svg#icon-cross"></use></svg>
+</button>
+        
+  <div class="thm" id="thm:green-tao" style="display: none">
+    <div class="thm_thmheading">
+      <span class="theorem_thmcaption">
+      Theorem
+      </span>
+      <span class="theorem_thmlabel">30</span><span class="theorem_thmtitle">Green–Tao</span></div>
+    <div class="thm_thmcontent"><p>   The FormalQualBench statement that the prime numbers contain arbitrarily long arithmetic progressions. </p>
+</div>
+
+    <a class="latex_link" href="sect0011.html#thm:green-tao">LaTeX</a>
+    
+    
+  <a class="lean_link lean_decl" href=":/find/#doc/GreenTaoTheorem.MainTheorem">Lean</a>
+    
+    
+  
+    
+  </div>
+    
+      </div>
+    </div>
+
+
+    
+    <div class="dep-modal-container" id="thm:hilbert-17_modal">
+      <div class="dep-modal-content">
+          <button class="dep-closebtn">
+<svg  class="icon icon-cross "><use xlink:href="symbol-defs.svg#icon-cross"></use></svg>
+</button>
+        
+  <div class="thm" id="thm:hilbert-17" style="display: none">
+    <div class="thm_thmheading">
+      <span class="theorem_thmcaption">
+      Theorem
+      </span>
+      <span class="theorem_thmlabel">31</span><span class="theorem_thmtitle">Hilbert’s seventeenth problem</span></div>
+    <div class="thm_thmcontent"><p>   The FormalQualBench statement of Hilbert’s seventeenth problem. </p>
+</div>
+
+    <a class="latex_link" href="sect0012.html#thm:hilbert-17">LaTeX</a>
+    
+    
+  <a class="lean_link lean_decl" href=":/find/#doc/Hilbert17thProblem.MainTheorem">Lean</a>
+    
+    
+  
+    
+  </div>
+    
+      </div>
+    </div>
+
+
+    
+    <div class="dep-modal-container" id="thm:jordan-cycle_modal">
+      <div class="dep-modal-content">
+          <button class="dep-closebtn">
+<svg  class="icon icon-cross "><use xlink:href="symbol-defs.svg#icon-cross"></use></svg>
+</button>
+        
+  <div class="thm" id="thm:jordan-cycle" style="display: none">
+    <div class="thm_thmheading">
+      <span class="theorem_thmcaption">
+      Theorem
+      </span>
+      <span class="theorem_thmlabel">32</span><span class="theorem_thmtitle">Jordan cycle theorem</span></div>
+    <div class="thm_thmcontent"><p>   The FormalQualBench statement of the Jordan cycle theorem. </p>
+</div>
+
+    <a class="latex_link" href="sect0013.html#thm:jordan-cycle">LaTeX</a>
+    
+    
+  <a class="lean_link lean_decl" href=":/find/#doc/JordanCycleTheorem.MainTheorem">Lean</a>
+    
+    
+  
+    
+  </div>
+    
+      </div>
+    </div>
+
+
+    
+    <div class="dep-modal-container" id="thm:jordan-derangement_modal">
+      <div class="dep-modal-content">
+          <button class="dep-closebtn">
+<svg  class="icon icon-cross "><use xlink:href="symbol-defs.svg#icon-cross"></use></svg>
+</button>
+        
+  <div class="thm" id="thm:jordan-derangement" style="display: none">
+    <div class="thm_thmheading">
+      <span class="theorem_thmcaption">
+      Theorem
+      </span>
+      <span class="theorem_thmlabel">33</span><span class="theorem_thmtitle">Jordan derangement theorem</span></div>
+    <div class="thm_thmcontent"><p>   The FormalQualBench statement of Jordan’s derangement theorem. </p>
+</div>
+
+    <a class="latex_link" href="sect0014.html#thm:jordan-derangement">LaTeX</a>
+    
+    
+  <a class="lean_link lean_decl" href=":/find/#doc/JordanDerangementTheorem.MainTheorem">Lean</a>
+    
+    
+  
+    
+  </div>
+    
+      </div>
+    </div>
+
+
+    
+    <div class="dep-modal-container" id="thm:kakeya-3d_modal">
+      <div class="dep-modal-content">
+          <button class="dep-closebtn">
+<svg  class="icon icon-cross "><use xlink:href="symbol-defs.svg#icon-cross"></use></svg>
+</button>
+        
+  <div class="thm" id="thm:kakeya-3d" style="display: none">
+    <div class="thm_thmheading">
+      <span class="theorem_thmcaption">
+      Theorem
+      </span>
+      <span class="theorem_thmlabel">34</span><span class="theorem_thmtitle">Kakeya theorem in three dimensions</span></div>
+    <div class="thm_thmcontent"><p>   The FormalQualBench statement of the three-dimensional Kakeya theorem. </p>
+</div>
+
+    <a class="latex_link" href="sect0015.html#thm:kakeya-3d">LaTeX</a>
+    
+    
+  <a class="lean_link lean_decl" href=":/find/#doc/KakeyaTheorem3D.MainTheorem">Lean</a>
+    
+    
+  
+    
+  </div>
+    
+      </div>
+    </div>
+
+
+    
+    <div class="dep-modal-container" id="thm:maynard-tao_modal">
+      <div class="dep-modal-content">
+          <button class="dep-closebtn">
+<svg  class="icon icon-cross "><use xlink:href="symbol-defs.svg#icon-cross"></use></svg>
+</button>
+        
+  <div class="thm" id="thm:maynard-tao" style="display: none">
+    <div class="thm_thmheading">
+      <span class="theorem_thmcaption">
+      Theorem
+      </span>
+      <span class="theorem_thmlabel">35</span><span class="theorem_thmtitle">Maynard–Tao</span></div>
+    <div class="thm_thmcontent"><p>   The FormalQualBench statement of the Maynard–Tao bounded prime gaps theorem. </p>
+</div>
+
+    <a class="latex_link" href="sect0016.html#thm:maynard-tao">LaTeX</a>
+    
+    
+  <a class="lean_link lean_decl" href=":/find/#doc/MaynardTaoBoundedPrimeGaps.MainTheorem">Lean</a>
+    
+    
+  
+    
+  </div>
+    
+      </div>
+    </div>
+
+
+    
+    <div class="dep-modal-container" id="thm:paris-harrington_modal">
+      <div class="dep-modal-content">
+          <button class="dep-closebtn">
+<svg  class="icon icon-cross "><use xlink:href="symbol-defs.svg#icon-cross"></use></svg>
+</button>
+        
+  <div class="thm" id="thm:paris-harrington" style="display: none">
+    <div class="thm_thmheading">
+      <span class="theorem_thmcaption">
+      Theorem
+      </span>
+      <span class="theorem_thmlabel">36</span><span class="theorem_thmtitle">Paris–Harrington</span></div>
+    <div class="thm_thmcontent"><p>   The FormalQualBench statement of the Paris–Harrington principle. </p>
+</div>
+
+    <a class="latex_link" href="sect0017.html#thm:paris-harrington">LaTeX</a>
+    
+    
+  <a class="lean_link lean_decl" href=":/find/#doc/ParisHarringtonPrinciple.MainTheorem">Lean</a>
+    
+    
+  
+    
+  </div>
+    
+      </div>
+    </div>
+
+
+    
+    <div class="dep-modal-container" id="thm:pontryagin-duality_modal">
+      <div class="dep-modal-content">
+          <button class="dep-closebtn">
+<svg  class="icon icon-cross "><use xlink:href="symbol-defs.svg#icon-cross"></use></svg>
+</button>
+        
+  <div class="thm" id="thm:pontryagin-duality" style="display: none">
+    <div class="thm_thmheading">
+      <span class="theorem_thmcaption">
+      Theorem
+      </span>
+      <span class="theorem_thmlabel">37</span><span class="theorem_thmtitle">Pontryagin duality</span></div>
+    <div class="thm_thmcontent"><p>   The FormalQualBench statement of Pontryagin duality. </p>
+</div>
+
+    <a class="latex_link" href="sect0018.html#thm:pontryagin-duality">LaTeX</a>
+    
+    
+  <a class="lean_link lean_decl" href=":/find/#doc/PontryaginDuality.MainTheorem">Lean</a>
+    
+    
+  
+    
+  </div>
+    
+      </div>
+    </div>
+
+
+    
+    <div class="dep-modal-container" id="thm:quillen-suslin_modal">
+      <div class="dep-modal-content">
+          <button class="dep-closebtn">
+<svg  class="icon icon-cross "><use xlink:href="symbol-defs.svg#icon-cross"></use></svg>
+</button>
+        
+  <div class="thm" id="thm:quillen-suslin" style="display: none">
+    <div class="thm_thmheading">
+      <span class="theorem_thmcaption">
+      Theorem
+      </span>
+      <span class="theorem_thmlabel">38</span><span class="theorem_thmtitle">Quillen–Suslin</span></div>
+    <div class="thm_thmcontent"><p>   The FormalQualBench statement of the Quillen–Suslin theorem. </p>
+</div>
+
+    <a class="latex_link" href="sect0019.html#thm:quillen-suslin">LaTeX</a>
+    
+    
+  <a class="lean_link lean_decl" href=":/find/#doc/QuillenSuslinTheorem.MainTheorem">Lean</a>
+    
+    
+  
+    
+  </div>
+    
+      </div>
+    </div>
+
+
+    
+    <div class="dep-modal-container" id="thm:runge_modal">
+      <div class="dep-modal-content">
+          <button class="dep-closebtn">
+<svg  class="icon icon-cross "><use xlink:href="symbol-defs.svg#icon-cross"></use></svg>
+</button>
+        
+  <div class="thm" id="thm:runge" style="display: none">
+    <div class="thm_thmheading">
+      <span class="theorem_thmcaption">
+      Theorem
+      </span>
+      <span class="theorem_thmlabel">39</span><span class="theorem_thmtitle">Runge</span></div>
+    <div class="thm_thmcontent"><p>   The FormalQualBench statement of Runge’s theorem. </p>
+</div>
+
+    <a class="latex_link" href="sect0020.html#thm:runge">LaTeX</a>
+    
+    
+  <a class="lean_link lean_decl" href=":/find/#doc/RungeTheorem.MainTheorem">Lean</a>
+    
+    
+  
+    
+  </div>
+    
+      </div>
+    </div>
+
+
+    
+    <div class="dep-modal-container" id="thm:schauder-fixed-point_modal">
+      <div class="dep-modal-content">
+          <button class="dep-closebtn">
+<svg  class="icon icon-cross "><use xlink:href="symbol-defs.svg#icon-cross"></use></svg>
+</button>
+        
+  <div class="thm" id="thm:schauder-fixed-point" style="display: none">
+    <div class="thm_thmheading">
+      <span class="theorem_thmcaption">
+      Theorem
+      </span>
+      <span class="theorem_thmlabel">40</span><span class="theorem_thmtitle">Schauder fixed point</span></div>
+    <div class="thm_thmcontent"><p>   The FormalQualBench statement of the Schauder fixed-point theorem. </p>
+</div>
+
+    <a class="latex_link" href="sect0021.html#thm:schauder-fixed-point">LaTeX</a>
+    
+    
+  <a class="lean_link lean_decl" href=":/find/#doc/SchauderFixedPointTheorem.MainTheorem">Lean</a>
+    
+    
+  
+    
+  </div>
+    
+      </div>
+    </div>
+
+
+    
+    <div class="dep-modal-container" id="thm:skolem-mahler-lech_modal">
+      <div class="dep-modal-content">
+          <button class="dep-closebtn">
+<svg  class="icon icon-cross "><use xlink:href="symbol-defs.svg#icon-cross"></use></svg>
+</button>
+        
+  <div class="thm" id="thm:skolem-mahler-lech" style="display: none">
+    <div class="thm_thmheading">
+      <span class="theorem_thmcaption">
+      Theorem
+      </span>
+      <span class="theorem_thmlabel">41</span><span class="theorem_thmtitle">Skolem–Mahler–Lech</span></div>
+    <div class="thm_thmcontent"><p>   The FormalQualBench statement of the Skolem–Mahler–Lech theorem. </p>
+</div>
+
+    <a class="latex_link" href="sect0022.html#thm:skolem-mahler-lech">LaTeX</a>
+    
+    
+  <a class="lean_link lean_decl" href=":/find/#doc/SkolemMahlerLechTheorem.MainTheorem">Lean</a>
+    
+    
+  
+    
+  </div>
+    
+      </div>
+    </div>
+
+
+    
+    <div class="dep-modal-container" id="thm:ternary-goldbach_modal">
+      <div class="dep-modal-content">
+          <button class="dep-closebtn">
+<svg  class="icon icon-cross "><use xlink:href="symbol-defs.svg#icon-cross"></use></svg>
+</button>
+        
+  <div class="thm" id="thm:ternary-goldbach" style="display: none">
+    <div class="thm_thmheading">
+      <span class="theorem_thmcaption">
+      Theorem
+      </span>
+      <span class="theorem_thmlabel">42</span><span class="theorem_thmtitle">Ternary Goldbach</span></div>
+    <div class="thm_thmcontent"><p>   The FormalQualBench statement of the ternary Goldbach theorem. </p>
+</div>
+
+    <a class="latex_link" href="sect0023.html#thm:ternary-goldbach">LaTeX</a>
+    
+    
+  <a class="lean_link lean_decl" href=":/find/#doc/TernaryGoldbachTheorem.MainTheorem">Lean</a>
+    
+    
+  
+    
+  </div>
+    
+      </div>
+    </div>
+
+
+    
+    <div class="dep-modal-container" id="thm:von-neumann-double-commutant_modal">
+      <div class="dep-modal-content">
+          <button class="dep-closebtn">
+<svg  class="icon icon-cross "><use xlink:href="symbol-defs.svg#icon-cross"></use></svg>
+</button>
+        
+  <div class="thm" id="thm:von-neumann-double-commutant" style="display: none">
+    <div class="thm_thmheading">
+      <span class="theorem_thmcaption">
+      Theorem
+      </span>
+      <span class="theorem_thmlabel">43</span><span class="theorem_thmtitle">Von Neumann double commutant</span></div>
+    <div class="thm_thmcontent"><p>   The FormalQualBench statement of the von Neumann double commutant theorem. </p>
+</div>
+
+    <a class="latex_link" href="sect0024.html#thm:von-neumann-double-commutant">LaTeX</a>
+    
+    
+  <a class="lean_link lean_decl" href=":/find/#doc/VonNeumannDoubleCommutantTheorem.MainTheorem">Lean</a>
+    
+    
+  
+    
+  </div>
+    
+      </div>
+    </div>
+</div>
+</div> <!-- content -->
+</div> <!-- wrapper -->
+<script src="js/jquery.min.js" type="text/javascript"></script>
+
+<script src="js/d3.min.js"></script>
+<script src="js/hpcc.min.js"></script>
+<script src="js/d3-graphviz.js"></script>
+
+<script type="text/javascript">
+const graphContainer = d3.select("#graph");
+const width = graphContainer.node().clientWidth;
+const height = graphContainer.node().clientHeight;
+
+
+graphContainer.graphviz({useWorker: true})
+    .width(width)
+    .height(height)
+    .fit(true)
+    .renderDot(`strict digraph "" {	graph [bgcolor=transparent];	node [label="\N",		penwidth=1.8	];	edge [arrowhead=vee];	"thm:colorful-caratheodory"	[color=green,		label="colorful-caratheodory",		shape=ellipse];	"lem:banach-stone-isometry-faces"	[color=green,		label="banach-stone-isometry-faces",		shape=ellipse];	"def:banach-stone-point-map"	[color=green,		fillcolor="#B0ECA3",		label="banach-stone-point-map",		shape=box,		style=filled];	"lem:banach-stone-isometry-faces" -> "def:banach-stone-point-map"	[style=dashed];	"lem:banach-stone-map-apply"	[color=green,		label="banach-stone-map-apply",		shape=ellipse];	"def:banach-stone-point-map" -> "lem:banach-stone-map-apply"	[style=dashed];	"lem:banach-stone-point-map-inverse"	[color=green,		label="banach-stone-point-map-inverse",		shape=ellipse];	"lem:banach-stone-map-apply" -> "lem:banach-stone-point-map-inverse"	[style=dashed];	"lem:banach-stone-point-map-continuous"	[color=green,		label="banach-stone-point-map-continuous",		shape=ellipse];	"lem:banach-stone-map-apply" -> "lem:banach-stone-point-map-continuous"	[style=dashed];	"def:banach-stone-point-equiv"	[color=green,		fillcolor="#B0ECA3",		label="banach-stone-point-equiv",		shape=box,		style=filled];	"lem:banach-stone-point-map-inverse" -> "def:banach-stone-point-equiv"	[style=dashed];	"thm:banach-stone"	[color=green,		label="banach-stone",		shape=ellipse];	"lem:banach-stone-point-map-continuous" -> "thm:banach-stone"	[style=dashed];	"lem:banach-stone-separator"	[color=green,		label="banach-stone-separator",		shape=ellipse];	"lem:banach-stone-face-rigidity"	[color=green,		label="banach-stone-face-rigidity",		shape=ellipse];	"lem:banach-stone-separator" -> "lem:banach-stone-face-rigidity"	[style=dashed];	"lem:banach-stone-face-maximal"	[color=green,		label="banach-stone-face-maximal",		shape=ellipse];	"lem:banach-stone-face-rigidity" -> "lem:banach-stone-face-maximal"	[style=dashed];	"lem:banach-stone-face-maximal" -> "lem:banach-stone-isometry-faces"	[style=dashed];	"lem:colorful-caratheodory-support"	[color=green,		label="colorful-caratheodory-support",		shape=ellipse];	"thm:colorful-caratheodory-finite-zero"	[color=green,		label="colorful-caratheodory-finite-zero",		shape=ellipse];	"lem:colorful-caratheodory-support" -> "thm:colorful-caratheodory-finite-zero"	[style=dashed];	"thm:colorful-caratheodory-finite-zero" -> "thm:colorful-caratheodory"	[style=dashed];	"def:borsuk-ulam-antipode"	[color=green,		fillcolor="#B0ECA3",		label="borsuk-ulam-antipode",		shape=box,		style=filled];	"thm:borsuk-ulam"	[color="#FFAA33",		label="borsuk-ulam",		shape=ellipse];	"def:borsuk-ulam-antipode" -> "thm:borsuk-ulam"	[style=dashed];	"def:borsuk-ulam-sphere"	[color=green,		fillcolor="#B0ECA3",		label="borsuk-ulam-sphere",		shape=box,		style=filled];	"def:borsuk-ulam-sphere" -> "def:borsuk-ulam-antipode"	[style=dashed];	"def:collatz-map"	[color=green,		fillcolor="#B0ECA3",		label="collatz-map",		shape=box,		style=filled];	"def:collatz-attains-below"	[color=green,		fillcolor="#B0ECA3",		label="collatz-attains-below",		shape=box,		style=filled];	"def:collatz-map" -> "def:collatz-attains-below"	[style=dashed];	"thm:collatz-almost-bounded"	[color="#FFAA33",		label="collatz-almost-bounded",		shape=ellipse];	"def:collatz-attains-below" -> "thm:collatz-almost-bounded"	[style=dashed];	"lem:banach-stone-norm-attained"	[color=green,		label="banach-stone-norm-attained",		shape=ellipse];	"lem:banach-stone-finite-common-sign"	[color=green,		label="banach-stone-finite-common-sign",		shape=ellipse];	"lem:banach-stone-norm-attained" -> "lem:banach-stone-finite-common-sign"	[style=dashed];	"lem:banach-stone-convex-subset-face"	[color=green,		label="banach-stone-convex-subset-face",		shape=ellipse];	"lem:banach-stone-finite-common-sign" -> "lem:banach-stone-convex-subset-face"	[style=dashed];	"lem:banach-stone-convex-subset-face" -> "lem:banach-stone-face-maximal"	[style=dashed];	"thm:dlo-quantifier-elimination"	[color=blue,		label="dlo-quantifier-elimination",		shape=ellipse];	"thm:erdos-discrepancy"	[color=blue,		label="erdos-discrepancy",		shape=ellipse];	"thm:hilbert-17"	[color=blue,		label="hilbert-17",		shape=ellipse];	"thm:jordan-derangement"	[color=blue,		label="jordan-derangement",		shape=ellipse];	"thm:schauder-fixed-point"	[color=blue,		label="schauder-fixed-point",		shape=ellipse];	"thm:green-tao"	[color=blue,		label="green-tao",		shape=ellipse];	"thm:pontryagin-duality"	[color=blue,		label="pontryagin-duality",		shape=ellipse];	"thm:maynard-tao"	[color=blue,		label="maynard-tao",		shape=ellipse];	"thm:paris-harrington"	[color=blue,		label="paris-harrington",		shape=ellipse];	"thm:debruijn-erdos"	[color=green,		fillcolor="#1CAC78",		label="debruijn-erdos",		shape=ellipse,		style=filled];	"thm:skolem-mahler-lech"	[color=blue,		label="skolem-mahler-lech",		shape=ellipse];	"thm:jordan-cycle"	[color=blue,		label="jordan-cycle",		shape=ellipse];	"def:banach-stone-point-equiv" -> "thm:banach-stone"	[style=dashed];	"def:banach-stone-face"	[color=green,		fillcolor="#B0ECA3",		label="banach-stone-face",		shape=box,		style=filled];	"def:banach-stone-face" -> "lem:banach-stone-separator"	[style=dashed];	"def:banach-stone-face" -> "lem:banach-stone-convex-subset-face"	[style=dashed];	"lem:banach-stone-face-convex"	[color=green,		label="banach-stone-face-convex",		shape=ellipse];	"def:banach-stone-face" -> "lem:banach-stone-face-convex"	[style=dashed];	"lem:banach-stone-face-convex" -> "lem:banach-stone-isometry-faces"	[style=dashed];	"thm:kakeya-3d"	[color=blue,		label="kakeya-3d",		shape=ellipse];	"thm:ternary-goldbach"	[color=blue,		label="ternary-goldbach",		shape=ellipse];	"thm:gleason-kahane-zelazko"	[color=blue,		label="gleason-kahane-zelazko",		shape=ellipse];	"thm:von-neumann-double-commutant"	[color=blue,		label="von-neumann-double-commutant",		shape=ellipse];	"thm:runge"	[color=blue,		label=runge,		shape=ellipse];	"thm:burnside-prime-degree"	[color="#FFAA33",		label="burnside-prime-degree",		shape=ellipse];	"thm:quillen-suslin"	[color=blue,		label="quillen-suslin",		shape=ellipse];}`)
+    .on("end", interactive);
+
+latexLabelEscaper = function(label) {
+  return label.replace(/\./g, '\\.').replace(/:/g, '\\:')
+}
+
+clickNode = function() {
+  $("#statements div").hide()
+  var node_id = $('text', this).text();
+  $('.thm').hide();
+  $('#'+latexLabelEscaper(node_id)).show().children().show();
+}
+function interactive() {
+    $("span#legend_title").on("click", function () {
+           $(this).siblings('dl').toggle();
+        })
+
+    d3.selectAll('.node')
+        .attr('pointer-events', 'fill')
+        .on('click', function () {
+           var title = d3.select(this).selectAll('title').text().trim();
+           $('#statements > div').hide()
+           $('.thm').hide();
+           $('#'+latexLabelEscaper(title)+'_modal').show().children().show().children().show();
+           $('#statements').show()
+        });
+
+    d3.selectAll('.dep-closebtn').on('click', function() {
+        var modal =
+            d3.select(this).node().parentNode.parentNode.parentNode ;
+        d3.select(modal).style('display', 'none');
+    });
+}
+
+</script>
+
+</body>
+</html>
