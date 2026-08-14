@@ -1,7 +1,46 @@
 \section{Paris--Harrington principle}
 
+\begin{definition}[Relatively large homogeneous set]
+\label{def:ph-relatively-large}
+\lean{ParisHarringtonPrinciple.RelativelyLarge, ParisHarringtonPrinciple.IsHomogeneous}
+\leanok
+A finite set $H\subseteq[1,N]$ is relatively large when $|H|\ge m$ and $\min H\le |H|$. It is homogeneous for a coloring when all of its $k$-subsets receive the same color.
+\end{definition}
+
+\begin{lemma}[Infinite Ramsey theorem]
+\label{lem:ph-infinite-ramsey}
+\lean{ParisHarringtonPrinciple.infinite_ramsey}
+\leanok
+Every finite coloring of the $r$-element subsets of an infinite set of natural numbers has an infinite homogeneous subset.
+\end{lemma}
+
+\begin{definition}[Bad finite coloring]
+\label{def:ph-bad-coloring}
+\lean{ParisHarringtonPrinciple.IsGoodColoringSet, ParisHarringtonPrinciple.IsBadColoring, ParisHarringtonPrinciple.BadColoring}
+\leanok
+A bad coloring at size $N$ is one having no relatively large homogeneous witness of the required size.
+\end{definition}
+
+\begin{lemma}[Restriction of bad colorings]
+\label{lem:ph-bad-restrict}
+\lean{ParisHarringtonPrinciple.BadColoring.restrict, ParisHarringtonPrinciple.BadColoring.restrict_refl, ParisHarringtonPrinciple.BadColoring.restrict_trans}
+\leanok
+\uses{def:ph-bad-coloring}
+Bad colorings restrict coherently along inclusions $\operatorname{Fin}(i)\hookrightarrow\operatorname{Fin}(j)$.
+\end{lemma}
+
+\begin{lemma}[Uniform finite bound]
+\label{lem:ph-uniform-bound}
+\lean{ParisHarringtonPrinciple.exists_uniform_good_bound}
+\leanok
+\uses{lem:ph-infinite-ramsey, def:ph-bad-coloring, lem:ph-bad-restrict}
+For fixed $k,r,m$ with $r>0$ and $k\le m$, some $N$ forces every $r$-coloring on $\operatorname{Fin}(N)$ to admit a good homogeneous set.
+\end{lemma}
+
 \begin{theorem}[Paris--Harrington]
 \label{thm:paris-harrington}
 \lean{ParisHarringtonPrinciple.MainTheorem}
-The FormalQualBench statement of the Paris--Harrington principle.
+\leanok
+\uses{def:ph-relatively-large, lem:ph-uniform-bound}
+Assume $r>0$ and $k\le m$. Then there exists $N$ such that every $r$-coloring of the $k$-subsets of $[1,N]$ has a relatively large homogeneous set.
 \end{theorem}

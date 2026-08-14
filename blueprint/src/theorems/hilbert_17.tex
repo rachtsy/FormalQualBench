@@ -1,7 +1,20 @@
 \section{Hilbert's seventeenth problem}
 
-\begin{theorem}[Hilbert's seventeenth problem]
-\label{thm:hilbert-17}
+\begin{definition}[Global nonnegativity]
+\label{def:hilbert17-nonnegative}
+\lean{Hilbert17thProblem.IsGloballyNonnegative}
+\leanok
+A real multivariate polynomial is globally nonnegative if it evaluates to a nonnegative real number at every point.
+\end{definition}
+
+\begin{theorem}[Artin's solution of Hilbert's seventeenth problem]
+\label{thm:hilbert17}
 \lean{Hilbert17thProblem.MainTheorem}
-The FormalQualBench statement of Hilbert's seventeenth problem.
+\notready
+\uses{def:hilbert17-nonnegative}
+Every globally nonnegative real multivariate polynomial becomes a finite sum of squares in the fraction field of the polynomial ring.
 \end{theorem}
+
+\begin{proof}
+The theorem statement is formalized, but the proof is currently a \texttt{sorry}.
+\end{proof}

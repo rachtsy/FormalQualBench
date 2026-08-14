@@ -1,9 +1,12 @@
-\section{Burnside's theorem for prime degree}
+\section{Burnside's prime-degree theorem}
 
-\begin{theorem}[Burnside]
+\begin{theorem}[Burnside's theorem on prime degree]
 \label{thm:burnside-prime-degree}
 \lean{BurnsidePrimeDegreeTheorem.MainTheorem}
 \notready
-A transitive permutation group of prime degree is either $2$-transitive or has
-a normal regular subgroup.
+Let $G$ act transitively on a finite set $\alpha$ of prime cardinality. Then either the action is $2$-transitive, or $G$ has a normal regular subgroup.
 \end{theorem}
+
+\begin{proof}
+The theorem statement is formalized, but its proof is currently a \texttt{sorry}. The repository also contains auxiliary Burnside-development files, but the present \texttt{MainTheorem} does not yet depend on them.
+\end{proof}

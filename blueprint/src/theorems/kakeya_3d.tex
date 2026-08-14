@@ -1,7 +1,28 @@
 \section{Three-dimensional Kakeya theorem}
 
-\begin{theorem}[Kakeya theorem in three dimensions]
+\begin{definition}[Unit segment in a direction]
+\label{def:kakeya-segment}
+\lean{KakeyaTheorem3D.R3, KakeyaTheorem3D.segmentAlong}
+\leanok
+For $x,v\in\mathbb R^3$, the segment along $v$ from $x$ is $\{x+tv:0\le t\le1\}$.
+\end{definition}
+
+\begin{definition}[Kakeya set]
+\label{def:kakeya-set}
+\lean{KakeyaTheorem3D.IsKakeyaSet}
+\leanok
+\uses{def:kakeya-segment}
+A set $K\subseteq\mathbb R^3$ is Kakeya if it contains a unit line segment in every unit direction.
+\end{definition}
+
+\begin{theorem}[Kakeya theorem in $\mathbb R^3$]
 \label{thm:kakeya-3d}
 \lean{KakeyaTheorem3D.MainTheorem}
-The FormalQualBench statement of the three-dimensional Kakeya theorem.
+\notready
+\uses{def:kakeya-set}
+Every Kakeya set in $\mathbb R^3$ has Hausdorff dimension $3$.
 \end{theorem}
+
+\begin{proof}
+The geometric definitions and theorem statement are formalized, but the proof is currently a \texttt{sorry}.
+\end{proof}

@@ -1,7 +1,53 @@
-\section{Von Neumann double commutant theorem}
+\section{von Neumann double commutant theorem}
 
-\begin{theorem}[Von Neumann double commutant]
+\begin{lemma}[Invariant subspaces and closure]
+\label{lem:vN-closure-invariant}
+\lean{VonNeumannDoubleCommutantTheorem.closure_invt}
+\leanok
+The topological closure of an invariant subspace of a continuous linear operator remains invariant.
+\end{lemma}
+
+\begin{lemma}[Orthogonal complements of invariant subspaces]
+\label{lem:vN-orthogonal-invariant}
+\lean{VonNeumannDoubleCommutantTheorem.orthogonal_invt}
+\leanok
+If a subspace is invariant under $a^*$, then its orthogonal complement is invariant under $a$.
+\end{lemma}
+
+\begin{definition}[Diagonal amplification]
+\label{def:vN-diag}
+\lean{VonNeumannDoubleCommutantTheorem.HSum, VonNeumannDoubleCommutantTheorem.diag}
+\leanok
+A bounded operator $a$ on $H$ acts diagonally on a finite Hilbert direct sum of copies of $H$.
+\end{definition}
+
+\begin{lemma}[Finite-vector approximation]
+\label{lem:vN-finite-approx}
+\lean{VonNeumannDoubleCommutantTheorem.finite_approx}
+\leanok
+\uses{lem:vN-closure-invariant, lem:vN-orthogonal-invariant, def:vN-diag}
+If $x$ lies in the bicommutant of a star-subalgebra $S$, then on any finite tuple of vectors the diagonal action of $x$ lies in the norm closure of the corresponding diagonal actions of elements of $S$.
+\end{lemma}
+
+\begin{lemma}[Weak-operator approximation]
+\label{lem:vN-wot-approx}
+\lean{VonNeumannDoubleCommutantTheorem.wot_approx}
+\leanok
+\uses{lem:vN-finite-approx}
+Every element of the bicommutant of $S$ lies in the weak-operator closure of $S$.
+\end{lemma}
+
+\begin{lemma}[Centralizers are weak-operator closed]
+\label{lem:vN-centralizer-closed}
+\lean{VonNeumannDoubleCommutantTheorem.wot_centralizer_closed}
+\leanok
+The image in the weak-operator topology of the centralizer of any set of bounded operators is closed.
+\end{lemma}
+
+\begin{theorem}[von Neumann double commutant theorem]
 \label{thm:von-neumann-double-commutant}
 \lean{VonNeumannDoubleCommutantTheorem.MainTheorem}
-The FormalQualBench statement of the von Neumann double commutant theorem.
+\leanok
+\uses{lem:vN-wot-approx, lem:vN-centralizer-closed}
+For a unital star-subalgebra $S\subseteq B(H)$, weak-operator closedness is equivalent to equality with its bicommutant.
 \end{theorem}

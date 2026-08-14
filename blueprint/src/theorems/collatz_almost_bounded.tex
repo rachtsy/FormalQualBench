@@ -4,24 +4,32 @@
 \label{def:collatz-map}
 \lean{CollatzMapAlmostBoundedValues.collatz}
 \leanok
-The Collatz map sends an even integer $n$ to $n/2$ and an odd integer $n$ to
-$3n+1$.
+Define $T(n)=n/2$ when $n$ is even and $T(n)=3n+1$ when $n$ is odd.
 \end{definition}
 
-\begin{definition}[Attaining a bounded value]
+\begin{definition}[Attaining a value below a bound]
 \label{def:collatz-attains-below}
 \lean{CollatzMapAlmostBoundedValues.AttainsBelow}
 \leanok
 \uses{def:collatz-map}
-For a function $f:\mathbb N\to\mathbb N$, a starting value $n$ attains below
-$f(n)$ if some iterate of the Collatz map is strictly smaller than $f(n)$.
+For $f:\mathbb N\to\mathbb N$, say that the orbit from $n$ attains below $f(n)$ if some iterate $T^k(n)$ is strictly smaller than $f(n)$.
+\end{definition}
+
+\begin{definition}[Logarithmic density zero]
+\label{def:collatz-log-density-zero}
+\lean{CollatzMapAlmostBoundedValues.logWeightSum, CollatzMapAlmostBoundedValues.LogDensityZero}
+\leanok
+A set has logarithmic density zero when its normalized logarithmic harmonic weight tends to zero.
 \end{definition}
 
 \begin{theorem}[Almost all Collatz orbits attain almost bounded values]
 \label{thm:collatz-almost-bounded}
 \lean{CollatzMapAlmostBoundedValues.MainTheorem}
 \notready
-\uses{def:collatz-attains-below}
-For every function $f(n)\to\infty$, the exceptional set of starting values whose
-Collatz orbit never goes below $f(n)$ has logarithmic density zero.
+\uses{def:collatz-attains-below, def:collatz-log-density-zero}
+For every $f:\mathbb N\to\mathbb N$ with $f(n)\to\infty$, the set of $n$ whose Collatz orbit never falls below $f(n)$ has logarithmic density zero.
 \end{theorem}
+
+\begin{proof}
+The definitions and statement are formalized; the proof of the main theorem is currently a \texttt{sorry}.
+\end{proof}

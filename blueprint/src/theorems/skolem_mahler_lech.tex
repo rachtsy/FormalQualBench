@@ -1,7 +1,20 @@
 \section{Skolem--Mahler--Lech theorem}
 
+\begin{definition}[Arithmetic progression]
+\label{def:sml-arith-prog}
+\lean{SkolemMahlerLechTheorem.arithProg}
+\leanok
+For $a,d\in\mathbb N$, define the arithmetic progression $\{a+dn:n\in\mathbb N\}$.
+\end{definition}
+
 \begin{theorem}[Skolem--Mahler--Lech]
 \label{thm:skolem-mahler-lech}
 \lean{SkolemMahlerLechTheorem.MainTheorem}
-The FormalQualBench statement of the Skolem--Mahler--Lech theorem.
+\notready
+\uses{def:sml-arith-prog}
+Over a field of characteristic zero, the zero set of a linear recurrence sequence is a finite exceptional set together with a finite union of arithmetic progressions.
 \end{theorem}
+
+\begin{proof}
+The theorem statement is formalized, but the proof is currently a \texttt{sorry}.
+\end{proof}

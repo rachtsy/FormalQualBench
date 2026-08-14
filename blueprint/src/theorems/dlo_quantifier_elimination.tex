@@ -1,8 +1,76 @@
 \section{Quantifier elimination for dense linear orders}
 
-\begin{theorem}[Quantifier elimination]
-\label{thm:dlo-quantifier-elimination}
+\begin{definition}[Quantifier elimination]
+\label{def:dlo-qe}
+\lean{DLOQuantifierElimination.EliminatesQuantifiers}
+\leanok
+A theory eliminates quantifiers if every bounded formula is semantically equivalent, in every model of the theory, to a quantifier-free formula.
+\end{definition}
+
+\begin{lemma}[Realization is preserved by finitely generated partial equivalences]
+\label{lem:dlo-fgequiv}
+\lean{DLOQuantifierElimination.realize_iff_of_fgequiv}
+\leanok
+A formula has the same truth value on tuples related by a finitely generated partial equivalence between two dense linear orders.
+\end{lemma}
+
+\begin{definition}[Finite order diagrams]
+\label{def:dlo-order-diagram}
+\lean{DLOQuantifierElimination.orderAtom, DLOQuantifierElimination.orderDiagram}
+\leanok
+A finite order profile is encoded by a conjunction of atomic or negated atomic order formulas.
+\end{definition}
+
+\begin{lemma}[Order diagrams are quantifier free]
+\label{lem:dlo-order-diagram-qf}
+\lean{DLOQuantifierElimination.orderDiagram_isQF}
+\leanok
+\uses{def:dlo-order-diagram}
+Every finite order diagram is quantifier free.
+\end{lemma}
+
+\begin{definition}[Quantifier-free representative over finitely many variables]
+\label{def:dlo-qf-finite}
+\lean{DLOQuantifierElimination.qfForFinite}
+\leanok
+\uses{def:dlo-order-diagram}
+For a formula with finitely many free variables, form the disjunction of precisely those finite order diagrams realized together with the formula over $\mathbb Q$.
+\end{definition}
+
+\begin{lemma}[The finite representative is quantifier free]
+\label{lem:dlo-qf-finite-isqf}
+\lean{DLOQuantifierElimination.qfForFinite_isQF}
+\leanok
+\uses{def:dlo-qf-finite, lem:dlo-order-diagram-qf}
+The formula constructed from finite order profiles is quantifier free.
+\end{lemma}
+
+\begin{lemma}[Same order profile gives a partial equivalence]
+\label{lem:dlo-profile-fgequiv}
+\lean{DLOQuantifierElimination.fgequivOfSameOrderProfile}
+\leanok
+Tuples with the same pairwise order profile generate isomorphic finite ordered substructures.
+\end{lemma}
+
+\begin{lemma}[Correctness of the finite representative]
+\label{lem:dlo-qf-finite-correct}
+\lean{DLOQuantifierElimination.realize_qfForFinite}
+\leanok
+\uses{lem:dlo-fgequiv, def:dlo-qf-finite, lem:dlo-profile-fgequiv}
+In every nonempty dense linear order, a formula with finitely many free variables is equivalent to its quantifier-free representative.
+\end{lemma}
+
+\begin{lemma}[Quantifier-free formulas remain quantifier free under substitution]
+\label{lem:dlo-qf-subst}
+\lean{DLOQuantifierElimination.isQF_subst}
+\leanok
+Substitution of terms into a quantifier-free formula preserves quantifier-freeness.
+\end{lemma}
+
+\begin{theorem}[Quantifier elimination for DLO]
+\label{thm:dlo-qe}
 \lean{DLOQuantifierElimination.MainTheorem}
-The FormalQualBench statement that the theory of dense linear orders admits
-quantifier elimination.
+\leanok
+\uses{def:dlo-qe, lem:dlo-qf-finite-isqf, lem:dlo-qf-finite-correct, lem:dlo-qf-subst}
+The theory of dense linear orders without endpoints, together with nonemptiness, eliminates quantifiers.
 \end{theorem}

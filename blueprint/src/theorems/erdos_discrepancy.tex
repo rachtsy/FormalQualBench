@@ -1,7 +1,28 @@
 \section{Erd\H{o}s discrepancy problem}
 
-\begin{theorem}[Erd\H{o}s discrepancy]
+\begin{definition}[Sign sequence]
+\label{def:erdos-discrepancy-sign}
+\lean{ErdosDiscrepancyProblem.IsSign}
+\leanok
+An integer is a sign when it is either $1$ or $-1$.
+\end{definition}
+
+\begin{definition}[Unbounded discrepancy]
+\label{def:erdos-discrepancy-unbounded}
+\lean{ErdosDiscrepancyProblem.DiscrepancyUnbounded}
+\leanok
+\uses{def:erdos-discrepancy-sign}
+Every $\{\pm1\}$-valued sequence has homogeneous arithmetic progressions whose partial sums have arbitrarily large absolute value.
+\end{definition}
+
+\begin{theorem}[Erd\H{o}s discrepancy theorem]
 \label{thm:erdos-discrepancy}
 \lean{ErdosDiscrepancyProblem.MainTheorem}
-The FormalQualBench statement of the Erd\H{o}s discrepancy problem.
+\notready
+\uses{def:erdos-discrepancy-unbounded}
+The discrepancy of every sign sequence is unbounded.
 \end{theorem}
+
+\begin{proof}
+The theorem statement is formalized, but the proof is currently a \texttt{sorry}.
+\end{proof}

@@ -1,7 +1,20 @@
 \section{Pontryagin duality}
 
-\begin{theorem}[Pontryagin duality]
+\begin{definition}[Canonical evaluation isomorphism]
+\label{def:pontryagin-evaluation}
+\lean{PontryaginDuality.IsEvaluationIso}
+\leanok
+A topological group isomorphism $A\simeq \widehat{\widehat A}$ is an evaluation isomorphism when it sends $a$ to the character $\chi\mapsto\chi(a)$.
+\end{definition}
+
+\begin{theorem}[Pontryagin biduality]
 \label{thm:pontryagin-duality}
 \lean{PontryaginDuality.MainTheorem}
-The FormalQualBench statement of Pontryagin duality.
+\notready
+\uses{def:pontryagin-evaluation}
+Every locally compact Hausdorff abelian topological group is canonically topologically isomorphic to its double Pontryagin dual via evaluation.
 \end{theorem}
+
+\begin{proof}
+The canonical formulation is formalized, but the proof is currently a \texttt{sorry}.
+\end{proof}

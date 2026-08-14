@@ -1,25 +1,37 @@
 \section{Borsuk--Ulam theorem}
 
-\begin{definition}[Unit sphere]
-\label{def:borsuk-ulam-sphere}
-\lean{BorsukUlamTheorem.UnitSphere}
+\begin{definition}[Unit sphere and antipodal map]
+\label{def:borsuk-ulam-antipode}
+\lean{BorsukUlamTheorem.UnitSphere, BorsukUlamTheorem.antipode}
 \leanok
-The type $S^n$ is represented as the unit sphere in $\mathbb R^{n+1}$.
+For $n\in\mathbb N$, let $S^n$ be the unit sphere in $\mathbb R^{n+1}$. The antipodal map is $a(x)=-x$.
 \end{definition}
 
-\begin{definition}[Antipodal map]
-\label{def:borsuk-ulam-antipode}
-\lean{BorsukUlamTheorem.antipode}
+\begin{lemma}[Continuity of the antipodal map]
+\label{lem:borsuk-ulam-continuous-antipode}
+\lean{BorsukUlamTheorem.continuous_antipode}
 \leanok
-\uses{def:borsuk-ulam-sphere}
-The antipodal map sends $x$ to $-x$ on the unit sphere.
-\end{definition}
+\uses{def:borsuk-ulam-antipode}
+The antipodal map on $S^n$ is continuous.
+\end{lemma}
+
+\begin{lemma}[The antipodal map is an involution]
+\label{lem:borsuk-ulam-antipode-involution}
+\lean{BorsukUlamTheorem.antipode_antipode}
+\leanok
+\uses{def:borsuk-ulam-antipode}
+For every $x\in S^n$, one has $a(a(x))=x$.
+\end{lemma}
 
 \begin{theorem}[Borsuk--Ulam]
 \label{thm:borsuk-ulam}
 \lean{BorsukUlamTheorem.MainTheorem}
 \notready
 \uses{def:borsuk-ulam-antipode}
-Every continuous map $f:S^n\to\mathbb R^n$ takes the same value at some
-antipodal pair $x$ and $-x$.
+For every $n\in\mathbb N$ and every continuous map $f:S^n\to\mathbb R^n$, there exists $x\in S^n$ such that $f(x)=f(-x)$.
 \end{theorem}
+
+\begin{proof}
+\uses{lem:borsuk-ulam-continuous-antipode, lem:borsuk-ulam-antipode-involution}
+The Lean proof handles dimensions $0$ and $1$. In dimension $1$ it uses connectedness and the intermediate value theorem. The case $n\ge 2$ is currently left as a \texttt{sorry}.
+\end{proof}

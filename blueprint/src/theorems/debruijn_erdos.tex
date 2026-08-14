@@ -4,12 +4,10 @@
 \label{thm:debruijn-erdos}
 \lean{DeBruijnErdos.MainTheorem}
 \leanok
-Let $G$ be a graph and let $k\in\mathbb N$.  If every finite induced subgraph of
-$G$ is $k$-colorable, then $G$ is $k$-colorable.
+Let $G$ be a graph and $k\in\mathbb N$. If every finite induced subgraph of $G$ is $k$-colorable, then $G$ is $k$-colorable.
 \end{theorem}
 
 \begin{proof}
 \leanok
-The formal proof applies the compactness principle for graph homomorphisms to
-the complete graph on $k$ vertices.
+The Lean proof invokes the compactness theorem \texttt{SimpleGraph.nonempty\_hom\_of\_forall\_finite\_subgraph\_hom} with target the complete graph on $\operatorname{Fin}(k)$. A $k$-coloring of every finite induced subgraph provides the required finite graph homomorphisms.
 \end{proof}

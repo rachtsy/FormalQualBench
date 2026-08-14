@@ -1,7 +1,13 @@
-\section{Jordan derangement theorem}
+\section{Jordan's derangement theorem}
 
-\begin{theorem}[Jordan derangement theorem]
+\begin{theorem}[Jordan's derangement theorem]
 \label{thm:jordan-derangement}
 \lean{JordanDerangementTheorem.MainTheorem}
-The FormalQualBench statement of Jordan's derangement theorem.
+\leanok
+A finite transitive permutation group acting on a nontrivial set contains a derangement, i.e. an element with no fixed point.
 \end{theorem}
+
+\begin{proof}
+\leanok
+Assume every group element fixes a point. Burnside's orbit-counting identity expresses the sum of the numbers of fixed points as the number of orbits times $|G|$. Transitivity gives one orbit, while every summand is at least $1$ and the identity element fixes more than one point, yielding a strict contradiction.
+\end{proof}
