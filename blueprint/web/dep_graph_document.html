@@ -76,15 +76,15 @@
       </span>
       <span class="definition_thmlabel">1</span><span class="definition_thmtitle">Faces of the unit sphere</span></div>
     <div class="thm_thmcontent"><p>   For a compact space \(X\), a point \(x\in X\), and \(\varepsilon \in \mathbb R\), define </p>
-<div class="displaymath" id="a0000000026">
+<div class="displaymath" id="a0000000025">
   \[  F(x,\varepsilon )=\{ f\in C(X,\mathbb R):\| f\| =1\text{ and }f(x)=\varepsilon \} .  \]
 </div>
 </div>
 
-    <a class="latex_link" href="sect0002.html#def:banach-stone-face">LaTeX</a>
+    <a class="latex_link" href="sect0001.html#def:banach-stone-face">LaTeX</a>
     
     
-  <a class="lean_link lean_decl" href=":/find/#doc/BanachStoneTheorem.face">Lean</a>
+  <a class="lean_link lean_decl" href="https://rachtsy.github.io/FormalQualBench/docs/find/#doc/BanachStoneTheorem.face">Lean</a>
     
     
   
@@ -111,10 +111,10 @@
     <div class="thm_thmcontent"><p>    The two inverse point maps define an equivalence between the underlying spaces. </p>
 </div>
 
-    <a class="latex_link" href="sect0002.html#def:banach-stone-point-equiv">LaTeX</a>
+    <a class="latex_link" href="sect0001.html#def:banach-stone-point-equiv">LaTeX</a>
     
     
-  <a class="lean_link lean_decl" href=":/find/#doc/BanachStoneTheorem.pointEquiv">Lean</a>
+  <a class="lean_link lean_decl" href="https://rachtsy.github.io/FormalQualBench/docs/find/#doc/BanachStoneTheorem.pointEquiv">Lean</a>
     
     
   
@@ -141,10 +141,10 @@
     <div class="thm_thmcontent"><p>    The image-of-faces correspondence defines a map between the underlying compact Hausdorff spaces. </p>
 </div>
 
-    <a class="latex_link" href="sect0002.html#def:banach-stone-point-map">LaTeX</a>
+    <a class="latex_link" href="sect0001.html#def:banach-stone-point-map">LaTeX</a>
     
     
-  <a class="lean_link lean_decl" href=":/find/#doc/BanachStoneTheorem.pointMap">Lean</a>
+  <a class="lean_link lean_decl" href="https://rachtsy.github.io/FormalQualBench/docs/find/#doc/BanachStoneTheorem.pointMap">Lean</a>
     
     
   
@@ -167,44 +167,23 @@
       <span class="definition_thmcaption">
       Definition
       </span>
-      <span class="definition_thmlabel">17</span><span class="definition_thmtitle">Antipodal map</span></div>
-    <div class="thm_thmcontent"><p>    The antipodal map sends \(x\) to \(-x\) on the unit sphere. </p>
+      <span class="definition_thmlabel">16</span><span class="definition_thmtitle">Unit sphere and antipodal map</span></div>
+    <div class="thm_thmcontent"><p>   For \(n\in \mathbb N\), let \(S^n\) be the unit sphere in \(\mathbb R^{n+1}\). The antipodal map is \(a(x)=-x\). </p>
 </div>
 
-    <a class="latex_link" href="sect0003.html#def:borsuk-ulam-antipode">LaTeX</a>
+    <a class="latex_link" href="sect0002.html#def:borsuk-ulam-antipode">LaTeX</a>
     
     
-  <a class="lean_link lean_decl" href=":/find/#doc/BorsukUlamTheorem.antipode">Lean</a>
-    
-    
-  
-    
-  </div>
-    
-      </div>
-    </div>
-
-
-    
-    <div class="dep-modal-container" id="def:borsuk-ulam-sphere_modal">
-      <div class="dep-modal-content">
-          <button class="dep-closebtn">
-<svg  class="icon icon-cross "><use xlink:href="symbol-defs.svg#icon-cross"></use></svg>
-</button>
+  <div class="tooltip">
+      <span class="lean_link">Lean</span>
+      <ul class="tooltip_list">
         
-  <div class="thm" id="def:borsuk-ulam-sphere" style="display: none">
-    <div class="thm_thmheading">
-      <span class="definition_thmcaption">
-      Definition
-      </span>
-      <span class="definition_thmlabel">16</span><span class="definition_thmtitle">Unit sphere</span></div>
-    <div class="thm_thmcontent"><p>   The type \(S^n\) is represented as the unit sphere in \(\mathbb R^{n+1}\). </p>
-</div>
-
-    <a class="latex_link" href="sect0003.html#def:borsuk-ulam-sphere">LaTeX</a>
-    
-    
-  <a class="lean_link lean_decl" href=":/find/#doc/BorsukUlamTheorem.UnitSphere">Lean</a>
+           <li><a href="https://rachtsy.github.io/FormalQualBench/docs/find/#doc/BorsukUlamTheorem.UnitSphere" class="lean_decl">BorsukUlamTheorem.UnitSphere</a></li>
+        
+           <li><a href="https://rachtsy.github.io/FormalQualBench/docs/find/#doc/BorsukUlamTheorem.antipode" class="lean_decl">BorsukUlamTheorem.antipode</a></li>
+        
+      </ul>
+  </div>
     
     
   
@@ -227,14 +206,53 @@
       <span class="definition_thmcaption">
       Definition
       </span>
-      <span class="definition_thmlabel">21</span><span class="definition_thmtitle">Attaining a bounded value</span></div>
-    <div class="thm_thmcontent"><p>    For a function \(f:\mathbb N\to \mathbb N\), a starting value \(n\) attains below \(f(n)\) if some iterate of the Collatz map is strictly smaller than \(f(n)\). </p>
+      <span class="definition_thmlabel">22</span><span class="definition_thmtitle">Attaining a value below a bound</span></div>
+    <div class="thm_thmcontent"><p>    For \(f:\mathbb N\to \mathbb N\), say that the orbit from \(n\) attains below \(f(n)\) if some iterate \(T^k(n)\) is strictly smaller than \(f(n)\). </p>
 </div>
 
-    <a class="latex_link" href="sect0005.html#def:collatz-attains-below">LaTeX</a>
+    <a class="latex_link" href="sect0004.html#def:collatz-attains-below">LaTeX</a>
     
     
-  <a class="lean_link lean_decl" href=":/find/#doc/CollatzMapAlmostBoundedValues.AttainsBelow">Lean</a>
+  <a class="lean_link lean_decl" href="https://rachtsy.github.io/FormalQualBench/docs/find/#doc/CollatzMapAlmostBoundedValues.AttainsBelow">Lean</a>
+    
+    
+  
+    
+  </div>
+    
+      </div>
+    </div>
+
+
+    
+    <div class="dep-modal-container" id="def:collatz-log-density-zero_modal">
+      <div class="dep-modal-content">
+          <button class="dep-closebtn">
+<svg  class="icon icon-cross "><use xlink:href="symbol-defs.svg#icon-cross"></use></svg>
+</button>
+        
+  <div class="thm" id="def:collatz-log-density-zero" style="display: none">
+    <div class="thm_thmheading">
+      <span class="definition_thmcaption">
+      Definition
+      </span>
+      <span class="definition_thmlabel">23</span><span class="definition_thmtitle">Logarithmic density zero</span></div>
+    <div class="thm_thmcontent"><p>   A set has logarithmic density zero when its normalized logarithmic harmonic weight tends to zero. </p>
+</div>
+
+    <a class="latex_link" href="sect0004.html#def:collatz-log-density-zero">LaTeX</a>
+    
+    
+  <div class="tooltip">
+      <span class="lean_link">Lean</span>
+      <ul class="tooltip_list">
+        
+           <li><a href="https://rachtsy.github.io/FormalQualBench/docs/find/#doc/CollatzMapAlmostBoundedValues.logWeightSum" class="lean_decl">CollatzMapAlmostBoundedValues.logWeightSum</a></li>
+        
+           <li><a href="https://rachtsy.github.io/FormalQualBench/docs/find/#doc/CollatzMapAlmostBoundedValues.LogDensityZero" class="lean_decl">CollatzMapAlmostBoundedValues.LogDensityZero</a></li>
+        
+      </ul>
+  </div>
     
     
   
@@ -257,14 +275,451 @@
       <span class="definition_thmcaption">
       Definition
       </span>
-      <span class="definition_thmlabel">20</span><span class="definition_thmtitle">Collatz map</span></div>
-    <div class="thm_thmcontent"><p>   The Collatz map sends an even integer \(n\) to \(n/2\) and an odd integer \(n\) to \(3n+1\). </p>
+      <span class="definition_thmlabel">21</span><span class="definition_thmtitle">Collatz map</span></div>
+    <div class="thm_thmcontent"><p>   Define \(T(n)=n/2\) when \(n\) is even and \(T(n)=3n+1\) when \(n\) is odd. </p>
 </div>
 
-    <a class="latex_link" href="sect0005.html#def:collatz-map">LaTeX</a>
+    <a class="latex_link" href="sect0004.html#def:collatz-map">LaTeX</a>
     
     
-  <a class="lean_link lean_decl" href=":/find/#doc/CollatzMapAlmostBoundedValues.collatz">Lean</a>
+  <a class="lean_link lean_decl" href="https://rachtsy.github.io/FormalQualBench/docs/find/#doc/CollatzMapAlmostBoundedValues.collatz">Lean</a>
+    
+    
+  
+    
+  </div>
+    
+      </div>
+    </div>
+
+
+    
+    <div class="dep-modal-container" id="def:dlo-order-diagram_modal">
+      <div class="dep-modal-content">
+          <button class="dep-closebtn">
+<svg  class="icon icon-cross "><use xlink:href="symbol-defs.svg#icon-cross"></use></svg>
+</button>
+        
+  <div class="thm" id="def:dlo-order-diagram" style="display: none">
+    <div class="thm_thmheading">
+      <span class="definition_thmcaption">
+      Definition
+      </span>
+      <span class="definition_thmlabel">30</span><span class="definition_thmtitle">Finite order diagrams</span></div>
+    <div class="thm_thmcontent"><p>   A finite order profile is encoded by a conjunction of atomic or negated atomic order formulas. </p>
+</div>
+
+    <a class="latex_link" href="sect0006.html#def:dlo-order-diagram">LaTeX</a>
+    
+    
+  <div class="tooltip">
+      <span class="lean_link">Lean</span>
+      <ul class="tooltip_list">
+        
+           <li><a href="https://rachtsy.github.io/FormalQualBench/docs/find/#doc/DLOQuantifierElimination.orderAtom" class="lean_decl">DLOQuantifierElimination.orderAtom</a></li>
+        
+           <li><a href="https://rachtsy.github.io/FormalQualBench/docs/find/#doc/DLOQuantifierElimination.orderDiagram" class="lean_decl">DLOQuantifierElimination.orderDiagram</a></li>
+        
+      </ul>
+  </div>
+    
+    
+  
+    
+  </div>
+    
+      </div>
+    </div>
+
+
+    
+    <div class="dep-modal-container" id="def:dlo-qe_modal">
+      <div class="dep-modal-content">
+          <button class="dep-closebtn">
+<svg  class="icon icon-cross "><use xlink:href="symbol-defs.svg#icon-cross"></use></svg>
+</button>
+        
+  <div class="thm" id="def:dlo-qe" style="display: none">
+    <div class="thm_thmheading">
+      <span class="definition_thmcaption">
+      Definition
+      </span>
+      <span class="definition_thmlabel">28</span><span class="definition_thmtitle">Quantifier elimination</span></div>
+    <div class="thm_thmcontent"><p>   A theory eliminates quantifiers if every bounded formula is semantically equivalent, in every model of the theory, to a quantifier-free formula. </p>
+</div>
+
+    <a class="latex_link" href="sect0006.html#def:dlo-qe">LaTeX</a>
+    
+    
+  <a class="lean_link lean_decl" href="https://rachtsy.github.io/FormalQualBench/docs/find/#doc/DLOQuantifierElimination.EliminatesQuantifiers">Lean</a>
+    
+    
+  
+    
+  </div>
+    
+      </div>
+    </div>
+
+
+    
+    <div class="dep-modal-container" id="def:dlo-qf-finite_modal">
+      <div class="dep-modal-content">
+          <button class="dep-closebtn">
+<svg  class="icon icon-cross "><use xlink:href="symbol-defs.svg#icon-cross"></use></svg>
+</button>
+        
+  <div class="thm" id="def:dlo-qf-finite" style="display: none">
+    <div class="thm_thmheading">
+      <span class="definition_thmcaption">
+      Definition
+      </span>
+      <span class="definition_thmlabel">32</span><span class="definition_thmtitle">Quantifier-free representative over finitely many variables</span></div>
+    <div class="thm_thmcontent"><p>    For a formula with finitely many free variables, form the disjunction of precisely those finite order diagrams realized together with the formula over \(\mathbb Q\). </p>
+</div>
+
+    <a class="latex_link" href="sect0006.html#def:dlo-qf-finite">LaTeX</a>
+    
+    
+  <a class="lean_link lean_decl" href="https://rachtsy.github.io/FormalQualBench/docs/find/#doc/DLOQuantifierElimination.qfForFinite">Lean</a>
+    
+    
+  
+    
+  </div>
+    
+      </div>
+    </div>
+
+
+    
+    <div class="dep-modal-container" id="def:erdos-discrepancy-sign_modal">
+      <div class="dep-modal-content">
+          <button class="dep-closebtn">
+<svg  class="icon icon-cross "><use xlink:href="symbol-defs.svg#icon-cross"></use></svg>
+</button>
+        
+  <div class="thm" id="def:erdos-discrepancy-sign" style="display: none">
+    <div class="thm_thmheading">
+      <span class="definition_thmcaption">
+      Definition
+      </span>
+      <span class="definition_thmlabel">39</span><span class="definition_thmtitle">Sign sequence</span></div>
+    <div class="thm_thmcontent"><p>   An integer is a sign when it is either \(1\) or \(-1\). </p>
+</div>
+
+    <a class="latex_link" href="sect0008.html#def:erdos-discrepancy-sign">LaTeX</a>
+    
+    
+  <a class="lean_link lean_decl" href="https://rachtsy.github.io/FormalQualBench/docs/find/#doc/ErdosDiscrepancyProblem.IsSign">Lean</a>
+    
+    
+  
+    
+  </div>
+    
+      </div>
+    </div>
+
+
+    
+    <div class="dep-modal-container" id="def:erdos-discrepancy-unbounded_modal">
+      <div class="dep-modal-content">
+          <button class="dep-closebtn">
+<svg  class="icon icon-cross "><use xlink:href="symbol-defs.svg#icon-cross"></use></svg>
+</button>
+        
+  <div class="thm" id="def:erdos-discrepancy-unbounded" style="display: none">
+    <div class="thm_thmheading">
+      <span class="definition_thmcaption">
+      Definition
+      </span>
+      <span class="definition_thmlabel">40</span><span class="definition_thmtitle">Unbounded discrepancy</span></div>
+    <div class="thm_thmcontent"><p>    Every \(\{ \pm 1\} \)-valued sequence has homogeneous arithmetic progressions whose partial sums have arbitrarily large absolute value. </p>
+</div>
+
+    <a class="latex_link" href="sect0008.html#def:erdos-discrepancy-unbounded">LaTeX</a>
+    
+    
+  <a class="lean_link lean_decl" href="https://rachtsy.github.io/FormalQualBench/docs/find/#doc/ErdosDiscrepancyProblem.DiscrepancyUnbounded">Lean</a>
+    
+    
+  
+    
+  </div>
+    
+      </div>
+    </div>
+
+
+    
+    <div class="dep-modal-container" id="def:hilbert17-nonnegative_modal">
+      <div class="dep-modal-content">
+          <button class="dep-closebtn">
+<svg  class="icon icon-cross "><use xlink:href="symbol-defs.svg#icon-cross"></use></svg>
+</button>
+        
+  <div class="thm" id="def:hilbert17-nonnegative" style="display: none">
+    <div class="thm_thmheading">
+      <span class="definition_thmcaption">
+      Definition
+      </span>
+      <span class="definition_thmlabel">44</span><span class="definition_thmtitle">Global nonnegativity</span></div>
+    <div class="thm_thmcontent"><p>   A real multivariate polynomial is globally nonnegative if it evaluates to a nonnegative real number at every point. </p>
+</div>
+
+    <a class="latex_link" href="sect0011.html#def:hilbert17-nonnegative">LaTeX</a>
+    
+    
+  <a class="lean_link lean_decl" href="https://rachtsy.github.io/FormalQualBench/docs/find/#doc/Hilbert17thProblem.IsGloballyNonnegative">Lean</a>
+    
+    
+  
+    
+  </div>
+    
+      </div>
+    </div>
+
+
+    
+    <div class="dep-modal-container" id="def:kakeya-segment_modal">
+      <div class="dep-modal-content">
+          <button class="dep-closebtn">
+<svg  class="icon icon-cross "><use xlink:href="symbol-defs.svg#icon-cross"></use></svg>
+</button>
+        
+  <div class="thm" id="def:kakeya-segment" style="display: none">
+    <div class="thm_thmheading">
+      <span class="definition_thmcaption">
+      Definition
+      </span>
+      <span class="definition_thmlabel">48</span><span class="definition_thmtitle">Unit segment in a direction</span></div>
+    <div class="thm_thmcontent"><p>   For \(x,v\in \mathbb R^3\), the segment along \(v\) from \(x\) is \(\{ x+tv:0\le t\le 1\} \). </p>
+</div>
+
+    <a class="latex_link" href="sect0014.html#def:kakeya-segment">LaTeX</a>
+    
+    
+  <div class="tooltip">
+      <span class="lean_link">Lean</span>
+      <ul class="tooltip_list">
+        
+           <li><a href="https://rachtsy.github.io/FormalQualBench/docs/find/#doc/KakeyaTheorem3D.R3" class="lean_decl">KakeyaTheorem3D.R3</a></li>
+        
+           <li><a href="https://rachtsy.github.io/FormalQualBench/docs/find/#doc/KakeyaTheorem3D.segmentAlong" class="lean_decl">KakeyaTheorem3D.segmentAlong</a></li>
+        
+      </ul>
+  </div>
+    
+    
+  
+    
+  </div>
+    
+      </div>
+    </div>
+
+
+    
+    <div class="dep-modal-container" id="def:kakeya-set_modal">
+      <div class="dep-modal-content">
+          <button class="dep-closebtn">
+<svg  class="icon icon-cross "><use xlink:href="symbol-defs.svg#icon-cross"></use></svg>
+</button>
+        
+  <div class="thm" id="def:kakeya-set" style="display: none">
+    <div class="thm_thmheading">
+      <span class="definition_thmcaption">
+      Definition
+      </span>
+      <span class="definition_thmlabel">49</span><span class="definition_thmtitle">Kakeya set</span></div>
+    <div class="thm_thmcontent"><p>    A set \(K\subseteq \mathbb R^3\) is Kakeya if it contains a unit line segment in every unit direction. </p>
+</div>
+
+    <a class="latex_link" href="sect0014.html#def:kakeya-set">LaTeX</a>
+    
+    
+  <a class="lean_link lean_decl" href="https://rachtsy.github.io/FormalQualBench/docs/find/#doc/KakeyaTheorem3D.IsKakeyaSet">Lean</a>
+    
+    
+  
+    
+  </div>
+    
+      </div>
+    </div>
+
+
+    
+    <div class="dep-modal-container" id="def:ph-bad-coloring_modal">
+      <div class="dep-modal-content">
+          <button class="dep-closebtn">
+<svg  class="icon icon-cross "><use xlink:href="symbol-defs.svg#icon-cross"></use></svg>
+</button>
+        
+  <div class="thm" id="def:ph-bad-coloring" style="display: none">
+    <div class="thm_thmheading">
+      <span class="definition_thmcaption">
+      Definition
+      </span>
+      <span class="definition_thmlabel">54</span><span class="definition_thmtitle">Bad finite coloring</span></div>
+    <div class="thm_thmcontent"><p>   A bad coloring at size \(N\) is one having no relatively large homogeneous witness of the required size. </p>
+</div>
+
+    <a class="latex_link" href="sect0016.html#def:ph-bad-coloring">LaTeX</a>
+    
+    
+  <div class="tooltip">
+      <span class="lean_link">Lean</span>
+      <ul class="tooltip_list">
+        
+           <li><a href="https://rachtsy.github.io/FormalQualBench/docs/find/#doc/ParisHarringtonPrinciple.IsGoodColoringSet" class="lean_decl">ParisHarringtonPrinciple.IsGoodColoringSet</a></li>
+        
+           <li><a href="https://rachtsy.github.io/FormalQualBench/docs/find/#doc/ParisHarringtonPrinciple.IsBadColoring" class="lean_decl">ParisHarringtonPrinciple.IsBadColoring</a></li>
+        
+           <li><a href="https://rachtsy.github.io/FormalQualBench/docs/find/#doc/ParisHarringtonPrinciple.BadColoring" class="lean_decl">ParisHarringtonPrinciple.BadColoring</a></li>
+        
+      </ul>
+  </div>
+    
+    
+  
+    
+  </div>
+    
+      </div>
+    </div>
+
+
+    
+    <div class="dep-modal-container" id="def:ph-relatively-large_modal">
+      <div class="dep-modal-content">
+          <button class="dep-closebtn">
+<svg  class="icon icon-cross "><use xlink:href="symbol-defs.svg#icon-cross"></use></svg>
+</button>
+        
+  <div class="thm" id="def:ph-relatively-large" style="display: none">
+    <div class="thm_thmheading">
+      <span class="definition_thmcaption">
+      Definition
+      </span>
+      <span class="definition_thmlabel">52</span><span class="definition_thmtitle">Relatively large homogeneous set</span></div>
+    <div class="thm_thmcontent"><p>   A finite set \(H\subseteq [1,N]\) is relatively large when \(|H|\ge m\) and \(\min H\le |H|\). It is homogeneous for a coloring when all of its \(k\)-subsets receive the same color. </p>
+</div>
+
+    <a class="latex_link" href="sect0016.html#def:ph-relatively-large">LaTeX</a>
+    
+    
+  <div class="tooltip">
+      <span class="lean_link">Lean</span>
+      <ul class="tooltip_list">
+        
+           <li><a href="https://rachtsy.github.io/FormalQualBench/docs/find/#doc/ParisHarringtonPrinciple.RelativelyLarge" class="lean_decl">ParisHarringtonPrinciple.RelativelyLarge</a></li>
+        
+           <li><a href="https://rachtsy.github.io/FormalQualBench/docs/find/#doc/ParisHarringtonPrinciple.IsHomogeneous" class="lean_decl">ParisHarringtonPrinciple.IsHomogeneous</a></li>
+        
+      </ul>
+  </div>
+    
+    
+  
+    
+  </div>
+    
+      </div>
+    </div>
+
+
+    
+    <div class="dep-modal-container" id="def:pontryagin-evaluation_modal">
+      <div class="dep-modal-content">
+          <button class="dep-closebtn">
+<svg  class="icon icon-cross "><use xlink:href="symbol-defs.svg#icon-cross"></use></svg>
+</button>
+        
+  <div class="thm" id="def:pontryagin-evaluation" style="display: none">
+    <div class="thm_thmheading">
+      <span class="definition_thmcaption">
+      Definition
+      </span>
+      <span class="definition_thmlabel">58</span><span class="definition_thmtitle">Canonical evaluation isomorphism</span></div>
+    <div class="thm_thmcontent"><p>   A topological group isomorphism \(A\simeq \widehat{\widehat A}\) is an evaluation isomorphism when it sends \(a\) to the character \(\chi \mapsto \chi (a)\). </p>
+</div>
+
+    <a class="latex_link" href="sect0017.html#def:pontryagin-evaluation">LaTeX</a>
+    
+    
+  <a class="lean_link lean_decl" href="https://rachtsy.github.io/FormalQualBench/docs/find/#doc/PontryaginDuality.IsEvaluationIso">Lean</a>
+    
+    
+  
+    
+  </div>
+    
+      </div>
+    </div>
+
+
+    
+    <div class="dep-modal-container" id="def:sml-arith-prog_modal">
+      <div class="dep-modal-content">
+          <button class="dep-closebtn">
+<svg  class="icon icon-cross "><use xlink:href="symbol-defs.svg#icon-cross"></use></svg>
+</button>
+        
+  <div class="thm" id="def:sml-arith-prog" style="display: none">
+    <div class="thm_thmheading">
+      <span class="definition_thmcaption">
+      Definition
+      </span>
+      <span class="definition_thmlabel">63</span><span class="definition_thmtitle">Arithmetic progression</span></div>
+    <div class="thm_thmcontent"><p>   For \(a,d\in \mathbb N\), define the arithmetic progression \(\{ a+dn:n\in \mathbb N\} \). </p>
+</div>
+
+    <a class="latex_link" href="sect0021.html#def:sml-arith-prog">LaTeX</a>
+    
+    
+  <a class="lean_link lean_decl" href="https://rachtsy.github.io/FormalQualBench/docs/find/#doc/SkolemMahlerLechTheorem.arithProg">Lean</a>
+    
+    
+  
+    
+  </div>
+    
+      </div>
+    </div>
+
+
+    
+    <div class="dep-modal-container" id="def:vN-diag_modal">
+      <div class="dep-modal-content">
+          <button class="dep-closebtn">
+<svg  class="icon icon-cross "><use xlink:href="symbol-defs.svg#icon-cross"></use></svg>
+</button>
+        
+  <div class="thm" id="def:vN-diag" style="display: none">
+    <div class="thm_thmheading">
+      <span class="definition_thmcaption">
+      Definition
+      </span>
+      <span class="definition_thmlabel">68</span><span class="definition_thmtitle">Diagonal amplification</span></div>
+    <div class="thm_thmcontent"><p>   A bounded operator \(a\) on \(H\) acts diagonally on a finite Hilbert direct sum of copies of \(H\). </p>
+</div>
+
+    <a class="latex_link" href="sect0023.html#def:vN-diag">LaTeX</a>
+    
+    
+  <div class="tooltip">
+      <span class="lean_link">Lean</span>
+      <ul class="tooltip_list">
+        
+           <li><a href="https://rachtsy.github.io/FormalQualBench/docs/find/#doc/VonNeumannDoubleCommutantTheorem.HSum" class="lean_decl">VonNeumannDoubleCommutantTheorem.HSum</a></li>
+        
+           <li><a href="https://rachtsy.github.io/FormalQualBench/docs/find/#doc/VonNeumannDoubleCommutantTheorem.diag" class="lean_decl">VonNeumannDoubleCommutantTheorem.diag</a></li>
+        
+      </ul>
+  </div>
     
     
   
@@ -291,10 +746,10 @@
     <div class="thm_thmcontent"><p>    Every convex subset of the unit sphere of \(C(X,\mathbb R)\) is contained in a face \(F(x,\varepsilon )\) with \(\varepsilon \in \{ -1,1\} \). </p>
 </div>
 
-    <a class="latex_link" href="sect0002.html#lem:banach-stone-convex-subset-face">LaTeX</a>
+    <a class="latex_link" href="sect0001.html#lem:banach-stone-convex-subset-face">LaTeX</a>
     
     
-  <a class="lean_link lean_decl" href=":/find/#doc/BanachStoneTheorem.convex_subset_face">Lean</a>
+  <a class="lean_link lean_decl" href="https://rachtsy.github.io/FormalQualBench/docs/find/#doc/BanachStoneTheorem.convex_subset_face">Lean</a>
     
     
   
@@ -321,10 +776,10 @@
     <div class="thm_thmcontent"><p>    If \(|\varepsilon |=1\), then \(F(x,\varepsilon )\) is convex. </p>
 </div>
 
-    <a class="latex_link" href="sect0002.html#lem:banach-stone-face-convex">LaTeX</a>
+    <a class="latex_link" href="sect0001.html#lem:banach-stone-face-convex">LaTeX</a>
     
     
-  <a class="lean_link lean_decl" href=":/find/#doc/BanachStoneTheorem.face_convex">Lean</a>
+  <a class="lean_link lean_decl" href="https://rachtsy.github.io/FormalQualBench/docs/find/#doc/BanachStoneTheorem.face_convex">Lean</a>
     
     
   
@@ -351,10 +806,10 @@
     <div class="thm_thmcontent"><p>    Each signed face is a maximal convex subset of the unit sphere. </p>
 </div>
 
-    <a class="latex_link" href="sect0002.html#lem:banach-stone-face-maximal">LaTeX</a>
+    <a class="latex_link" href="sect0001.html#lem:banach-stone-face-maximal">LaTeX</a>
     
     
-  <a class="lean_link lean_decl" href=":/find/#doc/BanachStoneTheorem.face_maximal">Lean</a>
+  <a class="lean_link lean_decl" href="https://rachtsy.github.io/FormalQualBench/docs/find/#doc/BanachStoneTheorem.face_maximal">Lean</a>
     
     
   
@@ -381,10 +836,10 @@
     <div class="thm_thmcontent"><p>    If one signed face is contained in another, then the underlying points and signs are equal. </p>
 </div>
 
-    <a class="latex_link" href="sect0002.html#lem:banach-stone-face-rigidity">LaTeX</a>
+    <a class="latex_link" href="sect0001.html#lem:banach-stone-face-rigidity">LaTeX</a>
     
     
-  <a class="lean_link lean_decl" href=":/find/#doc/BanachStoneTheorem.face_subset_face">Lean</a>
+  <a class="lean_link lean_decl" href="https://rachtsy.github.io/FormalQualBench/docs/find/#doc/BanachStoneTheorem.face_subset_face">Lean</a>
     
     
   
@@ -411,10 +866,10 @@
     <div class="thm_thmcontent"><p>    Let \(A\) be a convex subset of the unit sphere of \(C(X,\mathbb R)\). Every finite subset of \(A\) has a point \(x\in X\) and a common sign \(\varepsilon \in \{ -1,1\} \) at which all its functions take the value \(\varepsilon \). </p>
 </div>
 
-    <a class="latex_link" href="sect0002.html#lem:banach-stone-finite-common-sign">LaTeX</a>
+    <a class="latex_link" href="sect0001.html#lem:banach-stone-finite-common-sign">LaTeX</a>
     
     
-  <a class="lean_link lean_decl" href=":/find/#doc/BanachStoneTheorem.finite_common_sign">Lean</a>
+  <a class="lean_link lean_decl" href="https://rachtsy.github.io/FormalQualBench/docs/find/#doc/BanachStoneTheorem.finite_common_sign">Lean</a>
     
     
   
@@ -441,10 +896,10 @@
     <div class="thm_thmcontent"><p>    A linear isometry between spaces of real-valued continuous functions maps each signed face onto a signed face. </p>
 </div>
 
-    <a class="latex_link" href="sect0002.html#lem:banach-stone-isometry-faces">LaTeX</a>
+    <a class="latex_link" href="sect0001.html#lem:banach-stone-isometry-faces">LaTeX</a>
     
     
-  <a class="lean_link lean_decl" href=":/find/#doc/BanachStoneTheorem.exists_image_face_eq_face">Lean</a>
+  <a class="lean_link lean_decl" href="https://rachtsy.github.io/FormalQualBench/docs/find/#doc/BanachStoneTheorem.exists_image_face_eq_face">Lean</a>
     
     
   
@@ -471,10 +926,10 @@
     <div class="thm_thmcontent"><p>    For every \(f\) and \(y\), evaluation of the isometry at \(y\) is, up to a sign, evaluation of \(f\) at the induced point. </p>
 </div>
 
-    <a class="latex_link" href="sect0002.html#lem:banach-stone-map-apply">LaTeX</a>
+    <a class="latex_link" href="sect0001.html#lem:banach-stone-map-apply">LaTeX</a>
     
     
-  <a class="lean_link lean_decl" href=":/find/#doc/BanachStoneTheorem.map_apply_eq">Lean</a>
+  <a class="lean_link lean_decl" href="https://rachtsy.github.io/FormalQualBench/docs/find/#doc/BanachStoneTheorem.map_apply_eq">Lean</a>
     
     
   
@@ -501,10 +956,10 @@
     <div class="thm_thmcontent"><p>   If \(X\) is compact and nonempty and \(f\in C(X,\mathbb R)\), then there is \(x\in X\) such that \(|f(x)|=\| f\| \). </p>
 </div>
 
-    <a class="latex_link" href="sect0002.html#lem:banach-stone-norm-attained">LaTeX</a>
+    <a class="latex_link" href="sect0001.html#lem:banach-stone-norm-attained">LaTeX</a>
     
     
-  <a class="lean_link lean_decl" href=":/find/#doc/BanachStoneTheorem.exists_abs_apply_eq_norm">Lean</a>
+  <a class="lean_link lean_decl" href="https://rachtsy.github.io/FormalQualBench/docs/find/#doc/BanachStoneTheorem.exists_abs_apply_eq_norm">Lean</a>
     
     
   
@@ -531,10 +986,10 @@
     <div class="thm_thmcontent"><p>    The induced point map is continuous. </p>
 </div>
 
-    <a class="latex_link" href="sect0002.html#lem:banach-stone-point-map-continuous">LaTeX</a>
+    <a class="latex_link" href="sect0001.html#lem:banach-stone-point-map-continuous">LaTeX</a>
     
     
-  <a class="lean_link lean_decl" href=":/find/#doc/BanachStoneTheorem.continuous_pointMap">Lean</a>
+  <a class="lean_link lean_decl" href="https://rachtsy.github.io/FormalQualBench/docs/find/#doc/BanachStoneTheorem.continuous_pointMap">Lean</a>
     
     
   
@@ -561,10 +1016,10 @@
     <div class="thm_thmcontent"><p>    The point map associated with an isometry and the point map associated with its inverse are mutually inverse. </p>
 </div>
 
-    <a class="latex_link" href="sect0002.html#lem:banach-stone-point-map-inverse">LaTeX</a>
+    <a class="latex_link" href="sect0001.html#lem:banach-stone-point-map-inverse">LaTeX</a>
     
     
-  <a class="lean_link lean_decl" href=":/find/#doc/BanachStoneTheorem.pointMap_symm_apply">Lean</a>
+  <a class="lean_link lean_decl" href="https://rachtsy.github.io/FormalQualBench/docs/find/#doc/BanachStoneTheorem.pointMap_symm_apply">Lean</a>
     
     
   
@@ -591,10 +1046,70 @@
     <div class="thm_thmcontent"><p>    If \(x\ne y\), then for either sign there is a continuous function in the face at \(x\) taking the opposite sign at \(y\). </p>
 </div>
 
-    <a class="latex_link" href="sect0002.html#lem:banach-stone-separator">LaTeX</a>
+    <a class="latex_link" href="sect0001.html#lem:banach-stone-separator">LaTeX</a>
     
     
-  <a class="lean_link lean_decl" href=":/find/#doc/BanachStoneTheorem.separator_mem_face">Lean</a>
+  <a class="lean_link lean_decl" href="https://rachtsy.github.io/FormalQualBench/docs/find/#doc/BanachStoneTheorem.separator_mem_face">Lean</a>
+    
+    
+  
+    
+  </div>
+    
+      </div>
+    </div>
+
+
+    
+    <div class="dep-modal-container" id="lem:borsuk-ulam-antipode-involution_modal">
+      <div class="dep-modal-content">
+          <button class="dep-closebtn">
+<svg  class="icon icon-cross "><use xlink:href="symbol-defs.svg#icon-cross"></use></svg>
+</button>
+        
+  <div class="thm" id="lem:borsuk-ulam-antipode-involution" style="display: none">
+    <div class="thm_thmheading">
+      <span class="lemma_thmcaption">
+      Lemma
+      </span>
+      <span class="lemma_thmlabel">18</span><span class="lemma_thmtitle">The antipodal map is an involution</span></div>
+    <div class="thm_thmcontent"><p>    For every \(x\in S^n\), one has \(a(a(x))=x\). </p>
+</div>
+
+    <a class="latex_link" href="sect0002.html#lem:borsuk-ulam-antipode-involution">LaTeX</a>
+    
+    
+  <a class="lean_link lean_decl" href="https://rachtsy.github.io/FormalQualBench/docs/find/#doc/BorsukUlamTheorem.antipode_antipode">Lean</a>
+    
+    
+  
+    
+  </div>
+    
+      </div>
+    </div>
+
+
+    
+    <div class="dep-modal-container" id="lem:borsuk-ulam-continuous-antipode_modal">
+      <div class="dep-modal-content">
+          <button class="dep-closebtn">
+<svg  class="icon icon-cross "><use xlink:href="symbol-defs.svg#icon-cross"></use></svg>
+</button>
+        
+  <div class="thm" id="lem:borsuk-ulam-continuous-antipode" style="display: none">
+    <div class="thm_thmheading">
+      <span class="lemma_thmcaption">
+      Lemma
+      </span>
+      <span class="lemma_thmlabel">17</span><span class="lemma_thmtitle">Continuity of the antipodal map</span></div>
+    <div class="thm_thmcontent"><p>    The antipodal map on \(S^n\) is continuous. </p>
+</div>
+
+    <a class="latex_link" href="sect0002.html#lem:borsuk-ulam-continuous-antipode">LaTeX</a>
+    
+    
+  <a class="lean_link lean_decl" href="https://rachtsy.github.io/FormalQualBench/docs/find/#doc/BorsukUlamTheorem.continuous_antipode">Lean</a>
     
     
   
@@ -617,14 +1132,445 @@
       <span class="lemma_thmcaption">
       Lemma
       </span>
-      <span class="lemma_thmlabel">23</span><span class="lemma_thmtitle">Supporting inequality at a minimizing point</span></div>
+      <span class="lemma_thmlabel">25</span><span class="lemma_thmtitle">Supporting inequality at a minimizing point</span></div>
     <div class="thm_thmcontent"><p>   If \(p\) minimizes the squared norm over a convex set \(S\), then \(\| p\| ^2\leq \langle p,q\rangle \) for every \(q\in S\). </p>
 </div>
 
-    <a class="latex_link" href="sect0006.html#lem:colorful-caratheodory-support">LaTeX</a>
+    <a class="latex_link" href="sect0005.html#lem:colorful-caratheodory-support">LaTeX</a>
     
     
-  <a class="lean_link lean_decl" href=":/find/#doc/ColorfulCaratheodoryTheorem.inner_ge_of_min_on_convex">Lean</a>
+  <a class="lean_link lean_decl" href="https://rachtsy.github.io/FormalQualBench/docs/find/#doc/ColorfulCaratheodoryTheorem.inner_ge_of_min_on_convex">Lean</a>
+    
+    
+  
+    
+  </div>
+    
+      </div>
+    </div>
+
+
+    
+    <div class="dep-modal-container" id="lem:dlo-fgequiv_modal">
+      <div class="dep-modal-content">
+          <button class="dep-closebtn">
+<svg  class="icon icon-cross "><use xlink:href="symbol-defs.svg#icon-cross"></use></svg>
+</button>
+        
+  <div class="thm" id="lem:dlo-fgequiv" style="display: none">
+    <div class="thm_thmheading">
+      <span class="lemma_thmcaption">
+      Lemma
+      </span>
+      <span class="lemma_thmlabel">29</span><span class="lemma_thmtitle">Realization is preserved by finitely generated partial equivalences</span></div>
+    <div class="thm_thmcontent"><p>   A formula has the same truth value on tuples related by a finitely generated partial equivalence between two dense linear orders. </p>
+</div>
+
+    <a class="latex_link" href="sect0006.html#lem:dlo-fgequiv">LaTeX</a>
+    
+    
+  <a class="lean_link lean_decl" href="https://rachtsy.github.io/FormalQualBench/docs/find/#doc/DLOQuantifierElimination.realize_iff_of_fgequiv">Lean</a>
+    
+    
+  
+    
+  </div>
+    
+      </div>
+    </div>
+
+
+    
+    <div class="dep-modal-container" id="lem:dlo-order-diagram-qf_modal">
+      <div class="dep-modal-content">
+          <button class="dep-closebtn">
+<svg  class="icon icon-cross "><use xlink:href="symbol-defs.svg#icon-cross"></use></svg>
+</button>
+        
+  <div class="thm" id="lem:dlo-order-diagram-qf" style="display: none">
+    <div class="thm_thmheading">
+      <span class="lemma_thmcaption">
+      Lemma
+      </span>
+      <span class="lemma_thmlabel">31</span><span class="lemma_thmtitle">Order diagrams are quantifier free</span></div>
+    <div class="thm_thmcontent"><p>    Every finite order diagram is quantifier free. </p>
+</div>
+
+    <a class="latex_link" href="sect0006.html#lem:dlo-order-diagram-qf">LaTeX</a>
+    
+    
+  <a class="lean_link lean_decl" href="https://rachtsy.github.io/FormalQualBench/docs/find/#doc/DLOQuantifierElimination.orderDiagram_isQF">Lean</a>
+    
+    
+  
+    
+  </div>
+    
+      </div>
+    </div>
+
+
+    
+    <div class="dep-modal-container" id="lem:dlo-profile-fgequiv_modal">
+      <div class="dep-modal-content">
+          <button class="dep-closebtn">
+<svg  class="icon icon-cross "><use xlink:href="symbol-defs.svg#icon-cross"></use></svg>
+</button>
+        
+  <div class="thm" id="lem:dlo-profile-fgequiv" style="display: none">
+    <div class="thm_thmheading">
+      <span class="lemma_thmcaption">
+      Lemma
+      </span>
+      <span class="lemma_thmlabel">34</span><span class="lemma_thmtitle">Same order profile gives a partial equivalence</span></div>
+    <div class="thm_thmcontent"><p>   Tuples with the same pairwise order profile generate isomorphic finite ordered substructures. </p>
+</div>
+
+    <a class="latex_link" href="sect0006.html#lem:dlo-profile-fgequiv">LaTeX</a>
+    
+    
+  <a class="lean_link lean_decl" href="https://rachtsy.github.io/FormalQualBench/docs/find/#doc/DLOQuantifierElimination.fgequivOfSameOrderProfile">Lean</a>
+    
+    
+  
+    
+  </div>
+    
+      </div>
+    </div>
+
+
+    
+    <div class="dep-modal-container" id="lem:dlo-qf-finite-correct_modal">
+      <div class="dep-modal-content">
+          <button class="dep-closebtn">
+<svg  class="icon icon-cross "><use xlink:href="symbol-defs.svg#icon-cross"></use></svg>
+</button>
+        
+  <div class="thm" id="lem:dlo-qf-finite-correct" style="display: none">
+    <div class="thm_thmheading">
+      <span class="lemma_thmcaption">
+      Lemma
+      </span>
+      <span class="lemma_thmlabel">35</span><span class="lemma_thmtitle">Correctness of the finite representative</span></div>
+    <div class="thm_thmcontent"><p>    In every nonempty dense linear order, a formula with finitely many free variables is equivalent to its quantifier-free representative. </p>
+</div>
+
+    <a class="latex_link" href="sect0006.html#lem:dlo-qf-finite-correct">LaTeX</a>
+    
+    
+  <a class="lean_link lean_decl" href="https://rachtsy.github.io/FormalQualBench/docs/find/#doc/DLOQuantifierElimination.realize_qfForFinite">Lean</a>
+    
+    
+  
+    
+  </div>
+    
+      </div>
+    </div>
+
+
+    
+    <div class="dep-modal-container" id="lem:dlo-qf-finite-isqf_modal">
+      <div class="dep-modal-content">
+          <button class="dep-closebtn">
+<svg  class="icon icon-cross "><use xlink:href="symbol-defs.svg#icon-cross"></use></svg>
+</button>
+        
+  <div class="thm" id="lem:dlo-qf-finite-isqf" style="display: none">
+    <div class="thm_thmheading">
+      <span class="lemma_thmcaption">
+      Lemma
+      </span>
+      <span class="lemma_thmlabel">33</span><span class="lemma_thmtitle">The finite representative is quantifier free</span></div>
+    <div class="thm_thmcontent"><p>    The formula constructed from finite order profiles is quantifier free. </p>
+</div>
+
+    <a class="latex_link" href="sect0006.html#lem:dlo-qf-finite-isqf">LaTeX</a>
+    
+    
+  <a class="lean_link lean_decl" href="https://rachtsy.github.io/FormalQualBench/docs/find/#doc/DLOQuantifierElimination.qfForFinite_isQF">Lean</a>
+    
+    
+  
+    
+  </div>
+    
+      </div>
+    </div>
+
+
+    
+    <div class="dep-modal-container" id="lem:dlo-qf-subst_modal">
+      <div class="dep-modal-content">
+          <button class="dep-closebtn">
+<svg  class="icon icon-cross "><use xlink:href="symbol-defs.svg#icon-cross"></use></svg>
+</button>
+        
+  <div class="thm" id="lem:dlo-qf-subst" style="display: none">
+    <div class="thm_thmheading">
+      <span class="lemma_thmcaption">
+      Lemma
+      </span>
+      <span class="lemma_thmlabel">36</span><span class="lemma_thmtitle">Quantifier-free formulas remain quantifier free under substitution</span></div>
+    <div class="thm_thmcontent"><p>   Substitution of terms into a quantifier-free formula preserves quantifier-freeness. </p>
+</div>
+
+    <a class="latex_link" href="sect0006.html#lem:dlo-qf-subst">LaTeX</a>
+    
+    
+  <a class="lean_link lean_decl" href="https://rachtsy.github.io/FormalQualBench/docs/find/#doc/DLOQuantifierElimination.isQF_subst">Lean</a>
+    
+    
+  
+    
+  </div>
+    
+      </div>
+    </div>
+
+
+    
+    <div class="dep-modal-container" id="lem:ph-bad-restrict_modal">
+      <div class="dep-modal-content">
+          <button class="dep-closebtn">
+<svg  class="icon icon-cross "><use xlink:href="symbol-defs.svg#icon-cross"></use></svg>
+</button>
+        
+  <div class="thm" id="lem:ph-bad-restrict" style="display: none">
+    <div class="thm_thmheading">
+      <span class="lemma_thmcaption">
+      Lemma
+      </span>
+      <span class="lemma_thmlabel">55</span><span class="lemma_thmtitle">Restriction of bad colorings</span></div>
+    <div class="thm_thmcontent"><p>    Bad colorings restrict coherently along inclusions \(\operatorname {Fin}(i)\hookrightarrow \operatorname {Fin}(j)\). </p>
+</div>
+
+    <a class="latex_link" href="sect0016.html#lem:ph-bad-restrict">LaTeX</a>
+    
+    
+  <div class="tooltip">
+      <span class="lean_link">Lean</span>
+      <ul class="tooltip_list">
+        
+           <li><a href="https://rachtsy.github.io/FormalQualBench/docs/find/#doc/ParisHarringtonPrinciple.BadColoring.restrict" class="lean_decl">ParisHarringtonPrinciple.BadColoring.restrict</a></li>
+        
+           <li><a href="https://rachtsy.github.io/FormalQualBench/docs/find/#doc/ParisHarringtonPrinciple.BadColoring.restrict_refl" class="lean_decl">ParisHarringtonPrinciple.BadColoring.restrict_refl</a></li>
+        
+           <li><a href="https://rachtsy.github.io/FormalQualBench/docs/find/#doc/ParisHarringtonPrinciple.BadColoring.restrict_trans" class="lean_decl">ParisHarringtonPrinciple.BadColoring.restrict_trans</a></li>
+        
+      </ul>
+  </div>
+    
+    
+  
+    
+  </div>
+    
+      </div>
+    </div>
+
+
+    
+    <div class="dep-modal-container" id="lem:ph-infinite-ramsey_modal">
+      <div class="dep-modal-content">
+          <button class="dep-closebtn">
+<svg  class="icon icon-cross "><use xlink:href="symbol-defs.svg#icon-cross"></use></svg>
+</button>
+        
+  <div class="thm" id="lem:ph-infinite-ramsey" style="display: none">
+    <div class="thm_thmheading">
+      <span class="lemma_thmcaption">
+      Lemma
+      </span>
+      <span class="lemma_thmlabel">53</span><span class="lemma_thmtitle">Infinite Ramsey theorem</span></div>
+    <div class="thm_thmcontent"><p>   Every finite coloring of the \(r\)-element subsets of an infinite set of natural numbers has an infinite homogeneous subset. </p>
+</div>
+
+    <a class="latex_link" href="sect0016.html#lem:ph-infinite-ramsey">LaTeX</a>
+    
+    
+  <a class="lean_link lean_decl" href="https://rachtsy.github.io/FormalQualBench/docs/find/#doc/ParisHarringtonPrinciple.infinite_ramsey">Lean</a>
+    
+    
+  
+    
+  </div>
+    
+      </div>
+    </div>
+
+
+    
+    <div class="dep-modal-container" id="lem:ph-uniform-bound_modal">
+      <div class="dep-modal-content">
+          <button class="dep-closebtn">
+<svg  class="icon icon-cross "><use xlink:href="symbol-defs.svg#icon-cross"></use></svg>
+</button>
+        
+  <div class="thm" id="lem:ph-uniform-bound" style="display: none">
+    <div class="thm_thmheading">
+      <span class="lemma_thmcaption">
+      Lemma
+      </span>
+      <span class="lemma_thmlabel">56</span><span class="lemma_thmtitle">Uniform finite bound</span></div>
+    <div class="thm_thmcontent"><p>    For fixed \(k,r,m\) with \(r{\gt}0\) and \(k\le m\), some \(N\) forces every \(r\)-coloring on \(\operatorname {Fin}(N)\) to admit a good homogeneous set. </p>
+</div>
+
+    <a class="latex_link" href="sect0016.html#lem:ph-uniform-bound">LaTeX</a>
+    
+    
+  <a class="lean_link lean_decl" href="https://rachtsy.github.io/FormalQualBench/docs/find/#doc/ParisHarringtonPrinciple.exists_uniform_good_bound">Lean</a>
+    
+    
+  
+    
+  </div>
+    
+      </div>
+    </div>
+
+
+    
+    <div class="dep-modal-container" id="lem:vN-centralizer-closed_modal">
+      <div class="dep-modal-content">
+          <button class="dep-closebtn">
+<svg  class="icon icon-cross "><use xlink:href="symbol-defs.svg#icon-cross"></use></svg>
+</button>
+        
+  <div class="thm" id="lem:vN-centralizer-closed" style="display: none">
+    <div class="thm_thmheading">
+      <span class="lemma_thmcaption">
+      Lemma
+      </span>
+      <span class="lemma_thmlabel">71</span><span class="lemma_thmtitle">Centralizers are weak-operator closed</span></div>
+    <div class="thm_thmcontent"><p>   The image in the weak-operator topology of the centralizer of any set of bounded operators is closed. </p>
+</div>
+
+    <a class="latex_link" href="sect0023.html#lem:vN-centralizer-closed">LaTeX</a>
+    
+    
+  <a class="lean_link lean_decl" href="https://rachtsy.github.io/FormalQualBench/docs/find/#doc/VonNeumannDoubleCommutantTheorem.wot_centralizer_closed">Lean</a>
+    
+    
+  
+    
+  </div>
+    
+      </div>
+    </div>
+
+
+    
+    <div class="dep-modal-container" id="lem:vN-closure-invariant_modal">
+      <div class="dep-modal-content">
+          <button class="dep-closebtn">
+<svg  class="icon icon-cross "><use xlink:href="symbol-defs.svg#icon-cross"></use></svg>
+</button>
+        
+  <div class="thm" id="lem:vN-closure-invariant" style="display: none">
+    <div class="thm_thmheading">
+      <span class="lemma_thmcaption">
+      Lemma
+      </span>
+      <span class="lemma_thmlabel">66</span><span class="lemma_thmtitle">Invariant subspaces and closure</span></div>
+    <div class="thm_thmcontent"><p>   The topological closure of an invariant subspace of a continuous linear operator remains invariant. </p>
+</div>
+
+    <a class="latex_link" href="sect0023.html#lem:vN-closure-invariant">LaTeX</a>
+    
+    
+  <a class="lean_link lean_decl" href="https://rachtsy.github.io/FormalQualBench/docs/find/#doc/VonNeumannDoubleCommutantTheorem.closure_invt">Lean</a>
+    
+    
+  
+    
+  </div>
+    
+      </div>
+    </div>
+
+
+    
+    <div class="dep-modal-container" id="lem:vN-finite-approx_modal">
+      <div class="dep-modal-content">
+          <button class="dep-closebtn">
+<svg  class="icon icon-cross "><use xlink:href="symbol-defs.svg#icon-cross"></use></svg>
+</button>
+        
+  <div class="thm" id="lem:vN-finite-approx" style="display: none">
+    <div class="thm_thmheading">
+      <span class="lemma_thmcaption">
+      Lemma
+      </span>
+      <span class="lemma_thmlabel">69</span><span class="lemma_thmtitle">Finite-vector approximation</span></div>
+    <div class="thm_thmcontent"><p>    If \(x\) lies in the bicommutant of a star-subalgebra \(S\), then on any finite tuple of vectors the diagonal action of \(x\) lies in the norm closure of the corresponding diagonal actions of elements of \(S\). </p>
+</div>
+
+    <a class="latex_link" href="sect0023.html#lem:vN-finite-approx">LaTeX</a>
+    
+    
+  <a class="lean_link lean_decl" href="https://rachtsy.github.io/FormalQualBench/docs/find/#doc/VonNeumannDoubleCommutantTheorem.finite_approx">Lean</a>
+    
+    
+  
+    
+  </div>
+    
+      </div>
+    </div>
+
+
+    
+    <div class="dep-modal-container" id="lem:vN-orthogonal-invariant_modal">
+      <div class="dep-modal-content">
+          <button class="dep-closebtn">
+<svg  class="icon icon-cross "><use xlink:href="symbol-defs.svg#icon-cross"></use></svg>
+</button>
+        
+  <div class="thm" id="lem:vN-orthogonal-invariant" style="display: none">
+    <div class="thm_thmheading">
+      <span class="lemma_thmcaption">
+      Lemma
+      </span>
+      <span class="lemma_thmlabel">67</span><span class="lemma_thmtitle">Orthogonal complements of invariant subspaces</span></div>
+    <div class="thm_thmcontent"><p>   If a subspace is invariant under \(a^*\), then its orthogonal complement is invariant under \(a\). </p>
+</div>
+
+    <a class="latex_link" href="sect0023.html#lem:vN-orthogonal-invariant">LaTeX</a>
+    
+    
+  <a class="lean_link lean_decl" href="https://rachtsy.github.io/FormalQualBench/docs/find/#doc/VonNeumannDoubleCommutantTheorem.orthogonal_invt">Lean</a>
+    
+    
+  
+    
+  </div>
+    
+      </div>
+    </div>
+
+
+    
+    <div class="dep-modal-container" id="lem:vN-wot-approx_modal">
+      <div class="dep-modal-content">
+          <button class="dep-closebtn">
+<svg  class="icon icon-cross "><use xlink:href="symbol-defs.svg#icon-cross"></use></svg>
+</button>
+        
+  <div class="thm" id="lem:vN-wot-approx" style="display: none">
+    <div class="thm_thmheading">
+      <span class="lemma_thmcaption">
+      Lemma
+      </span>
+      <span class="lemma_thmlabel">70</span><span class="lemma_thmtitle">Weak-operator approximation</span></div>
+    <div class="thm_thmcontent"><p>    Every element of the bicommutant of \(S\) lies in the weak-operator closure of \(S\). </p>
+</div>
+
+    <a class="latex_link" href="sect0023.html#lem:vN-wot-approx">LaTeX</a>
+    
+    
+  <a class="lean_link lean_decl" href="https://rachtsy.github.io/FormalQualBench/docs/find/#doc/VonNeumannDoubleCommutantTheorem.wot_approx">Lean</a>
     
     
   
@@ -651,10 +1597,10 @@
     <div class="thm_thmcontent"><p>    Let \(X\) and \(Y\) be compact Hausdorff spaces. If \(C(X,\mathbb R)\) and \(C(Y,\mathbb R)\) are linearly isometric, then \(X\) and \(Y\) are homeomorphic. </p>
 </div>
 
-    <a class="latex_link" href="sect0002.html#thm:banach-stone">LaTeX</a>
+    <a class="latex_link" href="sect0001.html#thm:banach-stone">LaTeX</a>
     
     
-  <a class="lean_link lean_decl" href=":/find/#doc/BanachStoneTheorem.MainTheorem">Lean</a>
+  <a class="lean_link lean_decl" href="https://rachtsy.github.io/FormalQualBench/docs/find/#doc/BanachStoneTheorem.MainTheorem">Lean</a>
     
     
   
@@ -677,14 +1623,14 @@
       <span class="theorem_thmcaption">
       Theorem
       </span>
-      <span class="theorem_thmlabel">18</span><span class="theorem_thmtitle">Borsuk–Ulam</span></div>
-    <div class="thm_thmcontent"><p>    Every continuous map \(f:S^n\to \mathbb R^n\) takes the same value at some antipodal pair \(x\) and \(-x\). </p>
+      <span class="theorem_thmlabel">19</span><span class="theorem_thmtitle">Borsuk–Ulam</span></div>
+    <div class="thm_thmcontent"><p>    For every \(n\in \mathbb N\) and every continuous map \(f:S^n\to \mathbb R^n\), there exists \(x\in S^n\) such that \(f(x)=f(-x)\). </p>
 </div>
 
-    <a class="latex_link" href="sect0003.html#thm:borsuk-ulam">LaTeX</a>
+    <a class="latex_link" href="sect0002.html#thm:borsuk-ulam">LaTeX</a>
     
     
-  <a class="lean_link lean_decl" href=":/find/#doc/BorsukUlamTheorem.MainTheorem">Lean</a>
+  <a class="lean_link lean_decl" href="https://rachtsy.github.io/FormalQualBench/docs/find/#doc/BorsukUlamTheorem.MainTheorem">Lean</a>
     
     
   
@@ -707,14 +1653,14 @@
       <span class="theorem_thmcaption">
       Theorem
       </span>
-      <span class="theorem_thmlabel">19</span><span class="theorem_thmtitle">Burnside</span></div>
-    <div class="thm_thmcontent"><p>   A transitive permutation group of prime degree is either \(2\)-transitive or has a normal regular subgroup. </p>
+      <span class="theorem_thmlabel">20</span><span class="theorem_thmtitle">Burnside’s theorem on prime degree</span></div>
+    <div class="thm_thmcontent"><p>   Let \(G\) act transitively on a finite set \(\alpha \) of prime cardinality. Then either the action is \(2\)-transitive, or \(G\) has a normal regular subgroup. </p>
 </div>
 
-    <a class="latex_link" href="sect0004.html#thm:burnside-prime-degree">LaTeX</a>
+    <a class="latex_link" href="sect0003.html#thm:burnside-prime-degree">LaTeX</a>
     
     
-  <a class="lean_link lean_decl" href=":/find/#doc/BurnsidePrimeDegreeTheorem.MainTheorem">Lean</a>
+  <a class="lean_link lean_decl" href="https://rachtsy.github.io/FormalQualBench/docs/find/#doc/BurnsidePrimeDegreeTheorem.MainTheorem">Lean</a>
     
     
   
@@ -737,14 +1683,14 @@
       <span class="theorem_thmcaption">
       Theorem
       </span>
-      <span class="theorem_thmlabel">22</span><span class="theorem_thmtitle">Almost all Collatz orbits attain almost bounded values</span></div>
-    <div class="thm_thmcontent"><p>    For every function \(f(n)\to \infty \), the exceptional set of starting values whose Collatz orbit never goes below \(f(n)\) has logarithmic density zero. </p>
+      <span class="theorem_thmlabel">24</span><span class="theorem_thmtitle">Almost all Collatz orbits attain almost bounded values</span></div>
+    <div class="thm_thmcontent"><p>    For every \(f:\mathbb N\to \mathbb N\) with \(f(n)\to \infty \), the set of \(n\) whose Collatz orbit never falls below \(f(n)\) has logarithmic density zero. </p>
 </div>
 
-    <a class="latex_link" href="sect0005.html#thm:collatz-almost-bounded">LaTeX</a>
+    <a class="latex_link" href="sect0004.html#thm:collatz-almost-bounded">LaTeX</a>
     
     
-  <a class="lean_link lean_decl" href=":/find/#doc/CollatzMapAlmostBoundedValues.MainTheorem">Lean</a>
+  <a class="lean_link lean_decl" href="https://rachtsy.github.io/FormalQualBench/docs/find/#doc/CollatzMapAlmostBoundedValues.MainTheorem">Lean</a>
     
     
   
@@ -767,14 +1713,14 @@
       <span class="theorem_thmcaption">
       Theorem
       </span>
-      <span class="theorem_thmlabel">25</span><span class="theorem_thmtitle">Colorful Carathéodory</span></div>
+      <span class="theorem_thmlabel">27</span><span class="theorem_thmtitle">Colorful Carathéodory</span></div>
     <div class="thm_thmcontent"><p>    If each of \(d+1\) subsets of \(\mathbb R^d\) contains the origin in its convex hull, then one can choose one point from each set such that the origin lies in the convex hull of the selected points. </p>
 </div>
 
-    <a class="latex_link" href="sect0006.html#thm:colorful-caratheodory">LaTeX</a>
+    <a class="latex_link" href="sect0005.html#thm:colorful-caratheodory">LaTeX</a>
     
     
-  <a class="lean_link lean_decl" href=":/find/#doc/ColorfulCaratheodoryTheorem.MainTheorem">Lean</a>
+  <a class="lean_link lean_decl" href="https://rachtsy.github.io/FormalQualBench/docs/find/#doc/ColorfulCaratheodoryTheorem.MainTheorem">Lean</a>
     
     
   
@@ -797,14 +1743,14 @@
       <span class="theorem_thmcaption">
       Theorem
       </span>
-      <span class="theorem_thmlabel">24</span><span class="theorem_thmtitle">Finite colorful zero lemma</span></div>
+      <span class="theorem_thmlabel">26</span><span class="theorem_thmtitle">Finite colorful zero lemma</span></div>
     <div class="thm_thmcontent"><p>    For \(d+1\) finite color classes in a \(d\)-dimensional real inner-product space, if the origin lies in the convex hull of every color class, one can choose one point of each color so that the origin lies in the convex hull of the chosen points. </p>
 </div>
 
-    <a class="latex_link" href="sect0006.html#thm:colorful-caratheodory-finite-zero">LaTeX</a>
+    <a class="latex_link" href="sect0005.html#thm:colorful-caratheodory-finite-zero">LaTeX</a>
     
     
-  <a class="lean_link lean_decl" href=":/find/#doc/ColorfulCaratheodoryTheorem.finite_colorful_zero">Lean</a>
+  <a class="lean_link lean_decl" href="https://rachtsy.github.io/FormalQualBench/docs/find/#doc/ColorfulCaratheodoryTheorem.finite_colorful_zero">Lean</a>
     
     
   
@@ -827,14 +1773,14 @@
       <span class="theorem_thmcaption">
       Theorem
       </span>
-      <span class="theorem_thmlabel">27</span><span class="theorem_thmtitle">De Bruijn–Erdős</span></div>
-    <div class="thm_thmcontent"><p>   Let \(G\) be a graph and let \(k\in \mathbb N\). If every finite induced subgraph of \(G\) is \(k\)-colorable, then \(G\) is \(k\)-colorable. </p>
+      <span class="theorem_thmlabel">38</span><span class="theorem_thmtitle">De Bruijn–Erdős</span></div>
+    <div class="thm_thmcontent"><p>   Let \(G\) be a graph and \(k\in \mathbb N\). If every finite induced subgraph of \(G\) is \(k\)-colorable, then \(G\) is \(k\)-colorable. </p>
 </div>
 
-    <a class="latex_link" href="sect0008.html#thm:debruijn-erdos">LaTeX</a>
+    <a class="latex_link" href="sect0007.html#thm:debruijn-erdos">LaTeX</a>
     
     
-  <a class="lean_link lean_decl" href=":/find/#doc/DeBruijnErdos.MainTheorem">Lean</a>
+  <a class="lean_link lean_decl" href="https://rachtsy.github.io/FormalQualBench/docs/find/#doc/DeBruijnErdos.MainTheorem">Lean</a>
     
     
   
@@ -846,25 +1792,25 @@
 
 
     
-    <div class="dep-modal-container" id="thm:dlo-quantifier-elimination_modal">
+    <div class="dep-modal-container" id="thm:dlo-qe_modal">
       <div class="dep-modal-content">
           <button class="dep-closebtn">
 <svg  class="icon icon-cross "><use xlink:href="symbol-defs.svg#icon-cross"></use></svg>
 </button>
         
-  <div class="thm" id="thm:dlo-quantifier-elimination" style="display: none">
+  <div class="thm" id="thm:dlo-qe" style="display: none">
     <div class="thm_thmheading">
       <span class="theorem_thmcaption">
       Theorem
       </span>
-      <span class="theorem_thmlabel">26</span><span class="theorem_thmtitle">Quantifier elimination</span></div>
-    <div class="thm_thmcontent"><p>   The FormalQualBench statement that the theory of dense linear orders admits quantifier elimination. </p>
+      <span class="theorem_thmlabel">37</span><span class="theorem_thmtitle">Quantifier elimination for DLO</span></div>
+    <div class="thm_thmcontent"><p>    The theory of dense linear orders without endpoints, together with nonemptiness, eliminates quantifiers. </p>
 </div>
 
-    <a class="latex_link" href="sect0007.html#thm:dlo-quantifier-elimination">LaTeX</a>
+    <a class="latex_link" href="sect0006.html#thm:dlo-qe">LaTeX</a>
     
     
-  <a class="lean_link lean_decl" href=":/find/#doc/DLOQuantifierElimination.MainTheorem">Lean</a>
+  <a class="lean_link lean_decl" href="https://rachtsy.github.io/FormalQualBench/docs/find/#doc/DLOQuantifierElimination.MainTheorem">Lean</a>
     
     
   
@@ -887,14 +1833,14 @@
       <span class="theorem_thmcaption">
       Theorem
       </span>
-      <span class="theorem_thmlabel">28</span><span class="theorem_thmtitle">Erdős discrepancy</span></div>
-    <div class="thm_thmcontent"><p>   The FormalQualBench statement of the Erdős discrepancy problem. </p>
+      <span class="theorem_thmlabel">41</span><span class="theorem_thmtitle">Erdős discrepancy theorem</span></div>
+    <div class="thm_thmcontent"><p>    The discrepancy of every sign sequence is unbounded. </p>
 </div>
 
-    <a class="latex_link" href="sect0009.html#thm:erdos-discrepancy">LaTeX</a>
+    <a class="latex_link" href="sect0008.html#thm:erdos-discrepancy">LaTeX</a>
     
     
-  <a class="lean_link lean_decl" href=":/find/#doc/ErdosDiscrepancyProblem.MainTheorem">Lean</a>
+  <a class="lean_link lean_decl" href="https://rachtsy.github.io/FormalQualBench/docs/find/#doc/ErdosDiscrepancyProblem.MainTheorem">Lean</a>
     
     
   
@@ -906,25 +1852,25 @@
 
 
     
-    <div class="dep-modal-container" id="thm:gleason-kahane-zelazko_modal">
+    <div class="dep-modal-container" id="thm:gkz_modal">
       <div class="dep-modal-content">
           <button class="dep-closebtn">
 <svg  class="icon icon-cross "><use xlink:href="symbol-defs.svg#icon-cross"></use></svg>
 </button>
         
-  <div class="thm" id="thm:gleason-kahane-zelazko" style="display: none">
+  <div class="thm" id="thm:gkz" style="display: none">
     <div class="thm_thmheading">
       <span class="theorem_thmcaption">
       Theorem
       </span>
-      <span class="theorem_thmlabel">29</span><span class="theorem_thmtitle">Gleason–Kahane–Želazko</span></div>
-    <div class="thm_thmcontent"><p>   The FormalQualBench statement of the Gleason–Kahane–Želazko theorem. </p>
+      <span class="theorem_thmlabel">42</span><span class="theorem_thmtitle">Gleason–Kahane– Zelazko</span></div>
+    <div class="thm_thmcontent"><p>   Let \(A\) be a complex Banach algebra. A complex-linear functional \(\varphi :A\to \mathbb C\) satisfying \(\varphi (1)=1\) and not vanishing on invertible elements is induced by a complex algebra homomorphism \(A\to \mathbb C\). </p>
 </div>
 
-    <a class="latex_link" href="sect0010.html#thm:gleason-kahane-zelazko">LaTeX</a>
+    <a class="latex_link" href="sect0009.html#thm:gkz">LaTeX</a>
     
     
-  <a class="lean_link lean_decl" href=":/find/#doc/GleasonKahaneZelazkoTheorem.MainTheorem">Lean</a>
+  <a class="lean_link lean_decl" href="https://rachtsy.github.io/FormalQualBench/docs/find/#doc/GleasonKahaneZelazkoTheorem.MainTheorem">Lean</a>
     
     
   
@@ -947,14 +1893,14 @@
       <span class="theorem_thmcaption">
       Theorem
       </span>
-      <span class="theorem_thmlabel">30</span><span class="theorem_thmtitle">Green–Tao</span></div>
-    <div class="thm_thmcontent"><p>   The FormalQualBench statement that the prime numbers contain arbitrarily long arithmetic progressions. </p>
+      <span class="theorem_thmlabel">43</span><span class="theorem_thmtitle">Green–Tao</span></div>
+    <div class="thm_thmcontent"><p>   For every \(k\in \mathbb N\), there exist \(a,d\in \mathbb N\) with \(d{\gt}0\) such that all \(k\) terms \(a+id\), \(i\in \operatorname {Fin}(k)\), are prime. </p>
 </div>
 
-    <a class="latex_link" href="sect0011.html#thm:green-tao">LaTeX</a>
+    <a class="latex_link" href="sect0010.html#thm:green-tao">LaTeX</a>
     
     
-  <a class="lean_link lean_decl" href=":/find/#doc/GreenTaoTheorem.MainTheorem">Lean</a>
+  <a class="lean_link lean_decl" href="https://rachtsy.github.io/FormalQualBench/docs/find/#doc/GreenTaoTheorem.MainTheorem">Lean</a>
     
     
   
@@ -966,25 +1912,25 @@
 
 
     
-    <div class="dep-modal-container" id="thm:hilbert-17_modal">
+    <div class="dep-modal-container" id="thm:hilbert17_modal">
       <div class="dep-modal-content">
           <button class="dep-closebtn">
 <svg  class="icon icon-cross "><use xlink:href="symbol-defs.svg#icon-cross"></use></svg>
 </button>
         
-  <div class="thm" id="thm:hilbert-17" style="display: none">
+  <div class="thm" id="thm:hilbert17" style="display: none">
     <div class="thm_thmheading">
       <span class="theorem_thmcaption">
       Theorem
       </span>
-      <span class="theorem_thmlabel">31</span><span class="theorem_thmtitle">Hilbert’s seventeenth problem</span></div>
-    <div class="thm_thmcontent"><p>   The FormalQualBench statement of Hilbert’s seventeenth problem. </p>
+      <span class="theorem_thmlabel">45</span><span class="theorem_thmtitle">Artin’s solution of Hilbert’s seventeenth problem</span></div>
+    <div class="thm_thmcontent"><p>    Every globally nonnegative real multivariate polynomial becomes a finite sum of squares in the fraction field of the polynomial ring. </p>
 </div>
 
-    <a class="latex_link" href="sect0012.html#thm:hilbert-17">LaTeX</a>
+    <a class="latex_link" href="sect0011.html#thm:hilbert17">LaTeX</a>
     
     
-  <a class="lean_link lean_decl" href=":/find/#doc/Hilbert17thProblem.MainTheorem">Lean</a>
+  <a class="lean_link lean_decl" href="https://rachtsy.github.io/FormalQualBench/docs/find/#doc/Hilbert17thProblem.MainTheorem">Lean</a>
     
     
   
@@ -1007,14 +1953,14 @@
       <span class="theorem_thmcaption">
       Theorem
       </span>
-      <span class="theorem_thmlabel">32</span><span class="theorem_thmtitle">Jordan cycle theorem</span></div>
-    <div class="thm_thmcontent"><p>   The FormalQualBench statement of the Jordan cycle theorem. </p>
+      <span class="theorem_thmlabel">46</span><span class="theorem_thmtitle">Jordan’s cycle theorem</span></div>
+    <div class="thm_thmcontent"><p>   Let \(G\) be a primitive finite permutation group. If \(G\) contains a cycle of prime support size \(p\) and \(p+3\le |\alpha |\), then the alternating group on \(\alpha \) is contained in \(G\). </p>
 </div>
 
-    <a class="latex_link" href="sect0013.html#thm:jordan-cycle">LaTeX</a>
+    <a class="latex_link" href="sect0012.html#thm:jordan-cycle">LaTeX</a>
     
     
-  <a class="lean_link lean_decl" href=":/find/#doc/JordanCycleTheorem.MainTheorem">Lean</a>
+  <a class="lean_link lean_decl" href="https://rachtsy.github.io/FormalQualBench/docs/find/#doc/JordanCycleTheorem.MainTheorem">Lean</a>
     
     
   
@@ -1037,14 +1983,14 @@
       <span class="theorem_thmcaption">
       Theorem
       </span>
-      <span class="theorem_thmlabel">33</span><span class="theorem_thmtitle">Jordan derangement theorem</span></div>
-    <div class="thm_thmcontent"><p>   The FormalQualBench statement of Jordan’s derangement theorem. </p>
+      <span class="theorem_thmlabel">47</span><span class="theorem_thmtitle">Jordan’s derangement theorem</span></div>
+    <div class="thm_thmcontent"><p>   A finite transitive permutation group acting on a nontrivial set contains a derangement, i.e. an element with no fixed point. </p>
 </div>
 
-    <a class="latex_link" href="sect0014.html#thm:jordan-derangement">LaTeX</a>
+    <a class="latex_link" href="sect0013.html#thm:jordan-derangement">LaTeX</a>
     
     
-  <a class="lean_link lean_decl" href=":/find/#doc/JordanDerangementTheorem.MainTheorem">Lean</a>
+  <a class="lean_link lean_decl" href="https://rachtsy.github.io/FormalQualBench/docs/find/#doc/JordanDerangementTheorem.MainTheorem">Lean</a>
     
     
   
@@ -1067,14 +2013,14 @@
       <span class="theorem_thmcaption">
       Theorem
       </span>
-      <span class="theorem_thmlabel">34</span><span class="theorem_thmtitle">Kakeya theorem in three dimensions</span></div>
-    <div class="thm_thmcontent"><p>   The FormalQualBench statement of the three-dimensional Kakeya theorem. </p>
+      <span class="theorem_thmlabel">50</span><span class="theorem_thmtitle">Kakeya theorem in \(\mathbb R^3\)</span></div>
+    <div class="thm_thmcontent"><p>    Every Kakeya set in \(\mathbb R^3\) has Hausdorff dimension \(3\). </p>
 </div>
 
-    <a class="latex_link" href="sect0015.html#thm:kakeya-3d">LaTeX</a>
+    <a class="latex_link" href="sect0014.html#thm:kakeya-3d">LaTeX</a>
     
     
-  <a class="lean_link lean_decl" href=":/find/#doc/KakeyaTheorem3D.MainTheorem">Lean</a>
+  <a class="lean_link lean_decl" href="https://rachtsy.github.io/FormalQualBench/docs/find/#doc/KakeyaTheorem3D.MainTheorem">Lean</a>
     
     
   
@@ -1097,14 +2043,14 @@
       <span class="theorem_thmcaption">
       Theorem
       </span>
-      <span class="theorem_thmlabel">35</span><span class="theorem_thmtitle">Maynard–Tao</span></div>
-    <div class="thm_thmcontent"><p>   The FormalQualBench statement of the Maynard–Tao bounded prime gaps theorem. </p>
+      <span class="theorem_thmlabel">51</span><span class="theorem_thmtitle">Bounded gaps between primes</span></div>
+    <div class="thm_thmcontent"><p>   There exists a positive constant \(B\) such that, above every threshold \(N\), there are distinct primes \(p{\lt}q\) with \(q-p\le B\). </p>
 </div>
 
-    <a class="latex_link" href="sect0016.html#thm:maynard-tao">LaTeX</a>
+    <a class="latex_link" href="sect0015.html#thm:maynard-tao">LaTeX</a>
     
     
-  <a class="lean_link lean_decl" href=":/find/#doc/MaynardTaoBoundedPrimeGaps.MainTheorem">Lean</a>
+  <a class="lean_link lean_decl" href="https://rachtsy.github.io/FormalQualBench/docs/find/#doc/MaynardTaoBoundedPrimeGaps.MainTheorem">Lean</a>
     
     
   
@@ -1127,14 +2073,14 @@
       <span class="theorem_thmcaption">
       Theorem
       </span>
-      <span class="theorem_thmlabel">36</span><span class="theorem_thmtitle">Paris–Harrington</span></div>
-    <div class="thm_thmcontent"><p>   The FormalQualBench statement of the Paris–Harrington principle. </p>
+      <span class="theorem_thmlabel">57</span><span class="theorem_thmtitle">Paris–Harrington</span></div>
+    <div class="thm_thmcontent"><p>    Assume \(r{\gt}0\) and \(k\le m\). Then there exists \(N\) such that every \(r\)-coloring of the \(k\)-subsets of \([1,N]\) has a relatively large homogeneous set. </p>
 </div>
 
-    <a class="latex_link" href="sect0017.html#thm:paris-harrington">LaTeX</a>
+    <a class="latex_link" href="sect0016.html#thm:paris-harrington">LaTeX</a>
     
     
-  <a class="lean_link lean_decl" href=":/find/#doc/ParisHarringtonPrinciple.MainTheorem">Lean</a>
+  <a class="lean_link lean_decl" href="https://rachtsy.github.io/FormalQualBench/docs/find/#doc/ParisHarringtonPrinciple.MainTheorem">Lean</a>
     
     
   
@@ -1157,14 +2103,14 @@
       <span class="theorem_thmcaption">
       Theorem
       </span>
-      <span class="theorem_thmlabel">37</span><span class="theorem_thmtitle">Pontryagin duality</span></div>
-    <div class="thm_thmcontent"><p>   The FormalQualBench statement of Pontryagin duality. </p>
+      <span class="theorem_thmlabel">59</span><span class="theorem_thmtitle">Pontryagin biduality</span></div>
+    <div class="thm_thmcontent"><p>    Every locally compact Hausdorff abelian topological group is canonically topologically isomorphic to its double Pontryagin dual via evaluation. </p>
 </div>
 
-    <a class="latex_link" href="sect0018.html#thm:pontryagin-duality">LaTeX</a>
+    <a class="latex_link" href="sect0017.html#thm:pontryagin-duality">LaTeX</a>
     
     
-  <a class="lean_link lean_decl" href=":/find/#doc/PontryaginDuality.MainTheorem">Lean</a>
+  <a class="lean_link lean_decl" href="https://rachtsy.github.io/FormalQualBench/docs/find/#doc/PontryaginDuality.MainTheorem">Lean</a>
     
     
   
@@ -1187,14 +2133,14 @@
       <span class="theorem_thmcaption">
       Theorem
       </span>
-      <span class="theorem_thmlabel">38</span><span class="theorem_thmtitle">Quillen–Suslin</span></div>
-    <div class="thm_thmcontent"><p>   The FormalQualBench statement of the Quillen–Suslin theorem. </p>
+      <span class="theorem_thmlabel">60</span><span class="theorem_thmtitle">Quillen–Suslin</span></div>
+    <div class="thm_thmcontent"><p>   Let \(k\) be a field. Every finitely generated projective module over the multivariate polynomial ring \(k[x_1,\ldots ,x_n]\) is free. </p>
 </div>
 
-    <a class="latex_link" href="sect0019.html#thm:quillen-suslin">LaTeX</a>
+    <a class="latex_link" href="sect0018.html#thm:quillen-suslin">LaTeX</a>
     
     
-  <a class="lean_link lean_decl" href=":/find/#doc/QuillenSuslinTheorem.MainTheorem">Lean</a>
+  <a class="lean_link lean_decl" href="https://rachtsy.github.io/FormalQualBench/docs/find/#doc/QuillenSuslinTheorem.MainTheorem">Lean</a>
     
     
   
@@ -1217,14 +2163,14 @@
       <span class="theorem_thmcaption">
       Theorem
       </span>
-      <span class="theorem_thmlabel">39</span><span class="theorem_thmtitle">Runge</span></div>
-    <div class="thm_thmcontent"><p>   The FormalQualBench statement of Runge’s theorem. </p>
+      <span class="theorem_thmlabel">61</span><span class="theorem_thmtitle">Runge approximation theorem</span></div>
+    <div class="thm_thmcontent"><p>   Let \(U\subseteq \mathbb C\) be open, \(K\subseteq U\) compact with connected complement, and let \(f\) be holomorphic on \(U\). For every \(\varepsilon {\gt}0\) there is a polynomial \(p\) with \(|p(z)-f(z)|{\lt}\varepsilon \) for all \(z\in K\). </p>
 </div>
 
-    <a class="latex_link" href="sect0020.html#thm:runge">LaTeX</a>
+    <a class="latex_link" href="sect0019.html#thm:runge">LaTeX</a>
     
     
-  <a class="lean_link lean_decl" href=":/find/#doc/RungeTheorem.MainTheorem">Lean</a>
+  <a class="lean_link lean_decl" href="https://rachtsy.github.io/FormalQualBench/docs/find/#doc/RungeTheorem.MainTheorem">Lean</a>
     
     
   
@@ -1247,14 +2193,14 @@
       <span class="theorem_thmcaption">
       Theorem
       </span>
-      <span class="theorem_thmlabel">40</span><span class="theorem_thmtitle">Schauder fixed point</span></div>
-    <div class="thm_thmcontent"><p>   The FormalQualBench statement of the Schauder fixed-point theorem. </p>
+      <span class="theorem_thmlabel">62</span><span class="theorem_thmtitle">Schauder fixed point theorem</span></div>
+    <div class="thm_thmcontent"><p>   Let \(s\) be a nonempty compact convex subset of a real Banach space. Every continuous self-map of \(s\) has a fixed point. </p>
 </div>
 
-    <a class="latex_link" href="sect0021.html#thm:schauder-fixed-point">LaTeX</a>
+    <a class="latex_link" href="sect0020.html#thm:schauder-fixed-point">LaTeX</a>
     
     
-  <a class="lean_link lean_decl" href=":/find/#doc/SchauderFixedPointTheorem.MainTheorem">Lean</a>
+  <a class="lean_link lean_decl" href="https://rachtsy.github.io/FormalQualBench/docs/find/#doc/SchauderFixedPointTheorem.MainTheorem">Lean</a>
     
     
   
@@ -1277,14 +2223,14 @@
       <span class="theorem_thmcaption">
       Theorem
       </span>
-      <span class="theorem_thmlabel">41</span><span class="theorem_thmtitle">Skolem–Mahler–Lech</span></div>
-    <div class="thm_thmcontent"><p>   The FormalQualBench statement of the Skolem–Mahler–Lech theorem. </p>
+      <span class="theorem_thmlabel">64</span><span class="theorem_thmtitle">Skolem–Mahler–Lech</span></div>
+    <div class="thm_thmcontent"><p>    Over a field of characteristic zero, the zero set of a linear recurrence sequence is a finite exceptional set together with a finite union of arithmetic progressions. </p>
 </div>
 
-    <a class="latex_link" href="sect0022.html#thm:skolem-mahler-lech">LaTeX</a>
+    <a class="latex_link" href="sect0021.html#thm:skolem-mahler-lech">LaTeX</a>
     
     
-  <a class="lean_link lean_decl" href=":/find/#doc/SkolemMahlerLechTheorem.MainTheorem">Lean</a>
+  <a class="lean_link lean_decl" href="https://rachtsy.github.io/FormalQualBench/docs/find/#doc/SkolemMahlerLechTheorem.MainTheorem">Lean</a>
     
     
   
@@ -1307,14 +2253,14 @@
       <span class="theorem_thmcaption">
       Theorem
       </span>
-      <span class="theorem_thmlabel">42</span><span class="theorem_thmtitle">Ternary Goldbach</span></div>
-    <div class="thm_thmcontent"><p>   The FormalQualBench statement of the ternary Goldbach theorem. </p>
+      <span class="theorem_thmlabel">65</span><span class="theorem_thmtitle">Helfgott’s ternary Goldbach theorem</span></div>
+    <div class="thm_thmcontent"><p>   Every odd integer \(n{\gt}5\) is the sum of three primes. </p>
 </div>
 
-    <a class="latex_link" href="sect0023.html#thm:ternary-goldbach">LaTeX</a>
+    <a class="latex_link" href="sect0022.html#thm:ternary-goldbach">LaTeX</a>
     
     
-  <a class="lean_link lean_decl" href=":/find/#doc/TernaryGoldbachTheorem.MainTheorem">Lean</a>
+  <a class="lean_link lean_decl" href="https://rachtsy.github.io/FormalQualBench/docs/find/#doc/TernaryGoldbachTheorem.MainTheorem">Lean</a>
     
     
   
@@ -1337,14 +2283,14 @@
       <span class="theorem_thmcaption">
       Theorem
       </span>
-      <span class="theorem_thmlabel">43</span><span class="theorem_thmtitle">Von Neumann double commutant</span></div>
-    <div class="thm_thmcontent"><p>   The FormalQualBench statement of the von Neumann double commutant theorem. </p>
+      <span class="theorem_thmlabel">72</span><span class="theorem_thmtitle">von Neumann double commutant theorem</span></div>
+    <div class="thm_thmcontent"><p>    For a unital star-subalgebra \(S\subseteq B(H)\), weak-operator closedness is equivalent to equality with its bicommutant. </p>
 </div>
 
-    <a class="latex_link" href="sect0024.html#thm:von-neumann-double-commutant">LaTeX</a>
+    <a class="latex_link" href="sect0023.html#thm:von-neumann-double-commutant">LaTeX</a>
     
     
-  <a class="lean_link lean_decl" href=":/find/#doc/VonNeumannDoubleCommutantTheorem.MainTheorem">Lean</a>
+  <a class="lean_link lean_decl" href="https://rachtsy.github.io/FormalQualBench/docs/find/#doc/VonNeumannDoubleCommutantTheorem.MainTheorem">Lean</a>
     
     
   
@@ -1372,7 +2318,7 @@ graphContainer.graphviz({useWorker: true})
     .width(width)
     .height(height)
     .fit(true)
-    .renderDot(`strict digraph "" {	graph [bgcolor=transparent];	node [label="\N",		penwidth=1.8	];	edge [arrowhead=vee];	"thm:colorful-caratheodory"	[color=green,		label="colorful-caratheodory",		shape=ellipse];	"lem:banach-stone-isometry-faces"	[color=green,		label="banach-stone-isometry-faces",		shape=ellipse];	"def:banach-stone-point-map"	[color=green,		fillcolor="#B0ECA3",		label="banach-stone-point-map",		shape=box,		style=filled];	"lem:banach-stone-isometry-faces" -> "def:banach-stone-point-map"	[style=dashed];	"lem:banach-stone-map-apply"	[color=green,		label="banach-stone-map-apply",		shape=ellipse];	"def:banach-stone-point-map" -> "lem:banach-stone-map-apply"	[style=dashed];	"lem:banach-stone-point-map-inverse"	[color=green,		label="banach-stone-point-map-inverse",		shape=ellipse];	"lem:banach-stone-map-apply" -> "lem:banach-stone-point-map-inverse"	[style=dashed];	"lem:banach-stone-point-map-continuous"	[color=green,		label="banach-stone-point-map-continuous",		shape=ellipse];	"lem:banach-stone-map-apply" -> "lem:banach-stone-point-map-continuous"	[style=dashed];	"def:banach-stone-point-equiv"	[color=green,		fillcolor="#B0ECA3",		label="banach-stone-point-equiv",		shape=box,		style=filled];	"lem:banach-stone-point-map-inverse" -> "def:banach-stone-point-equiv"	[style=dashed];	"thm:banach-stone"	[color=green,		label="banach-stone",		shape=ellipse];	"lem:banach-stone-point-map-continuous" -> "thm:banach-stone"	[style=dashed];	"lem:banach-stone-separator"	[color=green,		label="banach-stone-separator",		shape=ellipse];	"lem:banach-stone-face-rigidity"	[color=green,		label="banach-stone-face-rigidity",		shape=ellipse];	"lem:banach-stone-separator" -> "lem:banach-stone-face-rigidity"	[style=dashed];	"lem:banach-stone-face-maximal"	[color=green,		label="banach-stone-face-maximal",		shape=ellipse];	"lem:banach-stone-face-rigidity" -> "lem:banach-stone-face-maximal"	[style=dashed];	"lem:banach-stone-face-maximal" -> "lem:banach-stone-isometry-faces"	[style=dashed];	"lem:colorful-caratheodory-support"	[color=green,		label="colorful-caratheodory-support",		shape=ellipse];	"thm:colorful-caratheodory-finite-zero"	[color=green,		label="colorful-caratheodory-finite-zero",		shape=ellipse];	"lem:colorful-caratheodory-support" -> "thm:colorful-caratheodory-finite-zero"	[style=dashed];	"thm:colorful-caratheodory-finite-zero" -> "thm:colorful-caratheodory"	[style=dashed];	"def:borsuk-ulam-antipode"	[color=green,		fillcolor="#B0ECA3",		label="borsuk-ulam-antipode",		shape=box,		style=filled];	"thm:borsuk-ulam"	[color="#FFAA33",		label="borsuk-ulam",		shape=ellipse];	"def:borsuk-ulam-antipode" -> "thm:borsuk-ulam"	[style=dashed];	"def:borsuk-ulam-sphere"	[color=green,		fillcolor="#B0ECA3",		label="borsuk-ulam-sphere",		shape=box,		style=filled];	"def:borsuk-ulam-sphere" -> "def:borsuk-ulam-antipode"	[style=dashed];	"def:collatz-map"	[color=green,		fillcolor="#B0ECA3",		label="collatz-map",		shape=box,		style=filled];	"def:collatz-attains-below"	[color=green,		fillcolor="#B0ECA3",		label="collatz-attains-below",		shape=box,		style=filled];	"def:collatz-map" -> "def:collatz-attains-below"	[style=dashed];	"thm:collatz-almost-bounded"	[color="#FFAA33",		label="collatz-almost-bounded",		shape=ellipse];	"def:collatz-attains-below" -> "thm:collatz-almost-bounded"	[style=dashed];	"lem:banach-stone-norm-attained"	[color=green,		label="banach-stone-norm-attained",		shape=ellipse];	"lem:banach-stone-finite-common-sign"	[color=green,		label="banach-stone-finite-common-sign",		shape=ellipse];	"lem:banach-stone-norm-attained" -> "lem:banach-stone-finite-common-sign"	[style=dashed];	"lem:banach-stone-convex-subset-face"	[color=green,		label="banach-stone-convex-subset-face",		shape=ellipse];	"lem:banach-stone-finite-common-sign" -> "lem:banach-stone-convex-subset-face"	[style=dashed];	"lem:banach-stone-convex-subset-face" -> "lem:banach-stone-face-maximal"	[style=dashed];	"thm:dlo-quantifier-elimination"	[color=blue,		label="dlo-quantifier-elimination",		shape=ellipse];	"thm:erdos-discrepancy"	[color=blue,		label="erdos-discrepancy",		shape=ellipse];	"thm:hilbert-17"	[color=blue,		label="hilbert-17",		shape=ellipse];	"thm:jordan-derangement"	[color=blue,		label="jordan-derangement",		shape=ellipse];	"thm:schauder-fixed-point"	[color=blue,		label="schauder-fixed-point",		shape=ellipse];	"thm:green-tao"	[color=blue,		label="green-tao",		shape=ellipse];	"thm:pontryagin-duality"	[color=blue,		label="pontryagin-duality",		shape=ellipse];	"thm:maynard-tao"	[color=blue,		label="maynard-tao",		shape=ellipse];	"thm:paris-harrington"	[color=blue,		label="paris-harrington",		shape=ellipse];	"thm:debruijn-erdos"	[color=green,		fillcolor="#1CAC78",		label="debruijn-erdos",		shape=ellipse,		style=filled];	"thm:skolem-mahler-lech"	[color=blue,		label="skolem-mahler-lech",		shape=ellipse];	"thm:jordan-cycle"	[color=blue,		label="jordan-cycle",		shape=ellipse];	"def:banach-stone-point-equiv" -> "thm:banach-stone"	[style=dashed];	"def:banach-stone-face"	[color=green,		fillcolor="#B0ECA3",		label="banach-stone-face",		shape=box,		style=filled];	"def:banach-stone-face" -> "lem:banach-stone-separator"	[style=dashed];	"def:banach-stone-face" -> "lem:banach-stone-convex-subset-face"	[style=dashed];	"lem:banach-stone-face-convex"	[color=green,		label="banach-stone-face-convex",		shape=ellipse];	"def:banach-stone-face" -> "lem:banach-stone-face-convex"	[style=dashed];	"lem:banach-stone-face-convex" -> "lem:banach-stone-isometry-faces"	[style=dashed];	"thm:kakeya-3d"	[color=blue,		label="kakeya-3d",		shape=ellipse];	"thm:ternary-goldbach"	[color=blue,		label="ternary-goldbach",		shape=ellipse];	"thm:gleason-kahane-zelazko"	[color=blue,		label="gleason-kahane-zelazko",		shape=ellipse];	"thm:von-neumann-double-commutant"	[color=blue,		label="von-neumann-double-commutant",		shape=ellipse];	"thm:runge"	[color=blue,		label=runge,		shape=ellipse];	"thm:burnside-prime-degree"	[color="#FFAA33",		label="burnside-prime-degree",		shape=ellipse];	"thm:quillen-suslin"	[color=blue,		label="quillen-suslin",		shape=ellipse];}`)
+    .renderDot(`strict digraph "" {	graph [bgcolor=transparent];	node [label="\N",		penwidth=1.8	];	edge [arrowhead=vee];	"lem:vN-finite-approx"	[color=green,		label="vN-finite-approx",		shape=ellipse];	"lem:vN-wot-approx"	[color=green,		label="vN-wot-approx",		shape=ellipse];	"lem:vN-finite-approx" -> "lem:vN-wot-approx"	[style=dashed];	"thm:von-neumann-double-commutant"	[color=green,		label="von-neumann-double-commutant",		shape=ellipse];	"lem:vN-wot-approx" -> "thm:von-neumann-double-commutant"	[style=dashed];	"thm:colorful-caratheodory-finite-zero"	[color=green,		label="colorful-caratheodory-finite-zero",		shape=ellipse];	"thm:colorful-caratheodory"	[color=green,		label="colorful-caratheodory",		shape=ellipse];	"thm:colorful-caratheodory-finite-zero" -> "thm:colorful-caratheodory"	[style=dashed];	"lem:banach-stone-separator"	[color=green,		label="banach-stone-separator",		shape=ellipse];	"lem:banach-stone-face-rigidity"	[color=green,		label="banach-stone-face-rigidity",		shape=ellipse];	"lem:banach-stone-separator" -> "lem:banach-stone-face-rigidity"	[style=dashed];	"lem:banach-stone-face-maximal"	[color=green,		label="banach-stone-face-maximal",		shape=ellipse];	"lem:banach-stone-face-rigidity" -> "lem:banach-stone-face-maximal"	[style=dashed];	"lem:banach-stone-isometry-faces"	[color=green,		label="banach-stone-isometry-faces",		shape=ellipse];	"lem:banach-stone-face-maximal" -> "lem:banach-stone-isometry-faces"	[style=dashed];	"lem:vN-centralizer-closed"	[color=green,		label="vN-centralizer-closed",		shape=ellipse];	"lem:vN-centralizer-closed" -> "thm:von-neumann-double-commutant"	[style=dashed];	"lem:dlo-fgequiv"	[color=green,		label="dlo-fgequiv",		shape=ellipse];	"lem:dlo-qf-finite-correct"	[color=green,		label="dlo-qf-finite-correct",		shape=ellipse];	"lem:dlo-fgequiv" -> "lem:dlo-qf-finite-correct"	[style=dashed];	"thm:dlo-qe"	[color=green,		label="dlo-qe",		shape=ellipse];	"lem:dlo-qf-finite-correct" -> "thm:dlo-qe"	[style=dashed];	"thm:ternary-goldbach"	[color="#FFAA33",		label="ternary-goldbach",		shape=ellipse];	"def:kakeya-set"	[color=green,		fillcolor="#B0ECA3",		label="kakeya-set",		shape=box,		style=filled];	"thm:kakeya-3d"	[color="#FFAA33",		label="kakeya-3d",		shape=ellipse];	"def:kakeya-set" -> "thm:kakeya-3d"	[style=dashed];	"def:ph-relatively-large"	[color=green,		fillcolor="#B0ECA3",		label="ph-relatively-large",		shape=box,		style=filled];	"thm:paris-harrington"	[color=green,		label="paris-harrington",		shape=ellipse];	"def:ph-relatively-large" -> "thm:paris-harrington"	[style=dashed];	"def:ph-bad-coloring"	[color=green,		fillcolor="#B0ECA3",		label="ph-bad-coloring",		shape=box,		style=filled];	"lem:ph-bad-restrict"	[color=green,		label="ph-bad-restrict",		shape=ellipse];	"def:ph-bad-coloring" -> "lem:ph-bad-restrict"	[style=dashed];	"lem:ph-uniform-bound"	[color=green,		label="ph-uniform-bound",		shape=ellipse];	"lem:ph-bad-restrict" -> "lem:ph-uniform-bound"	[style=dashed];	"lem:ph-uniform-bound" -> "thm:paris-harrington"	[style=dashed];	"def:banach-stone-face"	[color=green,		fillcolor="#B0ECA3",		label="banach-stone-face",		shape=box,		style=filled];	"def:banach-stone-face" -> "lem:banach-stone-separator"	[style=dashed];	"lem:banach-stone-face-convex"	[color=green,		label="banach-stone-face-convex",		shape=ellipse];	"def:banach-stone-face" -> "lem:banach-stone-face-convex"	[style=dashed];	"lem:banach-stone-convex-subset-face"	[color=green,		label="banach-stone-convex-subset-face",		shape=ellipse];	"def:banach-stone-face" -> "lem:banach-stone-convex-subset-face"	[style=dashed];	"lem:banach-stone-face-convex" -> "lem:banach-stone-isometry-faces"	[style=dashed];	"lem:banach-stone-convex-subset-face" -> "lem:banach-stone-face-maximal"	[style=dashed];	"def:banach-stone-point-map"	[color=green,		fillcolor="#B0ECA3",		label="banach-stone-point-map",		shape=box,		style=filled];	"lem:banach-stone-isometry-faces" -> "def:banach-stone-point-map"	[style=dashed];	"lem:banach-stone-map-apply"	[color=green,		label="banach-stone-map-apply",		shape=ellipse];	"def:banach-stone-point-map" -> "lem:banach-stone-map-apply"	[style=dashed];	"lem:banach-stone-point-map-inverse"	[color=green,		label="banach-stone-point-map-inverse",		shape=ellipse];	"lem:banach-stone-map-apply" -> "lem:banach-stone-point-map-inverse"	[style=dashed];	"lem:banach-stone-point-map-continuous"	[color=green,		label="banach-stone-point-map-continuous",		shape=ellipse];	"lem:banach-stone-map-apply" -> "lem:banach-stone-point-map-continuous"	[style=dashed];	"def:banach-stone-point-equiv"	[color=green,		fillcolor="#B0ECA3",		label="banach-stone-point-equiv",		shape=box,		style=filled];	"thm:banach-stone"	[color=green,		label="banach-stone",		shape=ellipse];	"def:banach-stone-point-equiv" -> "thm:banach-stone"	[style=dashed];	"lem:banach-stone-point-map-inverse" -> "def:banach-stone-point-equiv"	[style=dashed];	"lem:banach-stone-point-map-continuous" -> "thm:banach-stone"	[style=dashed];	"def:collatz-map"	[color=green,		fillcolor="#B0ECA3",		label="collatz-map",		shape=box,		style=filled];	"def:collatz-attains-below"	[color=green,		fillcolor="#B0ECA3",		label="collatz-attains-below",		shape=box,		style=filled];	"def:collatz-map" -> "def:collatz-attains-below"	[style=dashed];	"thm:collatz-almost-bounded"	[color="#FFAA33",		label="collatz-almost-bounded",		shape=ellipse];	"def:collatz-attains-below" -> "thm:collatz-almost-bounded"	[style=dashed];	"def:dlo-qf-finite"	[color=green,		fillcolor="#B0ECA3",		label="dlo-qf-finite",		shape=box,		style=filled];	"def:dlo-qf-finite" -> "lem:dlo-qf-finite-correct"	[style=dashed];	"lem:dlo-qf-finite-isqf"	[color=green,		label="dlo-qf-finite-isqf",		shape=ellipse];	"def:dlo-qf-finite" -> "lem:dlo-qf-finite-isqf"	[style=dashed];	"lem:dlo-qf-finite-isqf" -> "thm:dlo-qe"	[style=dashed];	"def:erdos-discrepancy-unbounded"	[color=green,		fillcolor="#B0ECA3",		label="erdos-discrepancy-unbounded",		shape=box,		style=filled];	"thm:erdos-discrepancy"	[color="#FFAA33",		label="erdos-discrepancy",		shape=ellipse];	"def:erdos-discrepancy-unbounded" -> "thm:erdos-discrepancy"	[style=dashed];	"def:kakeya-segment"	[color=green,		fillcolor="#B0ECA3",		label="kakeya-segment",		shape=box,		style=filled];	"def:kakeya-segment" -> "def:kakeya-set"	[style=dashed];	"thm:gkz"	[color="#FFAA33",		label=gkz,		shape=ellipse];	"lem:vN-orthogonal-invariant"	[color=green,		label="vN-orthogonal-invariant",		shape=ellipse];	"lem:vN-orthogonal-invariant" -> "lem:vN-finite-approx"	[style=dashed];	"lem:colorful-caratheodory-support"	[color=green,		label="colorful-caratheodory-support",		shape=ellipse];	"lem:colorful-caratheodory-support" -> "thm:colorful-caratheodory-finite-zero"	[style=dashed];	"thm:jordan-cycle"	[color="#FFAA33",		label="jordan-cycle",		shape=ellipse];	"thm:maynard-tao"	[color="#FFAA33",		label="maynard-tao",		shape=ellipse];	"thm:quillen-suslin"	[color="#FFAA33",		label="quillen-suslin",		shape=ellipse];	"thm:green-tao"	[color="#FFAA33",		label="green-tao",		shape=ellipse];	"lem:banach-stone-finite-common-sign"	[color=green,		label="banach-stone-finite-common-sign",		shape=ellipse];	"lem:banach-stone-finite-common-sign" -> "lem:banach-stone-convex-subset-face"	[style=dashed];	"lem:dlo-order-diagram-qf"	[color=green,		label="dlo-order-diagram-qf",		shape=ellipse];	"lem:dlo-order-diagram-qf" -> "lem:dlo-qf-finite-isqf"	[style=dashed];	"lem:dlo-profile-fgequiv"	[color=green,		label="dlo-profile-fgequiv",		shape=ellipse];	"lem:dlo-profile-fgequiv" -> "lem:dlo-qf-finite-correct"	[style=dashed];	"lem:vN-closure-invariant"	[color=green,		label="vN-closure-invariant",		shape=ellipse];	"lem:vN-closure-invariant" -> "lem:vN-finite-approx"	[style=dashed];	"thm:burnside-prime-degree"	[color="#FFAA33",		label="burnside-prime-degree",		shape=ellipse];	"thm:hilbert17"	[color="#FFAA33",		label=hilbert17,		shape=ellipse];	"thm:schauder-fixed-point"	[color="#FFAA33",		label="schauder-fixed-point",		shape=ellipse];	"def:sml-arith-prog"	[color=green,		fillcolor="#B0ECA3",		label="sml-arith-prog",		shape=box,		style=filled];	"thm:skolem-mahler-lech"	[color="#FFAA33",		label="skolem-mahler-lech",		shape=ellipse];	"def:sml-arith-prog" -> "thm:skolem-mahler-lech"	[style=dashed];	"def:borsuk-ulam-antipode"	[color=green,		fillcolor="#B0ECA3",		label="borsuk-ulam-antipode",		shape=box,		style=filled];	"lem:borsuk-ulam-continuous-antipode"	[color=green,		label="borsuk-ulam-continuous-antipode",		shape=ellipse];	"def:borsuk-ulam-antipode" -> "lem:borsuk-ulam-continuous-antipode"	[style=dashed];	"lem:borsuk-ulam-antipode-involution"	[color=green,		label="borsuk-ulam-antipode-involution",		shape=ellipse];	"def:borsuk-ulam-antipode" -> "lem:borsuk-ulam-antipode-involution"	[style=dashed];	"thm:borsuk-ulam"	[color="#FFAA33",		label="borsuk-ulam",		shape=ellipse];	"lem:borsuk-ulam-continuous-antipode" -> "thm:borsuk-ulam";	"lem:borsuk-ulam-antipode-involution" -> "thm:borsuk-ulam";	"def:collatz-log-density-zero"	[color=green,		fillcolor="#B0ECA3",		label="collatz-log-density-zero",		shape=box,		style=filled];	"def:collatz-log-density-zero" -> "thm:collatz-almost-bounded"	[style=dashed];	"def:dlo-qe"	[color=green,		fillcolor="#B0ECA3",		label="dlo-qe",		shape=box,		style=filled];	"def:dlo-qe" -> "thm:dlo-qe"	[style=dashed];	"def:dlo-order-diagram"	[color=green,		fillcolor="#B0ECA3",		label="dlo-order-diagram",		shape=box,		style=filled];	"def:dlo-order-diagram" -> "def:dlo-qf-finite"	[style=dashed];	"def:dlo-order-diagram" -> "lem:dlo-order-diagram-qf"	[style=dashed];	"def:hilbert17-nonnegative"	[color=green,		fillcolor="#B0ECA3",		label="hilbert17-nonnegative",		shape=box,		style=filled];	"def:hilbert17-nonnegative" -> "thm:hilbert17"	[style=dashed];	"lem:banach-stone-norm-attained"	[color=green,		label="banach-stone-norm-attained",		shape=ellipse];	"lem:banach-stone-norm-attained" -> "lem:banach-stone-finite-common-sign"	[style=dashed];	"lem:dlo-qf-subst"	[color=green,		label="dlo-qf-subst",		shape=ellipse];	"lem:dlo-qf-subst" -> "thm:dlo-qe"	[style=dashed];	"def:vN-diag"	[color=green,		fillcolor="#B0ECA3",		label="vN-diag",		shape=box,		style=filled];	"def:vN-diag" -> "lem:vN-finite-approx"	[style=dashed];	"thm:runge"	[color="#FFAA33",		label=runge,		shape=ellipse];	"thm:debruijn-erdos"	[color=green,		fillcolor="#1CAC78",		label="debruijn-erdos",		shape=ellipse,		style=filled];	"def:pontryagin-evaluation"	[color=green,		fillcolor="#B0ECA3",		label="pontryagin-evaluation",		shape=box,		style=filled];	"thm:pontryagin-duality"	[color="#FFAA33",		label="pontryagin-duality",		shape=ellipse];	"def:pontryagin-evaluation" -> "thm:pontryagin-duality"	[style=dashed];	"thm:jordan-derangement"	[color=green,		fillcolor="#1CAC78",		label="jordan-derangement",		shape=ellipse,		style=filled];	"lem:ph-infinite-ramsey"	[color=green,		label="ph-infinite-ramsey",		shape=ellipse];	"lem:ph-infinite-ramsey" -> "lem:ph-uniform-bound"	[style=dashed];	"def:erdos-discrepancy-sign"	[color=green,		fillcolor="#B0ECA3",		label="erdos-discrepancy-sign",		shape=box,		style=filled];	"def:erdos-discrepancy-sign" -> "def:erdos-discrepancy-unbounded"	[style=dashed];}`)
     .on("end", interactive);
 
 latexLabelEscaper = function(label) {

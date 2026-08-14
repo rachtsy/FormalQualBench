@@ -45,7 +45,7 @@ jobs:
         with:
           build: true
           lint: false
-          mk_all-check: false
+          mk_all-check: true
 
       - name: Check leanok declarations for sorryAx
         run: python3 scripts/check_blueprint_leanok.py

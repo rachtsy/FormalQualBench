@@ -3,3 +3,4 @@
 # Macos
 .DS_Store
 .gauss
+blueprint/src/*.paux
